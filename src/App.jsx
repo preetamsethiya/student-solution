@@ -11,7 +11,7 @@ import Disclaimer from "./pages/disclaimer/Disclaimer";
 import Footer from "./components/footer/Footer";
 import { Route, Routes } from "react-router";
 import Profile from "./pages/profile_page/Profile";
-import Post from "./pages/post_page/post";
+import Post from "./pages/post_page/Post";
 import Page_Container from "./components/page_container/Page_Container";
 
 function App() {
