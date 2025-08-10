@@ -14,6 +14,35 @@
 }
 
 /* home page 1*/
+.homeSearchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: 4px;
+}
+.homeSearch {
+  border: 1px solid rgb(15, 198, 235);
+  max-width: 200px;
+  margin: 8px;
+  border-radius: 100px;
+  overflow: hidden;
+}
+.homeFilterContainer .componentInput {
+  margin-left: 8px;
+  border-radius: 4px;
+  padding-inline: 8px;
+}
+.homeSearch .componentInput {
+  box-shadow: none;
+}
+.homeSearchContainer .selectContainer {
+  outline: none;
+  border: none;
+  box-shadow: 0 2px 4px #00000057;
+  padding-block: 8px;
+  padding-inline: 4px;
+  border-radius: 8px;
+}
 .homeContainer .cardWrapper {
   margin-bottom: 24px;
 }
@@ -55,8 +84,9 @@
 .homeContainer .cardWrapper .subHeading div {
   margin-left: 8px;
   border: 1px solid #cdcdcd;
-  padding: 4px 14px;
+  padding: 8px 22px;
   font-size: 16px;
+  font-weight: 600;
   border-radius: 50px;
 }
 .homeContainer .cardWrapper .cardContainer {
@@ -128,7 +158,7 @@
 /* post page 3 */
 
 .postPage .post .mediaContainer {
-  height: 80vh;
+  height: 78vh;
 }
 .postPage .post .userIdContainer {
   font-size: 20px;

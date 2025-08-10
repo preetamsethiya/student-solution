@@ -1,23 +1,64 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Card from "../../components/card/Card";
 import Page_Container from "../../components/page_container/Page_Container";
 import Button from "../../components/button/Button";
-import { cafes, colleges } from "../../data_store/data";
+import { cafes, profiles, updates } from "../../data_store/data";
 import { Link } from "react-router";
-const jobs = [...colleges];
+import { VarContext } from "../../context/VarContext";
+import Input from "../../components/input/Input";
+import UseSearch_Filter from "../../hooks/UseSearch_Filter";
+import { Search_FilterContext } from "../../context/Search_FilterContext";
+import SelectMenu from "../../components/select_menu/SelectMenu";
 export default function Home() {
-  const [isTrue, setIsTrue] = useState(true);
+  let profilesPosts = [];
+  profiles.map((profile) => {
+    profilesPosts = [...profilesPosts, ...profile.posts];
+  });
+  const updateList = [...updates, ...profilesPosts];
+  const clgActive = useContext(VarContext);
+  const { search_Filter, setSearch_Filter } = useContext(Search_FilterContext);
+  console.log(search_Filter);
+  const filter = UseSearch_Filter();
+  useEffect(() => {}, [profilesPosts]);
   return (
     <div className="homeContainer">
       <main>
+        {/* search section  */}
+
+        <div className="homeSearchContainer">
+          <div className="homeSearch">
+            <label htmlFor="search">
+              <Input
+                input={{
+                  id: "search",
+                  name: "search",
+                  type: "text",
+                  value: search_Filter || "",
+                  placeholder: "search...",
+                  onChange: filter,
+                }}
+              />
+              <span> 🔍</span>
+            </label>
+          </div>
+          <div className="homeFilterContainer">
+            <SelectMenu
+              selectMenu={{
+                onChange: filter,
+              }}
+            />
+          </div>
+        </div>
         <Page_Container>
           <div>
+            {/* card section 1  */}
+
             <div className="cardWrapper section1">
               <div className="subHeading">Cafes</div>
               <div className="cardContainer">
                 {cafes.map((cafe) => {
                   return (
-                    <Card key={cafe.id}>
+                    <Card key={cafe.user_Id}>
                       <a
                         href="https://wa.me/919617709663?text=hii"
                         target="_blank"
@@ -41,38 +82,47 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* card section 2 */}
+
           <div className="cardWrapper section2">
             <div className="subHeading">
               <div
-                className={`${isTrue ? "activeLink" : ""}`}
+                className={`${clgActive.isClgActive ? "activeLink" : ""}`}
                 onClick={(e) => {
-                  setIsTrue(true);
+                  clgActive.setIsClgActive(true);
                 }}
               >
-                <label htmlFor="collegeBtn">
+                <label htmlFor="profileBtn">
                   {" "}
                   Collges
-                  <input id="collegeBtn" type="button" value={"college"} />
+                  <input id="profileBtn" type="button" value={"profile"} />
                 </label>
               </div>
               <div
-                className={`${isTrue ? "" : "activeLink"}`}
+                className={`${clgActive.isClgActive ? "" : "activeLink"}`}
                 onClick={(e) => {
-                  setIsTrue(false);
+                  clgActive.setIsClgActive(false);
                 }}
               >
                 <label htmlFor="jobBtn">
                   {" "}
-                  Jobs
+                  Updates
                   <input id="jobBtn" type="button" value={"job"} />
                 </label>
               </div>
             </div>
-            {isTrue ? (
+            {clgActive.isClgActive ? (
               <div className="cardContainer">
-                {colleges.map((profile) => {
+                {/* profiles cards  */}
+
+                {profiles.map((profile) => {
                   return (
-                    <Link key={profile.id} to={profile.id} className="link">
+                    <Link
+                      key={profile.user_Id}
+                      to={profile.user_Id}
+                      className="link"
+                    >
                       {" "}
                       <Card data={profile} />
                     </Link>
@@ -80,15 +130,30 @@ export default function Home() {
                 })}
               </div>
             ) : (
+              // updates cards
+
               <div className="cardContainer">
-                {jobs.map((profile) => {
-                  return (
-                    <Link key={profile.id} to="posts" className="link">
-                      {" "}
-                      <Card data={profile} />
-                    </Link>
-                  );
-                })}
+                {updateList
+                  .filter((update) => {
+                    return (
+                      update.category
+                        .toLocaleLowerCase()
+                        .includes(search_Filter) ||
+                      update.title.toLocaleLowerCase().includes(search_Filter)
+                    );
+                  })
+                  .map((update) => {
+                    return (
+                      <Link
+                        key={update.post_Id}
+                        to={`/post/${update.post_Id}`}
+                        className="link"
+                      >
+                        {" "}
+                        <Card data={update} />
+                      </Link>
+                    );
+                  })}
               </div>
             )}
           </div>

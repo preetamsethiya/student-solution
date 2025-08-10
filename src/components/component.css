@@ -59,7 +59,7 @@ body {
 }
 .wrapper {
   margin-inline: 40px;
-  margin-top: 102px;
+  margin-top: 70px;
 }
 
 /* header component 1 */
@@ -68,7 +68,7 @@ body {
   backdrop-filter: blur(5px);
   box-shadow: 0 0 2px #0000004d;
   font-size: 16px;
-  padding-block: 24px;
+  padding-block: 10px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -167,4 +167,13 @@ body {
   font-size: 14px;
   font-weight: 600;
   user-select: none;
+}
+
+/* input component  */
+
+.componentInput {
+  outline: none;
+  border: none;
+  box-shadow: 0 0 1px;
+  padding: 6px 4px;
 }

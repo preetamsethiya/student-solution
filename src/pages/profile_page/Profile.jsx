@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Page_Container from "../../components/page_container/Page_Container";
 import Card from "../../components/card/Card";
-import { colleges } from "../../data_store/data";
+import { profiles as profileList } from "../../data_store/data";
 import Button from "../../components/button/Button";
-import { Link } from "react-router";
+import { Link, useParams } from "react-router";
 
 export default function Profile() {
+  const param = useParams();
+  console.log(param);
+
+  const [profileFilterd] = profileList.filter((profile) => {
+    return profile.user_Id === param.profile;
+  });
+  console.log(profileFilterd);
   return (
     <div className="profilePage">
       <main>
@@ -13,13 +20,13 @@ export default function Profile() {
           <div className="section1">
             <Card>
               <div className="idContainer">
-                <div className="id">Kondagaon</div>
+                <div className="id">{profileFilterd.user_Id} </div>
               </div>
               <div className="nameSection">
                 <div>
                   <div className="profileImg"></div>
                 </div>
-                <div className="name"> Gundadhur pg college, Kondagaon</div>
+                <div className="name">{profileFilterd.user_Name} </div>
               </div>
             </Card>
           </div>
@@ -27,17 +34,21 @@ export default function Profile() {
           <div className="section2">
             <div className="subHeading">updates</div>
             <div className="cardContainer">
-              {colleges[0].posts.map((post) => {
+              {profileFilterd.posts.map((post) => {
                 return (
-                  <Card key={post.id}>
-                    <Link to="/posts" className="link">
+                  <Card key={post.post_Id}>
+                    <Link
+                      to={`/${profileFilterd.user_Id}/${post.post_Id}`}
+                      className="link"
+                      state={"hii"}
+                    >
                       <div className="innerCard">
                         <Card data={post} />
                       </div>
                     </Link>
                     <div className="btnSection">
                       <a
-                        href="https://ggckondagaon.in/newsData/Both_307.pdf"
+                        href={`https://drive.google.com/uc?export=download&id=${post.post_Id}`}
                         className="link"
                         target="_blank"
                         download
@@ -48,7 +59,7 @@ export default function Profile() {
                           }}
                         />
                       </a>
-                      <Link to="/posts" className="link">
+                      <Link to={`/post/${post.post_Id}`} className="link">
                         <Button
                           btn={{
                             text: "View",

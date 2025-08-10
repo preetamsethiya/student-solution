@@ -1,11 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Page_Container from "../../components/page_container/Page_Container";
 import Card from "../../components/card/Card";
-import { colleges } from "../../data_store/data";
+import { profiles, updates } from "../../data_store/data";
 import Button from "../../components/button/Button";
 
 export default function Post() {
+  let profilesPosts = [];
+
+  profiles.map((profile) => {
+    profilesPosts = [...profilesPosts, ...profile.posts];
+  });
+
+  const updateList = [...updates, ...profilesPosts];
+
   const [isMore, setIsMore] = useState(true);
+
+  useEffect(() => {}, [profilesPosts]);
+
   return (
     <div className="postPage">
       <main>
@@ -15,9 +26,10 @@ export default function Post() {
               <div className="post">
                 <div className="mediaContainer">
                   <iframe
-                    src="https://ggckondagaon.in/newsData/Both_307.pdf"
-                    width="100%"
+                    src={updateList[0].post_Src}
+                    width="640"
                     height="100%"
+                    allow="autoplay"
                   ></iframe>
                 </div>
                 <div>
@@ -32,7 +44,20 @@ export default function Post() {
                       {" "}
                       this is post title my name is preetam kumar sethiya this
                       is post title my name is preetam kumar sethiya this is
-                      post
+                      post{" "}
+                      <a
+                        href={`https://drive.google.com/uc?export=download&id=
+                        ${updateList[0].download_Link.split("/")[5]}`}
+                        className="link"
+                        target="_blank"
+                        download
+                      >
+                        <Button
+                          btn={{
+                            text: "Download",
+                          }}
+                        />
+                      </a>
                     </p>{" "}
                     <Button
                       btn={{
