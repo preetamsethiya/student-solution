@@ -7,7 +7,7 @@ import { Link, useParams } from "react-router";
 
 export default function Profile() {
   const param = useParams();
-  console.log(param);
+  // console.log(param);
 
   const [profileFilterd] = profileList.filter((profile) => {
     return profile.user_Id === param.profile;

@@ -29,7 +29,7 @@ createRoot(document.getElementById("root")).render(
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/disclaimer" element={<Disclaimer />} />
             <Route
-              path="/*"
+              path="*"
               element={
                 <div
                   style={{

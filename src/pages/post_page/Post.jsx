@@ -3,7 +3,7 @@ import Page_Container from "../../components/page_container/Page_Container";
 import Card from "../../components/card/Card";
 import { profiles, updates } from "../../data_store/data";
 import Button from "../../components/button/Button";
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 
 export default function Post() {
   let profilesPosts = [];
@@ -25,6 +25,19 @@ export default function Post() {
   // console.log(postFiltered);
 
   useEffect(() => {}, [profilesPosts]);
+
+  if (!postFiltered) {
+    return (
+      <div
+        style={{
+          textAlign: "center",
+        }}
+      >
+        {" "}
+        <h4>Page not found</h4> <br /> <Link to={"/"}>Home</Link>
+      </div>
+    );
+  }
 
   return (
     <div className="postPage">
