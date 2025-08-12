@@ -3,10 +3,12 @@ import Page_Container from "../../components/page_container/Page_Container";
 import Card from "../../components/card/Card";
 import { profiles, updates } from "../../data_store/data";
 import Button from "../../components/button/Button";
+import { useParams } from "react-router";
 
 export default function Post() {
   let profilesPosts = [];
-  const [link, setLnk] = useState("");
+  const param = useParams();
+  // console.log(param);
 
   profiles.map((profile) => {
     profilesPosts = [...profilesPosts, ...profile.posts];
@@ -14,13 +16,15 @@ export default function Post() {
 
   const updateList = [...updates, ...profilesPosts];
 
+  const [postFiltered] = updateList.filter((update) => {
+    return update.post_Id === param.id;
+  });
+
   const [isMore, setIsMore] = useState(true);
 
-  // console.log(updateList[0]);
+  // console.log(postFiltered);
 
-  useEffect(() => {
-    setLnk(updateList[0].post_Id);
-  }, [profilesPosts]);
+  useEffect(() => {}, [profilesPosts]);
 
   return (
     <div className="postPage">
@@ -33,15 +37,25 @@ export default function Post() {
 
                 <div className="mediaContainer">
                   <iframe
-                    src={updateList[0].post_Src}
+                    src={postFiltered.post_Src}
                     width="100%"
                     height="100%"
                     allow="autoplay"
                   ></iframe>
                 </div>
                 <div>
-                  {updateList[0]?.site && (
-                    <div className="userIdContainer"> Kondagaon</div>
+                  {postFiltered.links[0]?.official_Site && (
+                    <div className="userIdContainer">
+                      <a
+                        style={{
+                          color: "black",
+                        }}
+                        href={postFiltered.links[0]?.official_Site}
+                      >
+                        {" "}
+                        official site
+                      </a>
+                    </div>
                   )}
 
                   {/* description  */}
@@ -55,11 +69,11 @@ export default function Post() {
                     >
                       {" "}
                       <span>
-                        <b> {updateList[0].title} : </b>
-                        {updateList[0].description}
+                        <b> {postFiltered.title} : </b>
+                        {postFiltered.description}
                       </span>{" "}
                       <a
-                        href={`https://drive.google.com/uc?export=download&id=${link}`}
+                        href={`https://drive.google.com/uc?export=download&id=${postFiltered.post_Id}`}
                         className="link"
                         target="_blank"
                         download
@@ -79,13 +93,13 @@ export default function Post() {
                       }}
                     />
                     {/* important dates.\ */}
-                    {updateList[0].date.length && (
+                    {postFiltered.date.length && (
                       <h4>
                         Important date <br /> <br />
                       </h4>
                     )}
-                    {updateList[0].date.length &&
-                      updateList[0].date.map((date, i) => {
+                    {postFiltered.date.length &&
+                      postFiltered.date.map((date, i) => {
                         return (
                           <b key={i}>
                             {date}, &nbsp; <br />
@@ -94,13 +108,13 @@ export default function Post() {
                       })}
                     <br /> <br />
                     {/* important links  */}
-                    {updateList[0].links.length && (
+                    {postFiltered.links.length && (
                       <h4>
                         Important links <br /> <br />
                       </h4>
                     )}
-                    {updateList[0].links.length &&
-                      updateList[0].links.map((link, i) => {
+                    {postFiltered.links.length &&
+                      postFiltered.links.map((link, i) => {
                         return (
                           <b key={i}>
                             <a href={link.site} target="_blank">

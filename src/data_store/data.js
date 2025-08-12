@@ -58,7 +58,7 @@ const profiles = [
         links: [
           {
             text: "Official site",
-            official_Site: "https://smkvbastar.ac.in/",
+            site: "https://smkvbastar.ac.in/",
           },
         ],
         category: "updates",
