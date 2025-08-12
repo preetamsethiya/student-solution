@@ -7,7 +7,7 @@ import { VarProvider } from "./context/VarContext.jsx";
 import { Search_FilterProvider } from "./context/Search_FilterContext.jsx";
 import Home from "./pages/home/Home.jsx";
 import Profile from "./pages/profile_page/Profile.jsx";
-import Post from "./pages/post_page/post.jsx";
+import Post from "./pages/post_page/Post.jsx";
 import About from "./pages/about/About.jsx";
 import Contact from "./pages/contact/Contact.jsx";
 import Privacy from "./pages/privacy/Privacy.jsx";
