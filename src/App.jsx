@@ -9,9 +9,8 @@ import Contact from "./pages/contact/Contact";
 import Privacy from "./pages/privacy/Privacy";
 import Disclaimer from "./pages/disclaimer/Disclaimer";
 import Footer from "./components/footer/Footer";
-import { Route, Routes } from "react-router";
+import { Outlet, Route, Routes } from "react-router";
 import Profile from "./pages/profile_page/Profile";
-import Post from "./pages/post_page/Post";
 import ReactGA from "react-ga4";
 import Page_Container from "./components/page_container/Page_Container";
 
@@ -27,17 +26,7 @@ function App() {
           {/* <div className="homeHeader">
             <Header />
           </div> */}
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/:profile" element={<Profile />} />
-            <Route path="/:profile/:id" element={<Post />} />
-            <Route path="/post/:id" element={<Post />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/disclaimer" element={<Disclaimer />} />
-          </Routes>
-
+          <Outlet />
           <Footer />
         </div>
       </div>

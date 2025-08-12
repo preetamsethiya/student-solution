@@ -12,7 +12,20 @@ export default function Profile() {
   const [profileFilterd] = profileList.filter((profile) => {
     return profile.user_Id === param.profile;
   });
-  console.log(profileFilterd);
+  // console.log(profileFilterd);
+
+  if (!profileFilterd) {
+    return (
+      <div
+        style={{
+          textAlign: "center",
+        }}
+      >
+        {" "}
+        <h4>Page not found</h4> <br /> <Link to={"/"}>Home</Link>
+      </div>
+    );
+  }
   return (
     <div className="profilePage">
       <main>

@@ -17,7 +17,6 @@
 .homeSearchContainer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin-inline: 4px;
 }
 .homeSearch {
@@ -34,6 +33,7 @@
 }
 .homeSearch .componentInput {
   box-shadow: none;
+  width: 80%;
 }
 .homeSearchContainer .selectContainer {
   outline: none;
@@ -42,6 +42,7 @@
   padding-block: 8px;
   padding-inline: 4px;
   border-radius: 8px;
+  background-color: white;
 }
 .homeContainer .cardWrapper {
   margin-bottom: 24px;
@@ -157,6 +158,10 @@
 
 /* post page 3 */
 
+.postPage .wrapper {
+  margin-top: 15px;
+}
+
 .postPage .post .mediaContainer {
   height: 78vh;
 }
@@ -166,6 +171,7 @@
 }
 .postPage .post .descriptionContainer {
   display: flex;
+  flex-direction: column;
 }
 .postPage .post .descriptionContainer .description {
   text-overflow: ellipsis;

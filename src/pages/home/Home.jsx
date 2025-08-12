@@ -11,15 +11,21 @@ import { Search_FilterContext } from "../../context/Search_FilterContext";
 import SelectMenu from "../../components/select_menu/SelectMenu";
 export default function Home() {
   let profilesPosts = [];
+
   profiles.map((profile) => {
     profilesPosts = [...profilesPosts, ...profile.posts];
   });
+
   const updateList = [...updates, ...profilesPosts];
+
   const clgActive = useContext(VarContext);
+
   const { search_Filter, setSearch_Filter } = useContext(Search_FilterContext);
-  console.log(search_Filter);
+
   const filter = UseSearch_Filter();
+
   useEffect(() => {}, [profilesPosts]);
+
   return (
     <div className="homeContainer">
       <main>

@@ -6,6 +6,7 @@ import Button from "../../components/button/Button";
 
 export default function Post() {
   let profilesPosts = [];
+  const [link, setLnk] = useState("");
 
   profiles.map((profile) => {
     profilesPosts = [...profilesPosts, ...profile.posts];
@@ -15,7 +16,11 @@ export default function Post() {
 
   const [isMore, setIsMore] = useState(true);
 
-  useEffect(() => {}, [profilesPosts]);
+  // console.log(updateList[0]);
+
+  useEffect(() => {
+    setLnk(updateList[0].post_Id);
+  }, [profilesPosts]);
 
   return (
     <div className="postPage">
@@ -24,16 +29,23 @@ export default function Post() {
           <div>
             <div>
               <div className="post">
+                {/* mediaContainer  */}
+
                 <div className="mediaContainer">
                   <iframe
                     src={updateList[0].post_Src}
-                    width="640"
+                    width="100%"
                     height="100%"
                     allow="autoplay"
                   ></iframe>
                 </div>
                 <div>
-                  <div className="userIdContainer"> Kondagaon</div>
+                  {updateList[0]?.site && (
+                    <div className="userIdContainer"> Kondagaon</div>
+                  )}
+
+                  {/* description  */}
+
                   <div className="descriptionContainer">
                     <p
                       className="description"
@@ -42,19 +54,19 @@ export default function Post() {
                       }}
                     >
                       {" "}
-                      this is post title my name is preetam kumar sethiya this
-                      is post title my name is preetam kumar sethiya this is
-                      post{" "}
+                      <span>
+                        <b> {updateList[0].title} : </b>
+                        {updateList[0].description}
+                      </span>{" "}
                       <a
-                        href={`https://drive.google.com/uc?export=download&id=
-                        ${updateList[0].download_Link.split("/")[5]}`}
+                        href={`https://drive.google.com/uc?export=download&id=${link}`}
                         className="link"
                         target="_blank"
                         download
                       >
                         <Button
                           btn={{
-                            text: "Download",
+                            text: "Download pdf",
                           }}
                         />
                       </a>
@@ -66,6 +78,40 @@ export default function Post() {
                         onClick: () => setIsMore((prev) => !prev),
                       }}
                     />
+                    {/* important dates.\ */}
+                    {updateList[0].date.length && (
+                      <h4>
+                        Important date <br /> <br />
+                      </h4>
+                    )}
+                    {updateList[0].date.length &&
+                      updateList[0].date.map((date, i) => {
+                        return (
+                          <b key={i}>
+                            {date}, &nbsp; <br />
+                          </b>
+                        );
+                      })}
+                    <br /> <br />
+                    {/* important links  */}
+                    {updateList[0].links.length && (
+                      <h4>
+                        Important links <br /> <br />
+                      </h4>
+                    )}
+                    {updateList[0].links.length &&
+                      updateList[0].links.map((link, i) => {
+                        return (
+                          <b key={i}>
+                            <a href={link.site} target="_blank">
+                              {" "}
+                              {link.text} - click here{" "}
+                            </a>{" "}
+                            <br />
+                            <br />
+                          </b>
+                        );
+                      })}
                   </div>
                 </div>
               </div>
