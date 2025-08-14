@@ -12,6 +12,7 @@ import About from "./pages/about/About.jsx";
 import Contact from "./pages/contact/Contact.jsx";
 import Privacy from "./pages/privacy/Privacy.jsx";
 import Disclaimer from "./pages/disclaimer/Disclaimer.jsx";
+import Redirect from "./pages/redirect/Redirect.jsx";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -24,6 +25,7 @@ createRoot(document.getElementById("root")).render(
             <Route path="/:profile" element={<Profile />} />
             <Route path="/:profile/:id" element={<Post />} />
             <Route path="/post/:id" element={<Post />} />
+            <Route path="/result/:url_Id" element={<Redirect />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<Privacy />} />

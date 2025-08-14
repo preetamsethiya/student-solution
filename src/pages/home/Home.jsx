@@ -9,6 +9,7 @@ import Input from "../../components/input/Input";
 import UseSearch_Filter from "../../hooks/UseSearch_Filter";
 import { Search_FilterContext } from "../../context/Search_FilterContext";
 import SelectMenu from "../../components/select_menu/SelectMenu";
+import { resultArr } from "../../data_store/data";
 export default function Home() {
   let profilesPosts = [];
 
@@ -55,6 +56,9 @@ export default function Home() {
             />
           </div>
         </div>
+        {/* {resultArr.map((result) => {
+          return <Link to={`/result/${result.url_Id}`}>click</Link>;
+        })} */}
         <Page_Container>
           <div>
             {/* card section 1  */}

@@ -163,26 +163,60 @@
 }
 
 .postPage .post .mediaContainer {
-  height: 78vh;
+  height: 60vh;
 }
+.postPage .textContainer {
+  display: flex;
+}
+.postPage .textContainer .moreBtn {
+  color: rgb(60, 59, 59);
+  padding: 0;
+  background-color: inherit;
+  align-self: flex-end;
+  font-weight: 600;
+  font-size: 16px;
+}
+
 .postPage .post .userIdContainer {
   font-size: 20px;
   margin: 4px 0 4px 8px;
 }
 .postPage .post .descriptionContainer {
-  display: flex;
-  flex-direction: column;
-}
-.postPage .post .descriptionContainer .description {
-  text-overflow: ellipsis;
+  /* -webkit-line-clamp: 2;
+  line-clamp: 2; */
+  /* display: -webkit-box; */
+  /* -webkit-box-orient: vertical; */
   overflow: hidden;
 }
-.postPage .post .descriptionContainer .moreBtn {
-  color: rgb(60, 59, 59);
-  padding: 0;
-  background-color: inherit;
-  margin-left: -4px;
-  align-self: flex-end;
+.postPage .post .description .textSlid {
+  margin-bottom: 8px;
+}
+
+.postPage .post .descriptionContainer .dateContainer,
+.linkContainer {
+  background-color: #3131f5de;
+  text-align: center;
+  color: #e8dcdc;
+  padding: 10px;
+  margin-bottom: 8px;
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+.postPage .post .descriptionContainer .date,
+.links {
+  background-color: #3131f5de;
+  text-align: center;
+  color: #e8dcdc;
+  padding: 10px;
+  margin-bottom: 8px;
+  margin-inline: 14px;
+  border-radius: 8px;
+}
+.postPage .post .descriptionContainer .links {
+  color: white;
+  text-decoration: none;
+  display: block;
 }
 
 /* about page 4 */

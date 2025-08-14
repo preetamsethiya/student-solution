@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Page_Container from "../../components/page_container/Page_Container";
 import Card from "../../components/card/Card";
 import { profiles as profileList } from "../../data_store/data";
-import Button from "../../components/button/Button";
+import Button, { Button2 } from "../../components/button/Button";
 import { Link, useParams } from "react-router";
 
 export default function Profile() {
@@ -28,6 +28,9 @@ export default function Profile() {
   }
   return (
     <div className="profilePage">
+      <div>
+        <Button2 />
+      </div>
       <main>
         <Page_Container>
           <div className="section1">

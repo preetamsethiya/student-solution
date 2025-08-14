@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Page_Container from "../../components/page_container/Page_Container";
 import Card from "../../components/card/Card";
 import { profiles, updates } from "../../data_store/data";
-import Button from "../../components/button/Button";
+import Button, { Button2 } from "../../components/button/Button";
 import { Link, useParams } from "react-router";
 
 export default function Post() {
@@ -22,7 +22,7 @@ export default function Post() {
 
   const [isMore, setIsMore] = useState(true);
 
-  // console.log(postFiltered);
+  console.log(postFiltered?.links[0]);
 
   useEffect(() => {}, [profilesPosts]);
 
@@ -41,6 +41,9 @@ export default function Post() {
 
   return (
     <div className="postPage">
+      <div>
+        <Button2 />
+      </div>
       <main>
         <Page_Container>
           <div>
@@ -57,47 +60,116 @@ export default function Post() {
                   ></iframe>
                 </div>
                 <div>
-                  {postFiltered.links[0]?.official_Site && (
+                  {postFiltered.links[0]?.site && (
                     <div className="userIdContainer">
                       <a
                         style={{
                           color: "black",
                         }}
-                        href={postFiltered.links[0]?.official_Site}
+                        href={postFiltered.links[0]?.site}
                       >
                         {" "}
-                        official site
+                        Official site
                       </a>
                     </div>
                   )}
 
-                  {/* description  */}
+                  <div
+                    className="textContainer"
+                    style={{
+                      flexDirection: isMore ? "" : "column",
+                    }}
+                  >
+                    {/* description  */}
+                    <b> {postFiltered.title} : </b>
 
-                  <div className="descriptionContainer">
-                    <p
-                      className="description"
-                      style={{
-                        whiteSpace: isMore ? "nowrap" : "normal",
-                      }}
-                    >
-                      {" "}
-                      <span>
-                        <b> {postFiltered.title} : </b>
-                        {postFiltered.description}
-                      </span>{" "}
-                      <a
-                        href={`https://drive.google.com/uc?export=download&id=${postFiltered.post_Id}`}
-                        className="link"
-                        target="_blank"
-                        download
+                    {!isMore && (
+                      <div
+                        className="descriptionContainer"
+                        style={{
+                          height: isMore ? "41px" : "",
+                        }}
                       >
-                        <Button
-                          btn={{
-                            text: "Download pdf",
-                          }}
-                        />
-                      </a>
-                    </p>{" "}
+                        <div className="description">
+                          {" "}
+                          <span>
+                            {/* {postFiltered.description} */}
+                            {postFiltered.description
+                              .split("$")
+                              .map((slid, i) => {
+                                return (
+                                  <div key={i} className="textSlid">
+                                    {slid}
+                                  </div>
+                                );
+                              })}
+                          </span>{" "}
+                          <a
+                            href={`https://drive.google.com/uc?export=download&id=${postFiltered.post_Id}`}
+                            className="link"
+                            target="_blank"
+                            download
+                          >
+                            <Button
+                              btn={{
+                                text: "Download pdf",
+                              }}
+                            />
+                          </a>
+                        </div>{" "}
+                        {/* important dates.\ */}
+                        {postFiltered.date.length && (
+                          <div className="dateContainer">
+                            {" "}
+                            <span>Important date</span>{" "}
+                          </div>
+                        )}
+                        {postFiltered.date.length &&
+                          postFiltered.date.map((date, i) => {
+                            return (
+                              <div
+                                className="date"
+                                style={{
+                                  backgroundColor:
+                                    i === 1 ? "#f14d4d" : `#02${i}f07`,
+                                }}
+                                key={i}
+                              >
+                                {date}
+                              </div>
+                            );
+                          })}
+                        <br /> <br />
+                        {/* important links  */}
+                        {postFiltered.links.length && (
+                          <div className="linkContainer">
+                            {" "}
+                            <span>Important Link</span>{" "}
+                          </div>
+                        )}
+                        {postFiltered.links.length &&
+                          postFiltered.links.map((link, i) => {
+                            return (
+                              <div key={i}>
+                                <a
+                                  className="links"
+                                  href={link.site}
+                                  style={{
+                                    backgroundColor:
+                                      i === 2
+                                        ? "rgb(185 116 17)"
+                                        : `#31${5 + i}1f${5 + i}`,
+                                  }}
+                                  target="_blank"
+                                >
+                                  {" "}
+                                  {link.text} - click here{" "}
+                                </a>{" "}
+                              </div>
+                            );
+                          })}
+                      </div>
+                    )}
                     <Button
                       btn={{
                         text: isMore ? "more" : "less",
@@ -105,40 +177,6 @@ export default function Post() {
                         onClick: () => setIsMore((prev) => !prev),
                       }}
                     />
-                    {/* important dates.\ */}
-                    {postFiltered.date.length && (
-                      <h4>
-                        Important date <br /> <br />
-                      </h4>
-                    )}
-                    {postFiltered.date.length &&
-                      postFiltered.date.map((date, i) => {
-                        return (
-                          <b key={i}>
-                            {date}, &nbsp; <br />
-                          </b>
-                        );
-                      })}
-                    <br /> <br />
-                    {/* important links  */}
-                    {postFiltered.links.length && (
-                      <h4>
-                        Important links <br /> <br />
-                      </h4>
-                    )}
-                    {postFiltered.links.length &&
-                      postFiltered.links.map((link, i) => {
-                        return (
-                          <b key={i}>
-                            <a href={link.site} target="_blank">
-                              {" "}
-                              {link.text} - click here{" "}
-                            </a>{" "}
-                            <br />
-                            <br />
-                          </b>
-                        );
-                      })}
                   </div>
                 </div>
               </div>
