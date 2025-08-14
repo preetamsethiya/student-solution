@@ -34,6 +34,7 @@
 .homeSearch .componentInput {
   box-shadow: none;
   width: 80%;
+  padding-block: 10px;
 }
 .homeSearchContainer .selectContainer {
   outline: none;
