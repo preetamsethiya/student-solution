@@ -56,6 +56,9 @@
   font-size: 16px;
   font-weight: 600;
 }
+.homeContainer .section2 .cardContainer .nameSection {
+  box-shadow: 0 17px 39px 0px #75f17b inset;
+}
 .homeContainer .cardContainer .innerCard .card {
   border-radius: unset;
   color: #e0d7d7;
@@ -181,6 +184,10 @@
   align-self: flex-end;
   font-weight: 600;
   font-size: 16px;
+  background: #2828ed;
+  color: white;
+  padding: 4px 9px;
+  border-radius: 3px;
 }
 
 .postPage .post .userIdContainer {
@@ -196,6 +203,7 @@
 }
 .postPage .post .description .textSlid {
   margin-bottom: 8px;
+  line-height: 26px;
 }
 
 .postPage .post .descriptionContainer .dateContainer,
@@ -218,6 +226,15 @@
   margin-bottom: 8px;
   margin-inline: 14px;
   border-radius: 8px;
+}
+.postPage .post .descriptionContainer .overView {
+  text-align: center;
+  color: #e8dcdc;
+  padding: 10px;
+  margin-bottom: 8px;
+  margin-inline: 14px;
+  border-radius: 8px;
+  box-shadow: 0 17px 39px 0px #75f17b inset;
 }
 .postPage .post .descriptionContainer .links {
   color: white;

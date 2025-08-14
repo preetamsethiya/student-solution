@@ -64,7 +64,7 @@ export default function Post() {
                     <div className="userIdContainer">
                       <a
                         style={{
-                          color: "black",
+                          color: "#0040ff",
                         }}
                         href={postFiltered.links[0]?.site}
                       >
@@ -117,6 +117,28 @@ export default function Post() {
                             />
                           </a>
                         </div>{" "}
+                        {/* overView  */}
+                        {postFiltered?.overView?.length > 0 && (
+                          <div className="dateContainer">
+                            <span>OverView:</span>
+                          </div>
+                        )}
+                        {postFiltered?.overView?.length > 0 &&
+                          postFiltered?.overView?.map((eachEl, i) => {
+                            return (
+                              <div
+                                className="overView"
+                                style={{
+                                  color: "black",
+                                  // backgroundColor: "white",
+                                  boxShadow: "0 17px 39px 0px #75f17b inset;",
+                                }}
+                                key={i}
+                              >
+                                {eachEl}
+                              </div>
+                            );
+                          })}
                         {/* important dates.\ */}
                         {postFiltered?.date?.length > 0 && (
                           <div className="dateContainer">
@@ -172,7 +194,7 @@ export default function Post() {
                     )}
                     <Button
                       btn={{
-                        text: isMore ? "more" : "less",
+                        text: isMore ? " Read more" : "less",
                         className: "moreBtn",
                         onClick: () => setIsMore((prev) => !prev),
                       }}
