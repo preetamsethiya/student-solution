@@ -118,14 +118,14 @@ export default function Post() {
                           </a>
                         </div>{" "}
                         {/* important dates.\ */}
-                        {postFiltered.date.length && (
+                        {postFiltered?.date?.length > 0 && (
                           <div className="dateContainer">
                             {" "}
                             <span>Important date</span>{" "}
                           </div>
                         )}
-                        {postFiltered.date.length &&
-                          postFiltered.date.map((date, i) => {
+                        {postFiltered?.date?.length > 0 &&
+                          postFiltered?.date?.map((date, i) => {
                             return (
                               <div
                                 className="date"

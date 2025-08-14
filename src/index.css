@@ -50,6 +50,11 @@
 }
 .homeContainer .cardWrapper .card .section1 .title {
   font-size: 18px;
+  font-weight: 600;
+}
+.homeContainer .section2 .cardContainer .card .title {
+  font-size: 16px;
+  font-weight: 600;
 }
 .homeContainer .cardContainer .innerCard .card {
   border-radius: unset;

@@ -17,13 +17,14 @@ export default function Home() {
     profilesPosts = [...profilesPosts, ...profile.posts];
   });
 
-  const updateList = [...updates, ...profilesPosts];
+  const updateList = [...profilesPosts, ...updates];
 
   const clgActive = useContext(VarContext);
 
   const { search_Filter, setSearch_Filter } = useContext(Search_FilterContext);
 
   const filter = UseSearch_Filter();
+  // console.log(updateList);
 
   useEffect(() => {}, [profilesPosts]);
 
@@ -152,6 +153,7 @@ export default function Home() {
                       update.title.toLocaleLowerCase().includes(search_Filter)
                     );
                   })
+                  .reverse()
                   .map((update) => {
                     return (
                       <Link
