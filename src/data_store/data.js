@@ -70,6 +70,10 @@ const profiles = [
             text: "Regular enrollment",
             site: "https://smkvbastar.in/",
           },
+          {
+            text: "  Enrollment, Watch video",
+            site: "https://youtu.be/55GW84vn6TA?si=aunr74aZEh2RCC78",
+          },
         ],
         category: "updates",
         time_Stamp: "12-08-2025",
