@@ -57,9 +57,17 @@ export default function Home() {
             />
           </div>
         </div>
-        {/* {resultArr.map((result) => {
-          return <Link to={`/result/${result.url_Id}`}>click</Link>;
-        })} */}
+        {resultArr.map((result, i) => {
+          console.log(
+            `https://studentsolution.netlify.app/result/${result.url_Id}`
+          );
+          console.log(result.url);
+          // return (
+          //   <Link key={i} to={`/result/${result.url_Id}`}>
+          //     click
+          //   </Link>
+          // );
+        })}
         <Page_Container>
           <div>
             {/* card section 1  */}

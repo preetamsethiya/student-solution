@@ -19,8 +19,8 @@ const cafes = [
 
 export const resultArr = [
   {
-    url_Id: "10th",
-    url: "https://smkvbastar.ac.in/",
+    url_Id: "smkv_results",
+    url: "https://smkvbj.uonex.in/GetResultsexam",
   },
 ];
 
