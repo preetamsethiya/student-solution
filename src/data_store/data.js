@@ -30,10 +30,14 @@ export const resultArr = [
 // const post_sample = {
 //   post_Id: "",
 //   post_Src:
-//     "https://drive.google.com/file/d/129kQQ-Va9MjAzIE7Pd_UhQKbj4e01Hnr/preview",
+//     "https://drive.google.com/file/d//preview",
 //   title: " ",
 //   description: ` `,
 //   date: ["", ""],
+// fees:[],
+// overView:[],
+// eligibility:[],
+// documents:[],
 //   links: [
 //     {
 //       text: "Official site",
@@ -41,7 +45,6 @@ export const resultArr = [
 //     },
 //   ],
 //   category: "updates",
-//   time_Stamp: "12-08-2025",
 // };
 
 const profiles = [
@@ -77,6 +80,54 @@ const profiles = [
         ],
         category: "updates",
         time_Stamp: "12-08-2025",
+      },
+      {
+        post_Id: "14vY6ZiyRpBn8YyBtHtjSIxUfZIBOFzLF",
+        post_Src:
+          "https://drive.google.com/file/d/14vY6ZiyRpBn8YyBtHtjSIxUfZIBOFzLF/preview",
+        title: " Private admission 2025-26, SMKV",
+        description: ` Shahid mahendran karma vishvavidhylaya Bastar se sambadh samast colleges me sanchalit snatak our snatakottar pathyakramo ke pratham semester me svadhyayi vidhyarthiyon ke liye online aavedan sah namankan karne ki prakriya shuru ho chuki hai. $ Svadhyayi vidhyarthiyon ke liye 21 vishayo evam programo ka vikalp rakha gaya hai. $  Svadhyayi vidhyarthiyon ke panjiyan ke liye SMKV university se sambadh 39 colleges ka chayan kiya gaya hai. $ Snatak star ke chhatra chhatraon ko (VAC & GE ) vishay ka chayan karna jaruri hai, jabki snatakottar star ke vidhyarthiyon ke liye jaruri nahin hai. `,
+        date: [
+          "Online start date: 15-08-2025",
+          "Online last date: 30-08-2025",
+          "College me hard copy submit: 18-08 se 02-09-2025 tak  ",
+        ],
+        fees: [
+          "FEES",
+          "Online aavedan: RS. 100/",
+          "Online namankan: RS. 110/",
+          "Satat aantarik mulyankan (snatak): RS. 400/ ",
+          "Satat aantarik mulyankan (snatakottar): RS. 500/ ",
+        ],
+        overView: [],
+        eligibility: [],
+        documents: [
+          "REQUIRED DOCUMENTS",
+          " Mobile number",
+          "Email ID",
+          "Photo & signature",
+          "10th marksheet",
+          "12th marksheet",
+          "pichhali class ka marksheet",
+          "Jati praman patra",
+          "Nivash praman patra",
+          "GAP certificate (yadi laagu ho)",
+        ],
+        links: [
+          {
+            text: "Official site",
+            site: "https://smkvbastar.ac.in/",
+          },
+          {
+            text: "Admission related PDF",
+            site: "https://smkvbastar.ac.in/Admin/Files/Examination/08142025011858_%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%A7%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%AF%E0%A5%80%20%E0%A4%B5%E0%A4%BF%E0%A4%A7%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%A5%E0%A5%80%20%E0%A4%B9%E0%A5%87%E0%A4%A4%E0%A5%81%20(%E0%A4%91%E0%A4%A8%E0%A4%B2%E0%A4%BE%E0%A4%87%E0%A4%A8%20%E0%A4%86%E0%A4%B5%E0%A5%87%E0%A4%A6%E0%A4%A8%20%E0%A4%B8%E0%A4%B9%20%E0%A4%A8%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%82%E0%A4%95%E0%A4%A8%20%E0%A4%B8%E0%A4%82%E0%A4%AC%E0%A4%82%E0%A4%A7%E0%A5%80%20%E0%A4%85%E0%A4%A7%E0%A4%BF%E0%A4%B8%E0%A5%82%E0%A4%9A%E0%A4%A8%E0%A4%BE%20)%2014.08.2025.PDF",
+          },
+          {
+            text: "Watch on YouTube",
+            site: "https://youtu.be/3RFVf97KIyI?si=aenvTmHNOcVT1vhs",
+          },
+        ],
+        category: "updates",
       },
     ],
   },

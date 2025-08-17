@@ -215,7 +215,7 @@
   margin-bottom: 8px;
   font-size: 22px;
   font-weight: 700;
-  margin-top: 8px;
+  margin-top: 28px;
 }
 .postPage .post .descriptionContainer .date,
 .links {
@@ -240,6 +240,25 @@
   color: white;
   text-decoration: none;
   display: block;
+}
+.postPage .post .descriptionContainer .listHeading {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  background: blue;
+  margin-bottom: 16px;
+  margin-top: 40px;
+  padding-block: 10px;
+  color: white;
+}
+.postPage .post .descriptionContainer .lists {
+  text-align: center;
+  background: #2c1c2ad6;
+  border-radius: 8px;
+  margin-inline: 8px;
+  margin-bottom: 8px;
+  padding-block: 10px;
+  color: white;
 }
 
 /* about page 4 */

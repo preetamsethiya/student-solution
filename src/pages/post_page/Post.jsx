@@ -161,7 +161,51 @@ export default function Post() {
                               </div>
                             );
                           })}
-                        <br /> <br />
+                        {/* fees  */}
+                        {postFiltered?.fees?.length > 0 &&
+                          postFiltered?.fees?.map((eachFees, i) => {
+                            return (
+                              <div
+                                key={i}
+                                className={`${
+                                  i <= 0 ? "listHeading" : "lists"
+                                }`}
+                              >
+                                {" "}
+                                {eachFees}{" "}
+                              </div>
+                            );
+                          })}
+                        {/* required docunents  */}
+                        {postFiltered?.documents?.length > 0 &&
+                          postFiltered?.documents?.map((document, i) => {
+                            return (
+                              <div
+                                key={i}
+                                className={`${
+                                  i <= 0 ? "listHeading" : "lists"
+                                }`}
+                              >
+                                {" "}
+                                {document}{" "}
+                              </div>
+                            );
+                          })}
+                        {/* eligibility  */}
+                        {postFiltered?.eligibility?.length > 0 &&
+                          postFiltered?.eligibility?.map((eachEl, i) => {
+                            return (
+                              <div
+                                key={i}
+                                className={`${
+                                  i <= 0 ? "listHeading" : "lists"
+                                }`}
+                              >
+                                {" "}
+                                {eachEl}{" "}
+                              </div>
+                            );
+                          })}
                         {/* important links  */}
                         {postFiltered.links.length && (
                           <div className="linkContainer">
