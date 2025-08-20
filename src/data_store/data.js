@@ -22,6 +22,14 @@ export const resultArr = [
     url_Id: "smkv_results",
     url: "https://smkvbj.uonex.in/GetResultsexam",
   },
+  {
+    url_Id: "cg_10th_result",
+    url: "https://vidia.cgbse.nic.in/result/Chance/Hs25Ch.aspx",
+  },
+  {
+    url_Id: "cg_12th_result",
+    url: "https://vidia.cgbse.nic.in/result/Chance/Hr25Ch.aspx",
+  },
 ];
 
 // profiles  collection
@@ -105,6 +113,8 @@ const profiles = [
           "REQUIRED DOCUMENTS",
           " Mobile number",
           "Email ID",
+          "ABC ID",
+          "Aadhar card",
           "Photo & signature",
           "10th marksheet",
           "12th marksheet",
