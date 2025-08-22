@@ -129,14 +129,6 @@ body {
   display: flex;
   padding: 8px 14px;
 }
-.card .nameSection .cardArrow {
-  color: #2e2c2c;
-  font-size: 18px;
-  font-weight: 100;
-  position: absolute;
-  top: 4px;
-  right: 10px;
-}
 .card .nameSection .title {
   -webkit-line-clamp: 2;
   line-clamp: 2;

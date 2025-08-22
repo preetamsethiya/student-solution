@@ -12,7 +12,6 @@ export default function Card(props) {
         <>
           <div>
             <div className="nameSection section1">
-              <div className="cardArrow">&gt;</div>
               <div>
                 <div className="profileImg"></div>
               </div>

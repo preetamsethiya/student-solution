@@ -371,6 +371,44 @@ $
     ],
     category: "updates",
   },
+  {
+    post_Id: "17sNfpmXyOu7Zb_wPAO2LMD6ck3Znfv3T",
+    post_Src:
+      "https://drive.google.com/file/d/17sNfpmXyOu7Zb_wPAO2LMD6ck3Znfv3T/preview",
+    title:
+      "NSPOTR app problem solved (initialization failed. Please restart application) ",
+    description: `Hi, $
+अगर आपको भी NSP OTR ऐप में "initialization failed. Please restart application" वाली ऐरर देखने को मिल रही है, तो  आप बिल्कुल सही जगह पर आए हैं । $
+दरअसल इस प्रकार के  ऐरर  का  कारण है आपका मोबाइल फोन क्योंकि "NSPOTR " ऐप किसी भी 4G mobile phone या 4G SIM वाले मोबाइल फोन में कम नहीं करता है । NSPOTR ऐप 5G mobile or 5G SIM के साथ ही काम करता है । $
+ अगर आपके फोन में NSPOTR का ऐप काम नहीं कर रहा है तो आप किसी 5G mobile phone यूज़र के मोबाइल में NSPOTR का ऐप डाउनलोड करके अपना OTR नंबर जनरेट कर सकते हैं । $
+
+( यह जानकारी सिर्फ उन लोगों के   लिए हैं जिनके मोबाइल में NSPOTR का ऐप काम नहीं कर रहा है। हो सकता है आपका mobile 4G हो लेकिन एंड्रॉयड वर्जन 10 से उपर हो ऐसी स्थिति में ऐप आपके फोन में काम कर सकता है, क्यूंकि एंड्रॉयड वर्जन 10 से नीचे वाले मोबाइल्स में NSPOTR का ऐप काम नहीं करता।)$
+ `,
+    date: [],
+    links: [
+      {
+        text: "Official site",
+        site: "https://scholarships.gov.in/Students",
+      },
+      {
+        text: "Apply for OTR ",
+        site: "https://scholarships.gov.in/otrapplication/#/login-page",
+      },
+      {
+        text: "NSP OTR APP",
+        site: "https://play.google.com/store/apps/details?id=in.gov.scholarships.nspotr",
+      },
+      {
+        text: "Face RD app ",
+        site: "https://play.google.com/store/apps/details?id=in.gov.uidai.facerd",
+      },
+      {
+        text: "Watch video on youtube ",
+        site: "https://youtu.be/AIRDXMHAYO8?si=0bLtV20YVVjkYVZS",
+      },
+    ],
+    category: "updates",
+  },
 ];
 
 export { cafes, profiles, updates };
