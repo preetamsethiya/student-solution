@@ -4,6 +4,7 @@ import Card from "../../components/card/Card";
 import { profiles, updates } from "../../data_store/data";
 import Button, { Button2 } from "../../components/button/Button";
 import { Link, useParams } from "react-router";
+import AdsComponent from "../../components/google_ad/AdsComponent";
 
 export default function Post() {
   let profilesPosts = [];
@@ -48,6 +49,7 @@ export default function Post() {
         <Page_Container>
           <div>
             <div>
+              <AdsComponent dataAdSlot="1488759680" />
               <article>
                 <div className="post">
                   {/* mediaContainer  */}
@@ -117,6 +119,7 @@ export default function Post() {
                                 }}
                               />
                             </a>
+                            <AdsComponent dataAdSlot="1488759680" />
                           </div>{" "}
                           {/* overView  */}
                           {postFiltered?.overView?.length > 0 && (
