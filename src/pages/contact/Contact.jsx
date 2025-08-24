@@ -40,12 +40,41 @@ export default function Contact() {
                     />
                   </div>
                 </div> */}
-                  <div className=" submit">
+                  {/* <div className=" submit">
                     {" "}
                     <a className=" btn submit-btn width-full"> SUBMIT </a>
-                  </div>
+                  </div> */}
                 </div>
               </form>
+              <div>
+                <h3>Contact Us</h3> <br />
+                We're here to help you on your educational and career journey!
+                Whether you have a question, a suggestion, or just want to say
+                hello, we'd love to hear from you. Please choose the best way to
+                get in touch with us. General Inquiries For general questions
+                about our website, content, or mission, please feel free to send
+                us an email. We'll do our best to get back to you as soon as
+                possible. Email:{" "}
+                <a href="mailto: iticomputer2023@gmail.com">
+                  {" "}
+                  iticomputer2023@gmail.com
+                </a>{" "}
+                Job & Career Support If you have a question about a specific job
+                listing, need help with your resume, or want career advice, our
+                team of experts is ready to assist. Please use the following
+                email address to reach our career support team. Email:
+                iticomputer2023@gmail.com Partnership & Advertising Interested
+                in partnering with us or advertising on our platform? We're
+                always looking for new ways to expand our offerings and connect
+                with our audience. Please contact our business development team.
+                Email: iticomputer2023@gmail.com Social Media Connect with us on
+                our social media channels to stay up-to-date with our latest
+                articles, job listings, and career tips.Facebook:
+                https://Facebook.com Twitter: https://x.com LinkedIn:
+                https://linkedin.com/in/preetamkumar-sethiya
+                https://studentsolution.netlify.app/ We look forward to hearing
+                from you!
+              </div>
             </div>
             <div className="contact-container text-center ">
               <div className="bottom" />
@@ -76,7 +105,7 @@ export default function Contact() {
                       PHONE (LANDLINE)
                     </div>
                     <div>
-                      7974755379 <br /> 849949389
+                      7974755379 <br />
                     </div>
                   </div>
                 </div>
@@ -87,12 +116,9 @@ export default function Contact() {
                   </div>
                   <div className="club-info">
                     <div className="contact-tittle margin-y font-2">
-                      OUR OFFICE LOCATION{" "}
+                      OUR LOCATION{" "}
                     </div>
-                    <div>
-                      The interior design company <br /> The courtyard, AI Quzd
-                      1, Colorado, USA
-                    </div>
+                    <div>Kondagaon</div>
                   </div>
                 </div>
               </div>

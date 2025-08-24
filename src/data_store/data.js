@@ -65,6 +65,25 @@ const profiles = [
     category: "university",
     posts: [
       {
+        post_Id: "19J27ltIr97oTHtc-Et4JQpQ54ObFr4Qw",
+        post_Src:
+          "https://drive.google.com/file/d/19J27ltIr97oTHtc-Et4JQpQ54ObFr4Qw/preview",
+        title: "Handicrafts and art fair (Bastar meri nazar se) ",
+        description: ` SMKV Incubation and Start-up Foundation evam kala archana art studio ke dwara dinank 28 se 30 august 2025 tak hastashilp evam kala mela 'Bastar meri nazar se' tatha udhyami sammailan ka aayojan kiya jana hai. Is sammelan ka uddeshya chhatro ko udhyamita ke kshetra me prerit karna evam safal udhyami ke anubhavo se avagat karana hai. Is sammelan me chhatra vibhinna kshetron ke uddhyamiyon se milkar apane vichar sajha kar sakenge evam uddhyamita se sambandhit vibhinna mahatvapurna jankari prapt kar sakenge. $ Is karyakram me uddhyamita ke kshetra me ruchi rakhne wale vishvavidhyalaya/ mahavidhylaya me adhyayanrat / purva chhatra-chhtraon evam shikshako ko amantrit kiya gaya hai. $ Hastashilp evam kala mela "Bastar meri nazar se" ka udghatan samaroh 28 august 2025, guruvaar se hai. $ pratham divas, 28 august 2025 udghatan samaroh sayam 5 baje se kala pradarshni evam DIY/ hastashilp evam kala mela. $ Dvitiya divas 29 august 2025, antarvidhyalayin chitrakala pratiyogita, dopahar 2:30 baje: kala archana art studio dwara "art mart" ka subharambh (SMKV-ISF ke antargat incubaty). $ Tritiya divas, 30 august 2025, udhyami sammelan , pratah 11 baje se: - 'Bastar me start-up ke avasar evam chunotiyan' $ sayam 5 baje se: open mic karyakram evam puraskar vitaran samaroh. `,
+        date: ["", ""],
+        fees: [],
+        overView: [],
+        eligibility: [],
+        documents: [],
+        links: [
+          {
+            text: "Official site",
+            site: "https://smkvbastar.ac.in/",
+          },
+        ],
+        category: "updates",
+      },
+      {
         post_Id: "133sm1ADozxrr_hq-pfZj4qg73Fk8g6xg",
         post_Src:
           "https://drive.google.com/file/d/1716mXXwsXnx_UEtdzmhYGXtWVjsn3R4R/preview",
@@ -175,7 +194,7 @@ const profiles = [
 // const post_sample_02 = {
 //   post_Id: "",
 //   post_Src:
-//     "https://drive.google.com/file/d/129kQQ-Va9MjAzIE7Pd_UhQKbj4e01Hnr/preview",
+//     "https://drive.google.com/file/d//preview",
 //   title: " ",
 //   description: ` `,
 //   date: ["", ""],
@@ -190,22 +209,134 @@ const profiles = [
 
 const updates = [
   {
+    post_Id: "18iHnH9UUiUi10t24pduCXjvx5X_beuKC",
+    post_Src:
+      "https://drive.google.com/file/d/18iHnH9UUiUi10t24pduCXjvx5X_beuKC/preview",
+    title: " How to  apply for domicile certificate using edistrict portal? ",
+    description: `Aapko google par search karna hai "cg lsk" udke baad cgedistrict wale page par click karein. Aapko portal ke home page ke log in section par 4 option dikhenge, aapko simply nagrik wale option par click karna hai. $ Fir aapke samne log in form khul kar aa jayega, aap langauge select kar user id and password enter karke  registered mobile number par  prapt OTP ko submit karke log in karen. $ log in karne ke baad atirikt nagrik panjikaran ka option aayega aapko "home" ke button par click karna hai. $ fir aap portal ke home page par aajayenge, fir aapko "sabhi savayein dekhen" wale option par click karen aur niche ki taraf scroll karke 6 number ke page me 51ven number par nivas praman patra ke option ko choose karen. $ Fir aavashyak dastavej se related page open hoga vha se aage ke button par click karna hai. Uske baad aavedak ki buniyadi jankari se related form khul kar aa jayega, jaruri jankari bhar kar jama karen par click karna hai. $ Uske baad hitgrahi ki jankari bharne ka form khul kar aa jayega jankari bharne ke baad sageje or purvavlokan ke button par click karen. Uske baad anulagn ka vivaran yani document upload karne ke liye page open ho jayega, jin documents ke naam ke aage * ka nishan laga rhega un documents ko bharna anivarya hai aur # nishan wale kam se kam ek document upload karna anivarya hai aapko total 21 documents upload karne ka vikalpa diya rhega . $ Document upload karne ke baad anulagn saheje ke button par click karna hai. Fir nivas
+     praman patra ka purvavlokan khul kar aajayega. $ Uske baad aavedan jama kare wale option par tik laga kar jama karen. Fri aapke aavedan ka pavati generate ho kar aajayega. Pavti ka print out nikalne ke liye chhape ke button par click karen  `,
+    date: ["", ""],
+    links: [
+      {
+        text: "Official site",
+        site: "https://cgedistrict.cgstate.gov.in/workflow/trackAppStatus.html",
+      },
+      {
+        text: "Watch on youtube",
+        site: "https://youtu.be/YFjv2c6qWbo?si=qJCKL2PM_lis4j7d",
+      },
+    ],
+    category: "updates",
+  },
+  {
+    post_Id: "18kQTMlYeWlogY5NLUYXP7Os65ML-ZBbJ",
+    post_Src:
+      "https://drive.google.com/file/d/18kQTMlYeWlogY5NLUYXP7Os65ML-ZBbJ/preview",
+    title: "How to  apply for income certificate using edistrict portal? ",
+    description: `Aapko google par search karna hai "cg lsk" udke baad cgedistrict wale page par click karein. Aapko portal ke home page ke log in section par 4 option dikhenge, aapko simply nagrik wale option par click karna hai. $ Fir aapke samne log in form khul kar aa jayega, aap langauge select kar user id and password enter karke  registered mobile number par  prapt OTP ko submit karke log in karen. $ log in karne ke baad atirikt nagrik panjikaran ka option aayega aapko "home" ke button par click karna hai. $ fir aap portal ke home page par aajayenge, fir aapko "sabhi savayein dekhen" wale option par click karen aur niche ki taraf scroll karke 5 number ke page me 50ven number par aay praman patra ke option ko choose karen. $ Fir aavashyak dastavej se related page open hoga vha se aage ke button par click karna hai. Uske baad aavedak ki buniyadi jankari se related form khul kar aa jayega, jaruri jankari bhar kar jama karen par click karna hai. $ Uske baad hitgrahi ki jankari bharne ka form khul kar aa jayega jankari bharne ke baad sageje or purvavlokan ke button par click karen. Uske baad anulagn ka vivaran yani document upload karne ke liye page open ho jayega, jin documents ke naam ke aage * ka nishan laga rhega un documents ko bharna anivarya hai aur # nishan wale kam se kam ek document upload karna anivarya hai. $ Document upload karne ke baad anulagn saheje ke button par click karna hai. Fir aay praman patra ka purvavlokan khul kar aajayega. $ Uske baad aavedan jama kare wale option par tik laga kar jama karen. Fri aapke aavedan ka pavati generate ho kar aajayega. Pavti ka print out nikalne ke liye chhape ke button par click karen  `,
+    date: ["", ""],
+    links: [
+      {
+        text: "Official site",
+        site: "https://cgedistrict.cgstate.gov.in/workflow/trackAppStatus.html",
+      },
+      {
+        text: " Watch on youtube",
+        site: "https://youtu.be/Nnb9-S9wF3A?si=ct3lfcJhTKHIA2OD",
+      },
+    ],
+    category: "updates",
+  },
+  {
+    post_Id: "18i9AGG1h5HCmPseeGsdMqLSt37c82Yph",
+    post_Src:
+      "https://drive.google.com/file/d/18i9AGG1h5HCmPseeGsdMqLSt37c82Yph/preview",
+    title: " How to create  e-distric citizen ID?  ",
+    description: ` Nagarik ID create karne ke liye aapko google par "cg lsk" search karna hai uske baad cgedistrict wale link pe click karein. Home page par aapko 4 option dekhne ko milega (1) lok seva kendra, (2) Department, (3) nagrik, (4) admin $ to aap ghar se hi aay praman patra, jati praman patra, nivas praman patra banana jahte hain to simpli nagril ke option pe click karein. $ Uske baad ek naya page khul kar aayega jisme language select karne aur user id and password bharne ka option rhega, aapke pass koi user id aur password nhi hai to aap "new registration" wale option par click karein. $ Uske baad nagrik panjikaran ka form khul kar aa jayega. Form me aap upyogkarta naam, pura naam, jila, gopaniya prashna, gopaniya prashna ka uttar, mobile number enter karein email id aur pate jaruri nahi isliye aap email id aur pata ko khali chhod sakte hain aur agresit karein par click karein. $ Fir aapka registration summary open ho kar aa jayega jise aap print karke ya screenshort le kar rakh sakte hain aur password registered mobile number par bhej diya jayega.  `,
+    date: ["", ""],
+    links: [
+      {
+        text: "Official site",
+        site: "https://cgedistrict.cgstate.gov.in/workflow/trackAppStatus.html",
+      },
+      {
+        text: " Watch on youtube",
+        site: "https://youtu.be/DM2l4vOXE24?si=-pIxVc2H4DX850CK",
+      },
+    ],
+    category: "updates",
+  },
+  {
+    post_Id: "190xK-yFF4o_DcSQWYYJ6yNEhbgNlsVHk",
+    post_Src:
+      "https://drive.google.com/file/d/190xK-yFF4o_DcSQWYYJ6yNEhbgNlsVHk/preview",
+    title: " National scholarship for who scored 80+ parcentage in 12th ",
+    description: `* 📌नेशनल स्कॉलरशिप(छात्रवृत्ति) का ऑनलाइन आवेदन हेतु सूचना/पोस्ट मैट्रिक छात्रवृत्ति पोर्टल, छत्तीसगढ़ | आदिम जाति तथा ...
+📢 * $
+                                                   
+इस वर्ष 2025 मे 12 वी पढ़ के निकले सभी मानविकी, विज्ञान और वाणिज्य विषय वाले छात्र जिनका प्रतिशत/मार्क्स 80% या उससे उपर है वे सभी इस SCHOLARSHIP के लिए आवेदन कर सकते है। इसमें केवल नियमित अध्यनरत छात्रों को कॉलेज के 3 साल 12000₹ प्रत्येक वर्ष मिलता है
+केन्द्रीय क्षेत्रीय छात्रवृत्ति योजना
+👉🏻जो विद्यार्थी पूर्व में भरे थे उनका नवीनीकरण का भी ऑनलाईन प्रारम्भ हो गया है। नवीनीकरण हेतु पिछले वर्ष का पुराना यूजर आईडी-पासवर्ड लगेगा ।
+👉🏻नोट- छात्र केवल राज्य या केन्द्रीय छात्रवृत्ति दोनों में से केवल एक ही छात्रवृत्ति के लिए पात्र होगा। दोनों भरने से उनके छात्रवृत्ति फॉर्म निरस्त हो सकते हैं। $
+👉🏻शर्ते - 1. छात्र का नाम अंकसुची में और आधार में नाम और स्पेलिंग एक सामान होना चाहिए। $
+2. बैंक में और आधार में मो.नं. लिंक और आधार सीडिंग होना चाहिए। $
+3. 18 वर्ष की आयु पूर्ण होनी चाहिए। $
+👉🏻छात्र अधिक जानकारी के लिए हेल्पलाईन नं. 0120-6619540 पर संपर्क कर सकते है।* $
+आवश्यक दस्तावेज - $
+1. आय प्रमाण पत्र (ओरिजिनल)$
+2. जाति प्रमाण पत्र$
+3. निवास प्रमाण पत्र$
+4. 10वी, 12वी अंकसूची$
+5. अंतिम कक्षा की अंकसूची$
+6. आधार कार्ड$
+7. पासपोर्ट फ़ोटो-1$
+8. कॉलेज प्रवेश की रशीद$
+9. OTR$
+10. मोबाइल नं. व ईमेल id$
+11. बैंक पासबुक `,
+    date: [],
+    links: [
+      {
+        text: "Official site",
+        site: "https://scholarships.gov.in/Students",
+      },
+    ],
+    category: "scholarship",
+  },
+  {
+    post_Id: "18JOi2G3GoUC_5G--MgAJe__eG5ivAsmR",
+    post_Src:
+      "https://drive.google.com/file/d/18JOi2G3GoUC_5G--MgAJe__eG5ivAsmR/preview",
+    title: "How to check aadhar seeded bank account? ",
+    description: ` Aadhar seeding $ Aadhar seeding vah prakriya hai jiske madhyam se bank dwara NPCI mapper par aadhar number map kiya jata hai. Bank dwara sansadhit  aadhar seeding ke safal samapan ke baad hi subsidy ko aadhar payment print ke madhyam se account me jama kiya jata hai. $ Aadhar linkkinh or aadhar seeding me antar. $  Aadhar linking vah prakriya hai jisme bank pate aur pahachan ke praman ke rup mein apne core banking me saving account ke sath aadhar number ko link karte hain. Jabki aadhar seeding me bank NPCI maper me apne core banking system ke sath aadhar number ko bhi map karte hain. $ Kya multiple accounts ko NPCI  mapper ke sath map kar sakte hain ? $ Nhi, ek samay par  aap sirf ek bank account ko NPCI  mapper ke sath map kar sakte hain. $ Aadhar seeding ke liye anurodh kaise karen? $ Aap bank me vyaktigat rup se ja kar consent form bhar kar aadhar seeding request submit kar sakte hain ya jo bank online banking ke madhyam se yah suvidha upalbdh karate hain un  banks ke online banking website me ja kar aadhar seeding  anurodh kar sakte hain. $ Kaise pata lagaye ki koi bank account pahle se hi seeded hai ya nhi. $ Aap www.uidai.gov.in website par ja kar prefered language choose karen aur "my aadhar" tab me jayein fir "aadhar service menu" me jayein aur "bank seeding status" option ko select karein.  Aadhar number aur captcha code enter karne ke baad mobile par prapt OTP submit karke aap apna aadhar seeded bank account check kar sakte hain.  `,
+    date: [],
+    links: [
+      {
+        text: "Official site",
+        site: "https://uidai.gov.in/",
+      },
+      {
+        text: "Watch on youtube",
+        site: "https://youtu.be/gjPkUF23UTg?si=7iSNJzYKYnn48ygZ",
+      },
+    ],
+    category: "updates",
+  },
+  {
     post_Id: "11plHr2m3PN52NtIUzYaaLFuxsoJBYkfp",
     post_Src:
-      "https://drive.google.com/file/d/11plHr2m3PN52NtIUzYaaLFuxsoJBYkfp/preview",
+      "https://drive.google.com/file/d/19TQWIKOwXkFWiUU0vXrT_pbNFKvnYMK2/preview",
     download_Link:
       "https://drive.google.com/file/d/1cUSqQVfPYYX6tUUlXbRScXVn-7EggzgB/view?usp=sharing",
     title: "CG police online form 2025 (PHQC25) ",
     description: `छत्तीसगढ़ पुलिस भर्ती 2024 के  फिजिकल टेस्ट का रिजल्ट जारी हो चुका है । जिन उम्मीदवारों ने फिजिकल टेस्ट दिया था, उनमें से चयनित अभ्यर्थियों की सूची आधिकारिक वेबसाइट पर अपलोड की गई है। ये उम्मीदवार अब लिखित परीक्षा के लिए पात्र माने जाएंगे। $ छत्तीसगढ़ पुलिस फिजिकल रिजल्ट 2025 के बाद अब लिखित परीक्षा के लिए छत्तीसगढ़ पुलिस ऑनलाइन फॉर्म 2025 भरने की प्रक्रिया शुरू हो चुकी है `,
     overView: [
-      {
-        name: "भर्ती का नाम - छत्तीसगढ़ पुलिस कांस्टेबल भर्ती 2023 ",
-        department: " विभाग - छत्तीसगढ़ पुलिस विभाग ",
-        post_name: "पद का नाम - कांस्टेबल जीडी , वाहन चालक, ट्रेड्समैन ",
-        vacancy: " कुल रिक्तियां - 5967 पद",
-        notification: "अधिसूचना जारी होने की तिथि - 20 अक्टूबर 2023 ",
-        application_Type: "आवदेन प्रक्रिया - ऑनलाइन",
-      },
+      "भर्ती का नाम - छत्तीसगढ़ पुलिस कांस्टेबल भर्ती 2023 ",
+      " विभाग - छत्तीसगढ़ पुलिस विभाग ",
+      "पद का नाम - कांस्टेबल जीडी , वाहन चालक, ट्रेड्समैन ",
+      " कुल रिक्तियां - 5967 पद",
+      "अधिसूचना जारी होने की तिथि - 20 अक्टूबर 2023 ",
+      "आवदेन प्रक्रिया - ऑनलाइन",
     ],
 
     date: [
@@ -228,6 +359,10 @@ const updates = [
       {
         text: "Syllabus",
         site: "https://vyapamcg.cgstate.gov.in/uploads/pdfs/50a0e834-7dbe-45cf-996c-11a477eb3386.pdf",
+      },
+      {
+        text: "Form fill up instruction",
+        site: "https://vyapamcg.cgstate.gov.in/uploads/pdfs/9888164e-6e23-4b77-8d56-aa9b42cfe795.pdf",
       },
     ],
 
@@ -327,7 +462,7 @@ Year 2025- 26 में अनुसूचित जाति, अनुसू�
   {
     post_Id: "13b6CMpbFWlOTOiDR2cxcZVjZ3i9zPRG6",
     post_Src:
-      "https://drive.google.com/file/d/13b6CMpbFWlOTOiDR2cxcZVjZ3i9zPRG6/preview",
+      "https://drive.google.com/file/d/19JzIjUSr0Ur6ZnB_1v8HzIlcMpETQWWv/preview",
     title: " CG Staff nursing vacancy 2025 ",
     description: `CG vyapam ने स्वास्थ्य सेवाएं विभाग के अंतर्गत स्टाफ नर्स के 225 पदों के लिए HSSN 25 भर्ती परीक्षा 2025 का आधिकारिक नोटिफिकेशन जारी कर दिया है। यह भर्ती छत्तीसगढ़ के विभिन्न जिलों में कार्यरत हॉस्पिटल्स और स्वास्थ्य संस्थानों में स्टाफ नर्स पदों पर नियुक्ति के लिए आयोजित की जाएगी। 
 $
@@ -367,6 +502,10 @@ $
       {
         text: "Syllabus ",
         site: "https://vyapamcg.cgstate.gov.in/uploads/pdfs/985e0d9b-1c58-4c35-9f9f-6dfc9c93bb70.pdf",
+      },
+      {
+        text: "Form fill up instruction PDF ",
+        site: "https://vyapamcg.cgstate.gov.in/uploads/pdfs/84fe0d36-827b-4766-b867-54bd5089637c.pdf",
       },
     ],
     category: "updates",

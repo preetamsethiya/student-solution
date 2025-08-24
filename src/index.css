@@ -304,6 +304,9 @@
   align-items: center;
   justify-content: center;
 }
+.media-container a {
+  text-decoration: none;
+}
 
 .media {
   width: 55px;
@@ -426,6 +429,7 @@
   );
   color: transparent;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 

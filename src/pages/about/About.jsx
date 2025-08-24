@@ -8,11 +8,41 @@ export default function About() {
         <Page_Container>
           <div className="info-container flex justify-between flex-column">
             <div>
-              <h1>Bethany Jones</h1>
+              <h1>About Us</h1>
               <div className="para">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime{" "}
-                <br />
-                cum possimus accusamus quaerat est illo ab eius praesentium ad?
+                Welcome to "studentsolution" ! We are a dedicated platform
+                designed to be your go-to resource for navigating the worlds of
+                education and career development. We understand that choosing a
+                path for your future can be both exciting and challenging, and
+                our goal is to provide you with the information and tools you
+                need to make informed decisions. Our Mission Our mission is
+                simple: to empower individuals by providing comprehensive,
+                reliable, and accessible information. We believe that everyone
+                deserves the opportunity to build a successful future, and that
+                starts with having the right resources at your fingertips. We
+                are committed to bridging the gap between aspiring students and
+                professionals and the opportunities that await them. What We
+                Offer Educational Resources: Whether you're a high school
+                student exploring college options, a graduate seeking advanced
+                degrees, or an adult learner looking to upskill, our platform
+                offers a wealth of information. You'll find articles on various
+                academic fields, tips for college applications, scholarship
+                guides, and insights into different educational systems. Career
+                Guidance: The job market is constantly evolving, and we're here
+                to help you keep up. We provide expert advice on resume writing,
+                interview preparation, and professional networking. Our
+                resources include career path guides, salary insights, and tips
+                for personal and professional growth. Job Listings: We partner
+                with various companies and organizations to bring you a curated
+                list of job openings. Our job board is regularly updated with
+                opportunities across different industries, from entry-level
+                positions to senior roles. Our Team Our team is made up to
+                helping you succeed. We work tirelessly to research, verify, and
+                present the most relevant and useful information. We're driven
+                by the belief that knowledge is the key to unlocking your full
+                potential. Thank you for being a part of our community. We're
+                excited to be a part of your journey toward a brighter future.
+                "studentsolution" Your path to a successful future starts here.
               </div>
             </div>
           </div>
@@ -24,24 +54,33 @@ export default function About() {
         </div> */}
           <div className="about-link-container">
             <div className="media-container">
-              <div className="media insta">
-                <div className="insta1">
-                  <div className="insta2">
-                    <div className="insta3">
-                      <div className="insta4" />
+              <a href="https://www.instagram.com/" target="_blank">
+                <div className="media insta">
+                  <div className="insta1">
+                    <div className="insta2">
+                      <div className="insta3">
+                        <div className="insta4" />
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
 
-              <div className="media linked-in">
-                {" "}
-                <div className="in">in</div>
-              </div>
-              <div className="media x">
-                {" "}
-                <div className="x">X</div>
-              </div>
+              <a
+                href="https://linkedin.com/in/preetamkumar-sethiya"
+                target="_blank"
+              >
+                <div className="media linked-in">
+                  {" "}
+                  <div className="in">in</div>
+                </div>
+              </a>
+              <a href="https://x.com/" target="_blank">
+                <div className="media x">
+                  {" "}
+                  <div className="x">X</div>
+                </div>
+              </a>
             </div>
           </div>
         </Page_Container>
