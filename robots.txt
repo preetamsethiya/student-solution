@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://studentsolution.netlify.app/sitemap.xml

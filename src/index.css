@@ -168,6 +168,11 @@
 
 /* post page 3 */
 
+.postPage {
+  display: flex;
+  margin-top: 50px;
+}
+
 .postPage .wrapper {
   margin-top: 15px;
 }

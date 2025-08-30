@@ -5,6 +5,7 @@ import { profiles, updates } from "../../data_store/data";
 import Button, { Button2 } from "../../components/button/Button";
 import { Link, useParams } from "react-router";
 import AdsComponent from "../../components/google_ad/AdsComponent";
+import SeoTags from "../../components/seo_tags/SeoTags";
 
 export default function Post() {
   let profilesPosts = [];
@@ -42,9 +43,9 @@ export default function Post() {
 
   return (
     <div className="postPage">
-      <div>
+      {/* <div>
         <Button2 />
-      </div>
+      </div> */}
       <main>
         <Page_Container>
           <div>
@@ -55,6 +56,11 @@ export default function Post() {
                   {/* mediaContainer  */}
 
                   <div className="mediaContainer">
+                    <SeoTags
+                      title={postFiltered.title}
+                      description={postFiltered.description}
+                      url={window.location.href}
+                    />
                     <iframe
                       src={postFiltered.post_Src}
                       width="100%"
