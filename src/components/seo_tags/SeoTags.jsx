@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../../assets/react.svg";
+// import img from "../../assets/react.svg";
 // console.log(img);
 export default function SeoTags(props) {
   //   console.log(props);
@@ -9,7 +9,10 @@ export default function SeoTags(props) {
       <meta name="description" content={props?.description} />
       <meta property="og:title" content={props?.title} />
       <meta property="og:description" content={props?.description} />
-      <meta property="og:image" content={img} />
+      <meta
+        property="og:image"
+        content="https://studentsolution.netlify.app/vite.svg"
+      />
 
       <meta property="og:url" content={props.url} />
       <meta property="og:type" content="website" />
