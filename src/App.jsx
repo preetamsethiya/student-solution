@@ -23,9 +23,9 @@ function App() {
     <>
       <div>
         <div>
-          {/* <div className="homeHeader">
+          <div className="homeHeader">
             <Header />
-          </div> */}
+          </div>
           <Outlet />
           <Footer />
         </div>

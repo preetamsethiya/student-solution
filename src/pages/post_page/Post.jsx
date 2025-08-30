@@ -21,7 +21,7 @@ export default function Post() {
     return update.post_Id === param.id;
   });
 
-  const [isMore, setIsMore] = useState(true);
+  const [isMore, setIsMore] = useState(false);
 
   console.log(postFiltered?.links[0]);
 
@@ -49,7 +49,7 @@ export default function Post() {
         <Page_Container>
           <div>
             <div>
-              <AdsComponent dataAdSlot="1488759680" />
+              {/* <AdsComponent dataAdSlot="1488759680" /> */}
               <article>
                 <div className="post">
                   {/* mediaContainer  */}
@@ -119,7 +119,7 @@ export default function Post() {
                                 }}
                               />
                             </a>
-                            <AdsComponent dataAdSlot="1488759680" />
+                            {/* <AdsComponent dataAdSlot="1488759680" /> */}
                           </div>{" "}
                           {/* overView  */}
                           {postFiltered?.overView?.length > 0 && (

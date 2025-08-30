@@ -104,7 +104,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <AdsComponent dataAdSlot="7424430887" />
+          {/* <AdsComponent dataAdSlot="7424430887" /> */}
 
           {/* card section 2 */}
 
@@ -179,7 +179,7 @@ export default function Home() {
                   })}
               </div>
             )}
-            <AdsComponent dataAdSlot="7424430887" />
+            {/* <AdsComponent dataAdSlot="7424430887" /> */}
           </div>
         </Page_Container>
       </main>

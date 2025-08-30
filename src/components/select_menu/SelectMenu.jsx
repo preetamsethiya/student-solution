@@ -1,10 +1,12 @@
 import React from "react";
 
 export default function SelectMenu(props) {
-  return  <>
+  return (
+    <>
       <select
         onChange={props.selectMenu.onChange}
         className="selectContainer"
+        name="selectMenu"
       >
         <option value="" hidden>
           {" "}
@@ -15,4 +17,5 @@ export default function SelectMenu(props) {
         <option value="enterance">Enterance</option>
       </select>
     </>
+  );
 }
