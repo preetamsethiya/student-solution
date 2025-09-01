@@ -9,8 +9,8 @@ export default function SeoTags(props) {
       {/* <link rel="canonical" href={props?.url}></link> */}
       {/* <meta property="og:locale" content="en_US" /> */}
       {/* <meta property="og:site_name" content="studentsolution.netlify.app" /> */}
-      <meta name="description" content={props?.description} />
-      <meta property="og:title" content={props?.title} />
+      {/* <meta name="description" content={props?.description} />
+      <meta property="og:title" content={props?.title} /> */}
       {/* <meta property="article:tag" content={props?.title} /> */}
       {/* <meta property="article:tag" content={props?.title}/>
 <meta property="article:tag" content="RRB Section Controller Apply Online"/>
@@ -27,11 +27,11 @@ export default function SeoTags(props) {
       ></meta> */}
       {/* <meta property="og:image:alt" content={props?.title}></meta> */}
       {/* <meta property="og:image:type" content="image/png"></meta> */}
-      <meta property="og:description" content={props?.description} />
+      {/* <meta property="og:description" content={props?.description} />
 
       <meta property="og:url" content={props?.url} />
       <meta property="og:type" content="website" />
-      <title>{props?.title}</title>
+      <title>{props?.title}</title> */}
 
       {/* बाकी पेज कंटेंट */}
 
