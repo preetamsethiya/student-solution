@@ -13,7 +13,6 @@ import { Outlet, Route, Routes } from "react-router";
 import Profile from "./pages/profile_page/Profile";
 import ReactGA from "react-ga4";
 import Page_Container from "./components/page_container/Page_Container";
-import SeoTags from "./components/seo_tags/SeoTags";
 
 function App() {
   const TRACKING_ID = "G-3CZ1S9KW80";
@@ -22,11 +21,6 @@ function App() {
   // warning: in the working copy of 'src/App.jsx', LF will be replaced by CRLF the next time Git touches it
   return (
     <>
-      <SeoTags
-        title={"app"}
-        description={"app description"}
-        url={window.location.href}
-      />
       <div>
         <div>
           <div className="homeHeader">

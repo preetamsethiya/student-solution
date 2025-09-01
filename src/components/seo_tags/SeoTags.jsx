@@ -18,16 +18,16 @@ export default function SeoTags(props) {
 <meta property="article:tag" content="RRB Section Controller Notification 2025"/>
 <meta property="article:tag" content="RRB Section Controller Recruitment 2025"/> */}
       {/* <meta property="article:section" content="home"></meta> */}
-      <meta
+      {/* <meta
         property="og:image"
         content={`https://studentsolution.netlify.app${img}`}
-      ></meta>
+      ></meta> */}
       {/* <meta
         property="og:image:secure_url"
         content={`https://studentsolution.netlify.app${img}`}
       ></meta> */}
-      <meta property="og:image:alt" content={props?.title}></meta>
-      <meta property="og:image:type" content="image/png"></meta>
+      {/* <meta property="og:image:alt" content={props?.title}></meta> */}
+      {/* <meta property="og:image:type" content="image/png"></meta> */}
       <meta property="og:description" content={props?.description} />
 
       <meta property="og:url" content={props?.url} />
