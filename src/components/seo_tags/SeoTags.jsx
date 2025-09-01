@@ -6,7 +6,6 @@ export default function SeoTags(props) {
   //   console.log(props);
   return (
     <>
-      <title>{props?.title}</title>
       {/* <link rel="canonical" href={props?.url}></link> */}
       {/* <meta property="og:locale" content="en_US" /> */}
       {/* <meta property="og:site_name" content="studentsolution.netlify.app" /> */}
@@ -32,6 +31,7 @@ export default function SeoTags(props) {
 
       <meta property="og:url" content={props?.url} />
       <meta property="og:type" content="website" />
+      <title>{props?.title}</title>
 
       {/* बाकी पेज कंटेंट */}
 
