@@ -21,6 +21,8 @@ createRoot(document.getElementById("root")).render(
       <VarProvider>
         <Routes>
           <Route path="/" element={<App />}>
+            {" "}
+            {/* </Route> */}
             <Route path="" element={<Home />} />
             <Route path="/:profile" element={<Profile />} />
             <Route path="/:profile/:id" element={<Post />} />
@@ -36,6 +38,7 @@ createRoot(document.getElementById("root")).render(
                 <div
                   style={{
                     textAlign: "center",
+                    marginTop: "60px",
                   }}
                 >
                   {" "}

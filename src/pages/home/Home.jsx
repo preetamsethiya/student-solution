@@ -11,6 +11,7 @@ import { Search_FilterContext } from "../../context/Search_FilterContext";
 import SelectMenu from "../../components/select_menu/SelectMenu";
 import { resultArr } from "../../data_store/data";
 import AdsComponent from "../../components/google_ad/AdsComponent";
+import SeoTags from "../../components/seo_tags/SeoTags";
 export default function Home() {
   let profilesPosts = [];
 
@@ -30,159 +31,166 @@ export default function Home() {
   useEffect(() => {}, [profilesPosts]);
 
   return (
-    <div className="homeContainer">
-      <main>
-        {/* search section  */}
+    <>
+      <SeoTags
+        title={"Home"}
+        description={"Home description"}
+        url={window.location.href}
+      />
+      <div className="homeContainer">
+        <main>
+          {/* search section  */}
 
-        <div className="homeSearchContainer">
-          <div className="homeSearch">
-            <label htmlFor="search">
-              <Input
-                input={{
-                  id: "search",
-                  name: "search",
-                  type: "text",
-                  value: search_Filter || "",
-                  placeholder: "search...",
+          <div className="homeSearchContainer">
+            <div className="homeSearch">
+              <label htmlFor="search">
+                <Input
+                  input={{
+                    id: "search",
+                    name: "search",
+                    type: "text",
+                    value: search_Filter || "",
+                    placeholder: "search...",
+                    onChange: filter,
+                  }}
+                />
+                <span> 🔍</span>
+              </label>
+            </div>
+            <div className="homeFilterContainer">
+              <SelectMenu
+                selectMenu={{
                   onChange: filter,
                 }}
               />
-              <span> 🔍</span>
-            </label>
-          </div>
-          <div className="homeFilterContainer">
-            <SelectMenu
-              selectMenu={{
-                onChange: filter,
-              }}
-            />
-          </div>
-        </div>
-        {resultArr.map((result, i) => {
-          console.log(
-            `https://studentsolution.netlify.app/result/${result.url_Id}`
-          );
-          console.log(result.url);
-          // return (
-          //   <Link key={i} to={`/result/${result.url_Id}`}>
-          //     click
-          //   </Link>
-          // );
-        })}
-        <Page_Container>
-          <div>
-            {/* google ad component */}
-
-            {/* card section 1  */}
-
-            <div className="cardWrapper section1">
-              <div className="subHeading">Cafes</div>
-              <div className="cardContainer">
-                {cafes.map((cafe) => {
-                  return (
-                    <Card key={cafe.user_Id}>
-                      <a
-                        href="https://wa.me/919617709663?text=hii"
-                        target="_blank"
-                        className="link"
-                      >
-                        <div className="innerCard">
-                          <Card data={cafe} />
-                        </div>
-
-                        <div className="btnSection">
-                          <Button
-                            btn={{
-                              text: "Contact for form fill-up",
-                            }}
-                          />
-                        </div>
-                      </a>
-                    </Card>
-                  );
-                })}
-              </div>
             </div>
           </div>
-          {/* <AdsComponent dataAdSlot="7424430887" /> */}
+          {resultArr.map((result, i) => {
+            console.log(
+              `https://studentsolution.netlify.app/result/${result.url_Id}`
+            );
+            console.log(result.url);
+            // return (
+            //   <Link key={i} to={`/result/${result.url_Id}`}>
+            //     click
+            //   </Link>
+            // );
+          })}
+          <Page_Container>
+            <div>
+              {/* google ad component */}
 
-          {/* card section 2 */}
+              {/* card section 1  */}
 
-          <div className="cardWrapper section2">
-            <div className="subHeading">
-              <div
-                className={`${clgActive.isClgActive ? "activeLink" : ""}`}
-                onClick={(e) => {
-                  clgActive.setIsClgActive(true);
-                }}
-              >
-                <label htmlFor="profileBtn">
-                  {" "}
-                  Collges
-                  <input id="profileBtn" type="button" value={"profile"} />
-                </label>
-              </div>
-              <div
-                className={`${clgActive.isClgActive ? "" : "activeLink"}`}
-                onClick={(e) => {
-                  clgActive.setIsClgActive(false);
-                }}
-              >
-                <label htmlFor="jobBtn">
-                  {" "}
-                  Updates
-                  <input id="jobBtn" type="button" value={"job"} />
-                </label>
-              </div>
-            </div>
-
-            {clgActive.isClgActive ? (
-              <div className="cardContainer">
-                {/* profiles cards  */}
-
-                {profiles.map((profile) => {
-                  return (
-                    <Link
-                      key={profile.user_Id}
-                      to={profile.user_Id}
-                      className="link"
-                    >
-                      {" "}
-                      <Card data={profile} />
-                    </Link>
-                  );
-                })}
-              </div>
-            ) : (
-              // updates cards
-
-              <div className="cardContainer">
-                {updateList
-                  .filter((update) => {
+              <div className="cardWrapper section1">
+                <div className="subHeading">Cafes</div>
+                <div className="cardContainer">
+                  {cafes.map((cafe) => {
                     return (
-                      update.category
-                        .toLocaleLowerCase()
-                        .includes(search_Filter) ||
-                      update.title.toLocaleLowerCase().includes(search_Filter)
-                    );
-                  })
-                  .reverse()
-                  .map((update) => {
-                    return (
-                      <article key={update.post_Id}>
-                        <Link to={`/post/${update.post_Id}`} className="link">
-                          {" "}
-                          <Card data={update} />
-                        </Link>
-                      </article>
+                      <Card key={cafe.user_Id}>
+                        <a
+                          href="https://wa.me/919617709663?text=hii"
+                          target="_blank"
+                          className="link"
+                        >
+                          <div className="innerCard">
+                            <Card data={cafe} />
+                          </div>
+
+                          <div className="btnSection">
+                            <Button
+                              btn={{
+                                text: "Contact for form fill-up",
+                              }}
+                            />
+                          </div>
+                        </a>
+                      </Card>
                     );
                   })}
+                </div>
               </div>
-            )}
+            </div>
             {/* <AdsComponent dataAdSlot="7424430887" /> */}
-          </div>
-        </Page_Container>
-      </main>
-    </div>
+
+            {/* card section 2 */}
+
+            <div className="cardWrapper section2">
+              <div className="subHeading">
+                <div
+                  className={`${clgActive.isClgActive ? "activeLink" : ""}`}
+                  onClick={(e) => {
+                    clgActive.setIsClgActive(true);
+                  }}
+                >
+                  <label htmlFor="profileBtn">
+                    {" "}
+                    Collges
+                    <input id="profileBtn" type="button" value={"profile"} />
+                  </label>
+                </div>
+                <div
+                  className={`${clgActive.isClgActive ? "" : "activeLink"}`}
+                  onClick={(e) => {
+                    clgActive.setIsClgActive(false);
+                  }}
+                >
+                  <label htmlFor="jobBtn">
+                    {" "}
+                    Updates
+                    <input id="jobBtn" type="button" value={"job"} />
+                  </label>
+                </div>
+              </div>
+
+              {clgActive.isClgActive ? (
+                <div className="cardContainer">
+                  {/* profiles cards  */}
+
+                  {profiles.map((profile) => {
+                    return (
+                      <Link
+                        key={profile.user_Id}
+                        to={profile.user_Id}
+                        className="link"
+                      >
+                        {" "}
+                        <Card data={profile} />
+                      </Link>
+                    );
+                  })}
+                </div>
+              ) : (
+                // updates cards
+
+                <div className="cardContainer">
+                  {updateList
+                    .filter((update) => {
+                      return (
+                        update.category
+                          .toLocaleLowerCase()
+                          .includes(search_Filter) ||
+                        update.title.toLocaleLowerCase().includes(search_Filter)
+                      );
+                    })
+                    .reverse()
+                    .map((update) => {
+                      return (
+                        <article key={update.post_Id}>
+                          <Link to={`/post/${update.post_Id}`} className="link">
+                            {" "}
+                            <Card data={update} />
+                          </Link>
+                        </article>
+                      );
+                    })}
+                </div>
+              )}
+              {/* <AdsComponent dataAdSlot="7424430887" /> */}
+            </div>
+          </Page_Container>
+        </main>
+      </div>
+    </>
   );
 }

@@ -42,225 +42,229 @@ export default function Post() {
   }
 
   return (
-    <div className="postPage">
-      {/* <div>
+    <>
+      <SeoTags
+        title={postFiltered.title}
+        description={postFiltered.description}
+        url={window.location.href}
+        type={"article"}
+      />
+      <div className="postPage">
+        {/* <div>
         <Button2 />
       </div> */}
-      <main>
-        <Page_Container>
-          <div>
+        <main>
+          <Page_Container>
             <div>
-              {/* <AdsComponent dataAdSlot="1488759680" /> */}
-              <article>
-                <div className="post">
-                  {/* mediaContainer  */}
+              <div>
+                {/* <AdsComponent dataAdSlot="1488759680" /> */}
+                <article>
+                  <div className="post">
+                    {/* mediaContainer  */}
 
-                  <div className="mediaContainer">
-                    <SeoTags
-                      title={postFiltered.title}
-                      description={postFiltered.description}
-                      url={window.location.href}
-                    />
-                    <iframe
-                      src={postFiltered.post_Src}
-                      width="100%"
-                      height="100%"
-                      allow="autoplay"
-                    ></iframe>
-                  </div>
-                  <div>
-                    {postFiltered.links[0]?.site && (
-                      <div className="userIdContainer">
-                        <a
-                          style={{
-                            color: "#0040ff",
-                          }}
-                          href={postFiltered.links[0]?.site}
-                        >
-                          {" "}
-                          Official site
-                        </a>
-                      </div>
-                    )}
-
-                    <div
-                      className="textContainer"
-                      style={{
-                        flexDirection: isMore ? "" : "column",
-                      }}
-                    >
-                      {/* description  */}
-                      <b> {postFiltered.title} : </b>
-
-                      {!isMore && (
-                        <div
-                          className="descriptionContainer"
-                          style={{
-                            height: isMore ? "41px" : "",
-                          }}
-                        >
-                          <div className="description">
+                    {/* <div className="mediaContainer">
+                      <iframe
+                        src={postFiltered.post_Src}
+                        width="100%"
+                        height="100%"
+                        allow="autoplay"
+                      ></iframe>
+                    </div> */}
+                    <div>
+                      {postFiltered.links[0]?.site && (
+                        <div className="userIdContainer">
+                          <a
+                            style={{
+                              color: "#0040ff",
+                            }}
+                            href={postFiltered.links[0]?.site}
+                          >
                             {" "}
-                            <span>
-                              {/* {postFiltered.description} */}
-                              {postFiltered.description
-                                .split("$")
-                                .map((slid, i) => {
-                                  return (
-                                    <div key={i} className="textSlid">
-                                      {slid}
-                                    </div>
-                                  );
-                                })}
-                            </span>{" "}
-                            <a
-                              href={`https://drive.google.com/uc?export=download&id=${postFiltered.post_Id}`}
-                              className="link"
-                              target="_blank"
-                              download
-                            >
-                              <Button
-                                btn={{
-                                  text: "Download pdf",
-                                }}
-                              />
-                            </a>
-                            {/* <AdsComponent dataAdSlot="1488759680" /> */}
-                          </div>{" "}
-                          {/* overView  */}
-                          {postFiltered?.overView?.length > 0 && (
-                            <div className="dateContainer">
-                              <span>OverView:</span>
-                            </div>
-                          )}
-                          {postFiltered?.overView?.length > 0 &&
-                            postFiltered?.overView?.map((eachEl, i) => {
-                              return (
-                                <div
-                                  className="overView"
-                                  style={{
-                                    color: "black",
-                                    // backgroundColor: "white",
-                                    boxShadow: "0 17px 39px 0px #75f17b inset",
-                                  }}
-                                  key={i}
-                                >
-                                  {eachEl}
-                                </div>
-                              );
-                            })}
-                          {/* important dates.\ */}
-                          {postFiltered?.date?.length > 0 && (
-                            <div className="dateContainer">
-                              {" "}
-                              <span>Important date</span>{" "}
-                            </div>
-                          )}
-                          {postFiltered?.date?.length > 0 &&
-                            postFiltered?.date?.map((date, i) => {
-                              return (
-                                <div
-                                  className="date"
-                                  style={{
-                                    backgroundColor:
-                                      i === 1 ? "#f14d4d" : `#02${i}f07`,
-                                  }}
-                                  key={i}
-                                >
-                                  {date}
-                                </div>
-                              );
-                            })}
-                          {/* fees  */}
-                          {postFiltered?.fees?.length > 0 &&
-                            postFiltered?.fees?.map((eachFees, i) => {
-                              return (
-                                <div
-                                  key={i}
-                                  className={`${
-                                    i <= 0 ? "listHeading" : "lists"
-                                  }`}
-                                >
-                                  {" "}
-                                  {eachFees}{" "}
-                                </div>
-                              );
-                            })}
-                          {/* required docunents  */}
-                          {postFiltered?.documents?.length > 0 &&
-                            postFiltered?.documents?.map((document, i) => {
-                              return (
-                                <div
-                                  key={i}
-                                  className={`${
-                                    i <= 0 ? "listHeading" : "lists"
-                                  }`}
-                                >
-                                  {" "}
-                                  {document}{" "}
-                                </div>
-                              );
-                            })}
-                          {/* eligibility  */}
-                          {postFiltered?.eligibility?.length > 0 &&
-                            postFiltered?.eligibility?.map((eachEl, i) => {
-                              return (
-                                <div
-                                  key={i}
-                                  className={`${
-                                    i <= 0 ? "listHeading" : "lists"
-                                  }`}
-                                >
-                                  {" "}
-                                  {eachEl}{" "}
-                                </div>
-                              );
-                            })}
-                          {/* important links  */}
-                          {postFiltered.links.length && (
-                            <div className="linkContainer">
-                              {" "}
-                              <span>Important Link</span>{" "}
-                            </div>
-                          )}
-                          {postFiltered.links.length &&
-                            postFiltered.links.map((link, i) => {
-                              return (
-                                <div key={i}>
-                                  <a
-                                    className="links"
-                                    href={link.site}
-                                    style={{
-                                      backgroundColor:
-                                        i === 2
-                                          ? "rgb(185 116 17)"
-                                          : `#31${5 + i}1f${5 + i}`,
-                                    }}
-                                    target="_blank"
-                                  >
-                                    {" "}
-                                    {link.text} - click here{" "}
-                                  </a>{" "}
-                                </div>
-                              );
-                            })}
+                            Official site
+                          </a>
                         </div>
                       )}
-                      <Button
-                        btn={{
-                          text: isMore ? " Read more" : "less",
-                          className: "moreBtn",
-                          onClick: () => setIsMore((prev) => !prev),
+
+                      <div
+                        className="textContainer"
+                        style={{
+                          flexDirection: isMore ? "" : "column",
                         }}
-                      />
+                      >
+                        {/* description  */}
+                        <b> {postFiltered.title} : </b>
+
+                        {!isMore && (
+                          <div
+                            className="descriptionContainer"
+                            style={{
+                              height: isMore ? "41px" : "",
+                            }}
+                          >
+                            <div className="description">
+                              {" "}
+                              <span>
+                                {/* {postFiltered.description} */}
+                                {postFiltered.description
+                                  .split("$")
+                                  .map((slid, i) => {
+                                    return (
+                                      <div key={i} className="textSlid">
+                                        {slid}
+                                      </div>
+                                    );
+                                  })}
+                              </span>{" "}
+                              <a
+                                href={`https://drive.google.com/uc?export=download&id=${postFiltered.post_Id}`}
+                                className="link"
+                                target="_blank"
+                                download
+                              >
+                                <Button
+                                  btn={{
+                                    text: "Download pdf",
+                                  }}
+                                />
+                              </a>
+                              {/* <AdsComponent dataAdSlot="1488759680" /> */}
+                            </div>{" "}
+                            {/* overView  */}
+                            {postFiltered?.overView?.length > 0 && (
+                              <div className="dateContainer">
+                                <span>OverView:</span>
+                              </div>
+                            )}
+                            {postFiltered?.overView?.length > 0 &&
+                              postFiltered?.overView?.map((eachEl, i) => {
+                                return (
+                                  <div
+                                    className="overView"
+                                    style={{
+                                      color: "black",
+                                      // backgroundColor: "white",
+                                      boxShadow:
+                                        "0 17px 39px 0px #75f17b inset",
+                                    }}
+                                    key={i}
+                                  >
+                                    {eachEl}
+                                  </div>
+                                );
+                              })}
+                            {/* important dates.\ */}
+                            {postFiltered?.date?.length > 0 && (
+                              <div className="dateContainer">
+                                {" "}
+                                <span>Important date</span>{" "}
+                              </div>
+                            )}
+                            {postFiltered?.date?.length > 0 &&
+                              postFiltered?.date?.map((date, i) => {
+                                return (
+                                  <div
+                                    className="date"
+                                    style={{
+                                      backgroundColor:
+                                        i === 1 ? "#f14d4d" : `#02${i}f07`,
+                                    }}
+                                    key={i}
+                                  >
+                                    {date}
+                                  </div>
+                                );
+                              })}
+                            {/* fees  */}
+                            {postFiltered?.fees?.length > 0 &&
+                              postFiltered?.fees?.map((eachFees, i) => {
+                                return (
+                                  <div
+                                    key={i}
+                                    className={`${
+                                      i <= 0 ? "listHeading" : "lists"
+                                    }`}
+                                  >
+                                    {" "}
+                                    {eachFees}{" "}
+                                  </div>
+                                );
+                              })}
+                            {/* required docunents  */}
+                            {postFiltered?.documents?.length > 0 &&
+                              postFiltered?.documents?.map((document, i) => {
+                                return (
+                                  <div
+                                    key={i}
+                                    className={`${
+                                      i <= 0 ? "listHeading" : "lists"
+                                    }`}
+                                  >
+                                    {" "}
+                                    {document}{" "}
+                                  </div>
+                                );
+                              })}
+                            {/* eligibility  */}
+                            {postFiltered?.eligibility?.length > 0 &&
+                              postFiltered?.eligibility?.map((eachEl, i) => {
+                                return (
+                                  <div
+                                    key={i}
+                                    className={`${
+                                      i <= 0 ? "listHeading" : "lists"
+                                    }`}
+                                  >
+                                    {" "}
+                                    {eachEl}{" "}
+                                  </div>
+                                );
+                              })}
+                            {/* important links  */}
+                            {postFiltered.links.length && (
+                              <div className="linkContainer">
+                                {" "}
+                                <span>Important Link</span>{" "}
+                              </div>
+                            )}
+                            {postFiltered.links.length &&
+                              postFiltered.links.map((link, i) => {
+                                return (
+                                  <div key={i}>
+                                    <a
+                                      className="links"
+                                      href={link.site}
+                                      style={{
+                                        backgroundColor:
+                                          i === 2
+                                            ? "rgb(185 116 17)"
+                                            : `#31${5 + i}1f${5 + i}`,
+                                      }}
+                                      target="_blank"
+                                    >
+                                      {" "}
+                                      {link.text} - click here{" "}
+                                    </a>{" "}
+                                  </div>
+                                );
+                              })}
+                          </div>
+                        )}
+                        <Button
+                          btn={{
+                            text: isMore ? " Read more" : "less",
+                            className: "moreBtn",
+                            onClick: () => setIsMore((prev) => !prev),
+                          }}
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </article>
+                </article>
+              </div>
             </div>
-          </div>
-        </Page_Container>
-      </main>
-    </div>
+          </Page_Container>
+        </main>
+      </div>
+    </>
   );
 }
