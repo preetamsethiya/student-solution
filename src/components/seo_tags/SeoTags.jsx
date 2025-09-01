@@ -7,9 +7,9 @@ export default function SeoTags(props) {
   return (
     <>
       <title>{props?.title}</title>
-      <link rel="canonical" href={props?.url}></link>
-      <meta property="og:locale" content="en_US" />
-      <meta property="og:site_name" content="studentsolution.netlify.app" />
+      {/* <link rel="canonical" href={props?.url}></link> */}
+      {/* <meta property="og:locale" content="en_US" /> */}
+      {/* <meta property="og:site_name" content="studentsolution.netlify.app" /> */}
       <meta name="description" content={props?.description} />
       <meta property="og:title" content={props?.title} />
       {/* <meta property="article:tag" content={props?.title} /> */}
@@ -22,16 +22,16 @@ export default function SeoTags(props) {
         property="og:image"
         content={`https://studentsolution.netlify.app${img}`}
       ></meta>
-      <meta
+      {/* <meta
         property="og:image:secure_url"
         content={`https://studentsolution.netlify.app${img}`}
-      ></meta>
+      ></meta> */}
       <meta property="og:image:alt" content={props?.title}></meta>
       <meta property="og:image:type" content="image/png"></meta>
       <meta property="og:description" content={props?.description} />
 
       <meta property="og:url" content={props?.url} />
-      <meta property="og:type" content={props?.type} />
+      <meta property="og:type" content="website" />
 
       {/* बाकी पेज कंटेंट */}
 
