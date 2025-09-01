@@ -63,10 +63,12 @@ export default function SeoTags(props) {
 }
 // <meta property="article:section" content="home">
 // <meta property="og:updated_time" content="2025-08-31T09:01:07+00:00">
-// <meta property="og:image" content="https://cgeducationhub.com/wp-content/uploads/2025/08/IMG-20250831-WA0050.jpg">
-// <meta property="og:image:secure_url" content="https://cgeducationhub.com/wp-content/uploads/2025/08/IMG-20250831-WA0050.jpg">
-// <meta property="og:image:width" content="1280">
-// <meta property="og:image:height" content="853">
+{
+  /* <meta property="og:image" content="https://cgeducationhub.com/wp-content/uploads/2025/08/IMG-20250831-WA0050.jpg">
+<meta property="og:image:secure_url" content="https://cgeducationhub.com/wp-content/uploads/2025/08/IMG-20250831-WA0050.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="853"> */
+}
 // <meta property="og:image:alt" content="Railway Section Controller Vacancy">
 // <meta property="og:image:type" content="image/jpeg">
 // <meta property="article:published_time" content="2025-08-31T09:01:05+00:00">
@@ -79,3 +81,4 @@ export default function SeoTags(props) {
 // <meta name="twitter:data1" content="Namarta Sahu">
 // <meta name="twitter:label2" content="Time to read">
 // <meta name="twitter:data2" content="5 minutes">
+// description Discover your passion and pursue your dreams with our comprehensive education and job resources.Stay ahead of the curve with our latest education and job trends.Transform your future with our education and job solutions.
