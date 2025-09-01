@@ -5,7 +5,6 @@ import { profiles, updates } from "../../data_store/data";
 import Button, { Button2 } from "../../components/button/Button";
 import { Link, useParams } from "react-router";
 import AdsComponent from "../../components/google_ad/AdsComponent";
-import SeoTags from "../../components/seo_tags/SeoTags";
 
 export default function Post() {
   let profilesPosts = [];
@@ -43,12 +42,6 @@ export default function Post() {
 
   return (
     <>
-      <SeoTags
-        title={postFiltered.title}
-        description={postFiltered.description}
-        url={window.location.href}
-        type={"article"}
-      />
       <div className="postPage">
         {/* <div>
         <Button2 />

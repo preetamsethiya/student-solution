@@ -11,7 +11,6 @@ import { Search_FilterContext } from "../../context/Search_FilterContext";
 import SelectMenu from "../../components/select_menu/SelectMenu";
 import { resultArr } from "../../data_store/data";
 import AdsComponent from "../../components/google_ad/AdsComponent";
-import SeoTags from "../../components/seo_tags/SeoTags";
 export default function Home() {
   let profilesPosts = [];
 
@@ -32,11 +31,6 @@ export default function Home() {
 
   return (
     <>
-      <SeoTags
-        title={"Home"}
-        description={"Home description"}
-        url={window.location.href}
-      />
       <div className="homeContainer">
         <main>
           {/* search section  */}
@@ -78,7 +72,7 @@ export default function Home() {
           })}
           <Page_Container>
             <div>
-              <h1>update9</h1>
+              <h1>update10</h1>
               {/* google ad component */}
 
               {/* card section 1  */}
