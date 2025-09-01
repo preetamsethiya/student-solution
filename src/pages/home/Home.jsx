@@ -78,7 +78,7 @@ export default function Home() {
           })}
           <Page_Container>
             <div>
-              <h1>update6</h1>
+              <h1>update7</h1>
               {/* google ad component */}
 
               {/* card section 1  */}
