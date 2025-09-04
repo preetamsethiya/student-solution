@@ -19,35 +19,7 @@ createRoot(document.getElementById("root")).render(
     {/* <StrictMode> */}
     <Search_FilterProvider>
       <VarProvider>
-        <Routes>
-          <Route path="/" element={<App />}>
-            {" "}
-            {/* </Route> */}
-            <Route path="" element={<Home />} />
-            <Route path="/:profile" element={<Profile />} />
-            <Route path="/:profile/:id" element={<Post />} />
-            <Route path="/post/:id" element={<Post />} />
-            <Route path="/result/:url_Id" element={<Redirect />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/disclaimer" element={<Disclaimer />} />
-            <Route
-              path="*"
-              element={
-                <div
-                  style={{
-                    textAlign: "center",
-                    marginTop: "60px",
-                  }}
-                >
-                  {" "}
-                  <h4>Page not found</h4> <br /> <Link to={"/"}>Home </Link>{" "}
-                </div>
-              }
-            />
-          </Route>
-        </Routes>
+        <App />
       </VarProvider>
     </Search_FilterProvider>
     {/* </StrictMode> */}
