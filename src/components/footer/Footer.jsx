@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router";
+import { images } from "../../data_store/data";
 
 export default function Footer() {
   return (
-    <div className="footer">
+    <div className="footer bg-amber-800 mt-2 pb-18 p-3">
       <div>
-        <ul>
+        <ul className="flex flex-wrap justify-center gap-4 text-gray-100">
           <li>
             <Link to="about">About</Link>
           </li>
@@ -23,32 +24,32 @@ export default function Footer() {
           </li>
         </ul>
         {/* media container css code available in about page section  */}
-        <div className="media-container">
-          <a href="https://www.instagram.com/" target="_blank">
-            <div className="media insta">
-              <div className="insta1">
-                <div className="insta2">
-                  <div className="insta3">
-                    <div className="insta4" />
-                  </div>
-                </div>
-              </div>
+        <div className="media-container flex flex-wrap justify-center gap-4 mt-4 text-white font-semibold">
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            className="flex justify-center items-center"
+          >
+            <div className="w-[40px]">
+              <img src={images.instaIcon} alt="insta" className="w-full" />
             </div>
           </a>
-
           <a
+            className="flex justify-center items-center"
             href="https://linkedin.com/in/preetamkumar-sethiya"
             target="_blank"
           >
-            <div className="media linked-in">
-              {" "}
-              <div className="in">in</div>
+            <div className="w-[40px] bg-white rounded-md overflow-hidden">
+              <img src={images.inIcon} alt="insta" className="w-full" />
             </div>
           </a>
-          <a href="https://x.com/" target="_blank">
-            <div className="media x">
-              {" "}
-              <div className="x">X</div>
+          <a
+            className="flex  justify-center items-center"
+            href="https://x.com/"
+            target="_blank"
+          >
+            <div className="w-[40px] rounded-md bg-white ">
+              <img src={images.xIcon} alt="insta" className="w-full" />
             </div>
           </a>
         </div>

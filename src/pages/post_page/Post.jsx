@@ -2,262 +2,112 @@ import React, { useEffect, useState } from "react";
 import Page_Container from "../../components/page_container/Page_Container";
 import Card from "../../components/card/Card";
 import { profiles, updates } from "../../data_store/data";
-import Button, { Button2 } from "../../components/button/Button";
-import { Link, useParams } from "react-router";
+import Button from "../../components/button/Button";
+import { Link, useParams, useSearchParams } from "react-router";
 import AdsComponent from "../../components/google_ad/AdsComponent";
+import { UseLocalstorage } from "../../hooks/UseLocalstorage";
 
 export default function Post() {
-  let profilesPosts = [];
   const param = useParams();
+  const getPhone = UseLocalstorage("phone", "");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const phone = searchParams.get("phone");
   // console.log(param);
-
-  profiles.map((profile) => {
-    profilesPosts = [...profilesPosts, ...profile.posts];
-  });
-
-  const updateList = [...updates, ...profilesPosts];
-
-  const [postFiltered] = updateList.filter((update) => {
+  const [post] = updates.filter((update) => {
     return update.post_Id === param.id;
   });
 
-  const [isMore, setIsMore] = useState(false);
-
-  console.log(postFiltered?.links[0]);
-
-  useEffect(() => {}, [profilesPosts]);
-
-  if (!postFiltered) {
-    return (
-      <div
-        style={{
-          textAlign: "center",
-        }}
-      >
-        {" "}
-        <h4>Page not found</h4> <br /> <Link to={"/"}>Home</Link>
-      </div>
-    );
-  }
-
+  useEffect(() => {
+    if (phone) {
+      getPhone[1](phone);
+    }
+    // console.log(post);
+  }, [post]);
   return (
     <>
-      <div className="postPage">
-        {/* <div>
-        <Button2 />
-      </div> */}
-        <main>
-          <Page_Container>
+      <main>
+        <Page_Container className="px-0">
+          {/* {console.log(post.title)} */}
+          <div className="bg-[url(/src/assets/images/now-or-never.png)]  bg-cover bg-center font-semibold text-white text-xl text-shadow-sm text-shadow-amber-400 text-center min-h-[200px] md:min-h-[300px]">
+            {post?.title}
+          </div>
+          <div className="mt-2 ml-2 flex justify-between">
             <div>
-              <div>
-                {/* <AdsComponent dataAdSlot="1488759680" /> */}
-                <article>
-                  <div className="post">
-                    {/* mediaContainer  */}
-
-                    {/* <div className="mediaContainer">
-                      <iframe
-                        src={postFiltered.post_Src}
-                        width="100%"
-                        height="100%"
-                        allow="autoplay"
-                      ></iframe>
-                    </div> */}
-                    <div>
-                      {postFiltered.links[0]?.site && (
-                        <div className="userIdContainer">
-                          <a
-                            style={{
-                              color: "#0040ff",
-                            }}
-                            href={postFiltered.links[0]?.site}
-                          >
-                            {" "}
-                            Official site
-                          </a>
-                        </div>
-                      )}
-
-                      <div
-                        className="textContainer"
-                        style={{
-                          flexDirection: isMore ? "" : "column",
-                        }}
-                      >
-                        {/* description  */}
-                        <b> {postFiltered.title} : </b>
-
-                        {!isMore && (
-                          <div
-                            className="descriptionContainer"
-                            style={{
-                              height: isMore ? "41px" : "",
-                            }}
-                          >
-                            <div className="description">
-                              {" "}
-                              <span>
-                                {/* {postFiltered.description} */}
-                                {postFiltered.description
-                                  .split("$")
-                                  .map((slid, i) => {
-                                    return (
-                                      <div key={i} className="textSlid">
-                                        {slid}
-                                      </div>
-                                    );
-                                  })}
-                              </span>{" "}
-                              <a
-                                href={`https://drive.google.com/uc?export=download&id=${postFiltered.post_Id}`}
-                                className="link"
-                                target="_blank"
-                                download
-                              >
-                                <Button
-                                  btn={{
-                                    text: "Download pdf",
-                                  }}
-                                />
-                              </a>
-                              {/* <AdsComponent dataAdSlot="1488759680" /> */}
-                            </div>{" "}
-                            {/* overView  */}
-                            {postFiltered?.overView?.length > 0 && (
-                              <div className="dateContainer">
-                                <span>OverView:</span>
-                              </div>
-                            )}
-                            {postFiltered?.overView?.length > 0 &&
-                              postFiltered?.overView?.map((eachEl, i) => {
-                                return (
-                                  <div
-                                    className="overView"
-                                    style={{
-                                      color: "black",
-                                      // backgroundColor: "white",
-                                      boxShadow:
-                                        "0 17px 39px 0px #75f17b inset",
-                                    }}
-                                    key={i}
-                                  >
-                                    {eachEl}
-                                  </div>
-                                );
-                              })}
-                            {/* important dates.\ */}
-                            {postFiltered?.date?.length > 0 && (
-                              <div className="dateContainer">
-                                {" "}
-                                <span>Important date</span>{" "}
-                              </div>
-                            )}
-                            {postFiltered?.date?.length > 0 &&
-                              postFiltered?.date?.map((date, i) => {
-                                return (
-                                  <div
-                                    className="date"
-                                    style={{
-                                      backgroundColor:
-                                        i === 1 ? "#f14d4d" : `#02${i}f07`,
-                                    }}
-                                    key={i}
-                                  >
-                                    {date}
-                                  </div>
-                                );
-                              })}
-                            {/* fees  */}
-                            {postFiltered?.fees?.length > 0 &&
-                              postFiltered?.fees?.map((eachFees, i) => {
-                                return (
-                                  <div
-                                    key={i}
-                                    className={`${
-                                      i <= 0 ? "listHeading" : "lists"
-                                    }`}
-                                  >
-                                    {" "}
-                                    {eachFees}{" "}
-                                  </div>
-                                );
-                              })}
-                            {/* required docunents  */}
-                            {postFiltered?.documents?.length > 0 &&
-                              postFiltered?.documents?.map((document, i) => {
-                                return (
-                                  <div
-                                    key={i}
-                                    className={`${
-                                      i <= 0 ? "listHeading" : "lists"
-                                    }`}
-                                  >
-                                    {" "}
-                                    {document}{" "}
-                                  </div>
-                                );
-                              })}
-                            {/* eligibility  */}
-                            {postFiltered?.eligibility?.length > 0 &&
-                              postFiltered?.eligibility?.map((eachEl, i) => {
-                                return (
-                                  <div
-                                    key={i}
-                                    className={`${
-                                      i <= 0 ? "listHeading" : "lists"
-                                    }`}
-                                  >
-                                    {" "}
-                                    {eachEl}{" "}
-                                  </div>
-                                );
-                              })}
-                            {/* important links  */}
-                            {postFiltered.links.length && (
-                              <div className="linkContainer">
-                                {" "}
-                                <span>Important Link</span>{" "}
-                              </div>
-                            )}
-                            {postFiltered.links.length &&
-                              postFiltered.links.map((link, i) => {
-                                return (
-                                  <div key={i}>
-                                    <a
-                                      className="links"
-                                      href={link.site}
-                                      style={{
-                                        backgroundColor:
-                                          i === 2
-                                            ? "rgb(185 116 17)"
-                                            : `#31${5 + i}1f${5 + i}`,
-                                      }}
-                                      target="_blank"
-                                    >
-                                      {" "}
-                                      {link.text} - click here{" "}
-                                    </a>{" "}
-                                  </div>
-                                );
-                              })}
-                          </div>
-                        )}
-                        <Button
-                          btn={{
-                            text: isMore ? " Read more" : "less",
-                            className: "moreBtn",
-                            onClick: () => setIsMore((prev) => !prev),
-                          }}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
+              {" "}
+              <span>
+                <a
+                  className="ring-1 ring-green-500 bg-green-500 text-white  px-2 font-semibold"
+                  href={`https://wa.me?text=${window.location.href}`}
+                  target="_blank"
+                >
+                  SHARE
+                </a>
+              </span>
             </div>
-          </Page_Container>
-        </main>
-      </div>
+            <div>
+              <a
+                className=" bg-blue-500 px-3 font-semibold text-white"
+                href={`https://wa.me/${getPhone[0]}?text=#sss`}
+                target="_blank"
+              >
+                {" "}
+                Form fill up, contact..!
+              </a>
+            </div>
+          </div>
+          <div className="font-semibold text-xl px-2 mt-1"> {post?.title}:</div>
+          <div className="bg-gray-300 px-2 rounded-md mx-2 ">
+            {/* discription  */}
+
+            {post?.description.split("$").map((slice, i) => {
+              return (
+                <div key={i}>
+                  {slice} <br />
+                  <br />{" "}
+                </div>
+              );
+            })}
+            {/* date */}
+            {post?.date?.map((aDate, i) => {
+              return (
+                <div className="bg-red-300 py-1 pl-1" key={i}>
+                  {aDate}
+                </div>
+              );
+            })}
+            {/* fees */}
+            {post?.fees?.map((aFees, i) => {
+              return (
+                <div className="bg-green-300  py-1 pl-1" key={i}>
+                  {aFees}
+                </div>
+              );
+            })}
+            {/* eligibilities */}
+            {post?.eligibilities?.map((eligibility, i) => {
+              return (
+                <div className="bg-orange-300  py-1 pl-1" key={i}>
+                  {eligibility}
+                </div>
+              );
+            })}
+            {/* links */}
+            {post?.links?.map((link, i) => {
+              return (
+                <div key={i} className="flex flex-col text-center mt-2">
+                  <a
+                    href={link?.site}
+                    target="_blank"
+                    className="bg-blue-300 mb-1.5 py-2 font-semibold "
+                  >
+                    {link.text}{" "}
+                  </a>
+                </div>
+              );
+            })}
+          </div>
+        </Page_Container>
+      </main>
     </>
   );
 }

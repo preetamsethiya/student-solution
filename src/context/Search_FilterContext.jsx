@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 export const Search_FilterContext = createContext(null);
 
 export const Search_FilterProvider = (props) => {
-  const [search_Filter, setSearch_Filter] = useState("");
+  const [search_Filter, setSearch_Filter] = useState("scholarship");
 
   return (
     <Search_FilterContext.Provider value={{ search_Filter, setSearch_Filter }}>

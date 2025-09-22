@@ -5,7 +5,7 @@ export default function SelectMenu(props) {
     <>
       <select
         onChange={props.selectMenu.onChange}
-        className="selectContainer"
+        className="inputSelectMenu pr-2.5"
         name="selectMenu"
       >
         <option value="" hidden>

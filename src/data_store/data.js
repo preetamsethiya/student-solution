@@ -1,3 +1,8 @@
+import inIcon from "/src/assets/images/social_icons/in.png";
+import instaIcon from "/src/assets/images/social_icons/insta.png";
+import xIcon from "/src/assets/images/social_icons/x.png";
+import whatsappIcon from "/src/assets/images/social_icons/whatsapp.png";
+
 // cafes collection
 const cafes = [
   {
@@ -15,178 +20,15 @@ const cafes = [
   // },
 ];
 
-// result collection
+// image collection
+const images = {
+  inIcon,
+  instaIcon,
+  xIcon,
+  whatsappIcon,
+};
 
-export const resultArr = [
-  {
-    url_Id: "smkv_results",
-    url: "https://smkvbj.uonex.in/GetResultsexam",
-  },
-  {
-    url_Id: "cg_10th_result",
-    url: "https://vidia.cgbse.nic.in/result/Chance/Hs25Ch.aspx",
-  },
-  {
-    url_Id: "cg_12th_result",
-    url: "https://vidia.cgbse.nic.in/result/Chance/Hr25Ch.aspx",
-  },
-];
-
-// profiles  collection
-
-// post sample ****
-// const post_sample = {
-//   post_Id: "",
-//   post_Src:
-//     "https://drive.google.com/file/d//preview",
-//   title: " ",
-//   description: ` `,
-//   date: ["", ""],
-// fees:[],
-// overView:[],
-// eligibility:[],
-// documents:[],
-//   links: [
-//     {
-//       text: "Official site",
-//       site: "",
-//     },
-//   ],
-//   category: "updates",
-// };
-
-const profiles = [
-  {
-    user_Id: "smkv_bastar",
-    user_Name: "SMKV University Bastar",
-    city: "Jagdalpur",
-    avtar_Url: "img.jpg",
-    site_Url: "bastar univerety",
-    category: "university",
-    posts: [
-      {
-        post_Id: "19J27ltIr97oTHtc-Et4JQpQ54ObFr4Qw",
-        post_Src:
-          "https://drive.google.com/file/d/19J27ltIr97oTHtc-Et4JQpQ54ObFr4Qw/preview",
-        title: "Handicrafts and art fair (Bastar meri nazar se) ",
-        description: ` SMKV Incubation and Start-up Foundation evam kala archana art studio ke dwara dinank 28 se 30 august 2025 tak hastashilp evam kala mela 'Bastar meri nazar se' tatha udhyami sammailan ka aayojan kiya jana hai. Is sammelan ka uddeshya chhatro ko udhyamita ke kshetra me prerit karna evam safal udhyami ke anubhavo se avagat karana hai. Is sammelan me chhatra vibhinna kshetron ke uddhyamiyon se milkar apane vichar sajha kar sakenge evam uddhyamita se sambandhit vibhinna mahatvapurna jankari prapt kar sakenge. $ Is karyakram me uddhyamita ke kshetra me ruchi rakhne wale vishvavidhyalaya/ mahavidhylaya me adhyayanrat / purva chhatra-chhtraon evam shikshako ko amantrit kiya gaya hai. $ Hastashilp evam kala mela "Bastar meri nazar se" ka udghatan samaroh 28 august 2025, guruvaar se hai. $ pratham divas, 28 august 2025 udghatan samaroh sayam 5 baje se kala pradarshni evam DIY/ hastashilp evam kala mela. $ Dvitiya divas 29 august 2025, antarvidhyalayin chitrakala pratiyogita, dopahar 2:30 baje: kala archana art studio dwara "art mart" ka subharambh (SMKV-ISF ke antargat incubaty). $ Tritiya divas, 30 august 2025, udhyami sammelan , pratah 11 baje se: - 'Bastar me start-up ke avasar evam chunotiyan' $ sayam 5 baje se: open mic karyakram evam puraskar vitaran samaroh. `,
-        date: ["", ""],
-        fees: [],
-        overView: [],
-        eligibility: [],
-        documents: [],
-        links: [
-          {
-            text: "Official site",
-            site: "https://smkvbastar.ac.in/",
-          },
-        ],
-        category: "updates",
-      },
-      {
-        post_Id: "133sm1ADozxrr_hq-pfZj4qg73Fk8g6xg",
-        post_Src:
-          "https://drive.google.com/file/d/1716mXXwsXnx_UEtdzmhYGXtWVjsn3R4R/preview",
-        title: "smkv enrollment form 2025-26 ",
-        description: ` ऑनलाइन आवेदन तिथि में वृद्धि $
- 'BA, BSC, BCOM प्रथम सेमेस्टर के विद्यार्थी ध्यान देवें' : ' नामांकन के लिए उन्हें प्रवेश के समय जो कार्ड मिला हुआ है उसे लेकर पहले कॉलेज प्रस्थान करना होगा, कॉलेज में आपको VAC/GE सब्जेक्ट लिखित में प्रदान किया जाएगा। उसके बाद ही अपना नामांकन कराएं। अगर आप नामांकन फॉर्म में अपने से ही VAC/GE विषय का चयन करते हैं,  तो आपको बाद में दिक्कतों का सामना करना पड़ सकता है। $ MA,MSC,MCOM प्रथम सेमेस्टर के विद्यार्थियों को यह करने की आवश्यकता नहीं है, वे बिना रुकावट के अपना नामांकन फॉर्म भरवा सकते हैं🛑'`,
-        date: ["start date : 01-08-2025", "last date: 25-08-2025"],
-        links: [
-          {
-            text: "Official site",
-            site: "https://smkvbastar.ac.in/",
-          },
-          {
-            text: "Regular enrollment",
-            site: "https://smkvbastar.in/",
-          },
-          {
-            text: "  Enrollment, Watch video",
-            site: "https://youtu.be/55GW84vn6TA?si=aunr74aZEh2RCC78",
-          },
-        ],
-        category: "updates",
-        time_Stamp: "12-08-2025",
-      },
-      {
-        post_Id: "14vY6ZiyRpBn8YyBtHtjSIxUfZIBOFzLF",
-        post_Src:
-          "https://drive.google.com/file/d/14vY6ZiyRpBn8YyBtHtjSIxUfZIBOFzLF/preview",
-        title: " Private admission 2025-26, SMKV",
-        description: ` Shahid mahendran karma vishvavidhylaya Bastar se sambadh samast colleges me sanchalit snatak our snatakottar pathyakramo ke pratham semester me svadhyayi vidhyarthiyon ke liye online aavedan sah namankan karne ki prakriya shuru ho chuki hai. $ Svadhyayi vidhyarthiyon ke liye 21 vishayo evam programo ka vikalp rakha gaya hai. $  Svadhyayi vidhyarthiyon ke panjiyan ke liye SMKV university se sambadh 39 colleges ka chayan kiya gaya hai. $ Snatak star ke chhatra chhatraon ko (VAC & GE ) vishay ka chayan karna jaruri hai, jabki snatakottar star ke vidhyarthiyon ke liye jaruri nahin hai. `,
-        date: [
-          "Online start date: 15-08-2025",
-          "Online last date: 30-08-2025",
-          "College me hard copy submit: 18-08 se 02-09-2025 tak  ",
-        ],
-        fees: [
-          "FEES",
-          "Online aavedan: RS. 100/",
-          "Online namankan: RS. 110/",
-          "Satat aantarik mulyankan (snatak): RS. 400/ ",
-          "Satat aantarik mulyankan (snatakottar): RS. 500/ ",
-        ],
-        overView: [],
-        eligibility: [],
-        documents: [
-          "REQUIRED DOCUMENTS",
-          " Mobile number",
-          "Email ID",
-          "ABC ID",
-          "Aadhar card",
-          "Photo & signature",
-          "10th marksheet",
-          "12th marksheet",
-          "pichhali class ka marksheet",
-          "Jati praman patra",
-          "Nivash praman patra",
-          "GAP certificate (yadi laagu ho)",
-        ],
-        links: [
-          {
-            text: "Official site",
-            site: "https://smkvbastar.ac.in/",
-          },
-          {
-            text: "Admission related PDF",
-            site: "https://smkvbastar.ac.in/Admin/Files/Examination/08142025011858_%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%A7%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%AF%E0%A5%80%20%E0%A4%B5%E0%A4%BF%E0%A4%A7%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%A5%E0%A5%80%20%E0%A4%B9%E0%A5%87%E0%A4%A4%E0%A5%81%20(%E0%A4%91%E0%A4%A8%E0%A4%B2%E0%A4%BE%E0%A4%87%E0%A4%A8%20%E0%A4%86%E0%A4%B5%E0%A5%87%E0%A4%A6%E0%A4%A8%20%E0%A4%B8%E0%A4%B9%20%E0%A4%A8%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%82%E0%A4%95%E0%A4%A8%20%E0%A4%B8%E0%A4%82%E0%A4%AC%E0%A4%82%E0%A4%A7%E0%A5%80%20%E0%A4%85%E0%A4%A7%E0%A4%BF%E0%A4%B8%E0%A5%82%E0%A4%9A%E0%A4%A8%E0%A4%BE%20)%2014.08.2025.PDF",
-          },
-          {
-            text: "Watch on YouTube",
-            site: "https://youtu.be/3RFVf97KIyI?si=aenvTmHNOcVT1vhs",
-          },
-        ],
-        category: "updates",
-      },
-    ],
-  },
-  {
-    user_Id: "gundadhurclg_kondagaon",
-    user_Name: "Govt Gundadhur PG College, Kondagaon",
-    city: "Kondagaon",
-    avtar_Url: "img.jpg",
-    site_Url: "ggpgcollegekondagaon",
-    category: "education",
-    posts: [],
-  },
-  {
-    user_Id: "girlsclg_kondagaon",
-    user_Name: "Govt girls College, Kondagaon",
-    city: "Kondagaon",
-    avtar_Url: "img.jpg",
-    site_Url: "gmrgcollegekondagaon",
-    category: "education",
-    posts: [],
-  },
-  {
-    user_Id: "clg_mardapal",
-    user_Name: "Govt navin College, Mardapal",
-    city: "Mardapal",
-    avtar_Url: "img.jpg",
-    site_Url: " ",
-    posts: [],
-  },
-];
+const profiles = [];
 
 // update collection
 
@@ -209,7 +51,8 @@ const profiles = [
 
 const updates = [
   {
-    post_Id: "18iHnH9UUiUi10t24pduCXjvx5X_beuKC",
+    post_Id: "1",
+    user_Id: "blog",
     post_Src:
       "https://drive.google.com/file/d/18iHnH9UUiUi10t24pduCXjvx5X_beuKC/preview",
     title: " How to  apply for domicile certificate using edistrict portal? ",
@@ -226,10 +69,10 @@ const updates = [
         site: "https://youtu.be/YFjv2c6qWbo?si=qJCKL2PM_lis4j7d",
       },
     ],
-    category: "updates",
   },
   {
-    post_Id: "18kQTMlYeWlogY5NLUYXP7Os65ML-ZBbJ",
+    post_Id: "2",
+    user_Id: "blog",
     post_Src:
       "https://drive.google.com/file/d/18kQTMlYeWlogY5NLUYXP7Os65ML-ZBbJ/preview",
     title: "How to  apply for income certificate using edistrict portal? ",
@@ -248,7 +91,8 @@ const updates = [
     category: "updates",
   },
   {
-    post_Id: "18i9AGG1h5HCmPseeGsdMqLSt37c82Yph",
+    post_Id: "3",
+    user_Id: "blog",
     post_Src:
       "https://drive.google.com/file/d/18i9AGG1h5HCmPseeGsdMqLSt37c82Yph/preview",
     title: " How to create  e-distric citizen ID?  ",
@@ -267,7 +111,8 @@ const updates = [
     category: "updates",
   },
   {
-    post_Id: "190xK-yFF4o_DcSQWYYJ6yNEhbgNlsVHk",
+    post_Id: "4",
+    user_Id: "scholarship",
     post_Src:
       "https://drive.google.com/file/d/190xK-yFF4o_DcSQWYYJ6yNEhbgNlsVHk/preview",
     title: " National scholarship for who scored 80+ parcentage in 12th ",
@@ -304,7 +149,8 @@ const updates = [
     category: "scholarship",
   },
   {
-    post_Id: "18JOi2G3GoUC_5G--MgAJe__eG5ivAsmR",
+    post_Id: "5",
+    user_Id: "blog",
     post_Src:
       "https://drive.google.com/file/d/18JOi2G3GoUC_5G--MgAJe__eG5ivAsmR/preview",
     title: "How to check aadhar seeded bank account? ",
@@ -323,7 +169,8 @@ const updates = [
     category: "updates",
   },
   {
-    post_Id: "11plHr2m3PN52NtIUzYaaLFuxsoJBYkfp",
+    post_Id: "6",
+    user_Id: "vyapam",
     post_Src:
       "https://drive.google.com/file/d/19TQWIKOwXkFWiUU0vXrT_pbNFKvnYMK2/preview",
     download_Link:
@@ -370,7 +217,8 @@ const updates = [
     time_Stamp: "12-08-2025",
   },
   {
-    post_Id: "130ZzKjaKVke2LGvmAbWSm5jj9SDLdIw9",
+    post_Id: "7",
+    user_Id: "scholarship",
     post_Src:
       "https://drive.google.com/file/d/130ZzKjaKVke2LGvmAbWSm5jj9SDLdIw9/preview",
     title: " CG post metric scholarship 2025-26 ",
@@ -419,7 +267,8 @@ Year 2025- 26 में अनुसूचित जाति, अनुसू�
     time_Stamp: "14-08-2025",
   },
   {
-    post_Id: "136YsL3BLW8cGbpbX72T0uzyZlI_PGka8",
+    post_Id: "8",
+    user_Id: "blog",
     post_Src:
       "https://drive.google.com/file/d/136YsL3BLW8cGbpbX72T0uzyZlI_PGka8/preview",
     title: " How to Get OTR Number, NSP OTR registration ",
@@ -460,7 +309,8 @@ Year 2025- 26 में अनुसूचित जाति, अनुसू�
     category: "updates",
   },
   {
-    post_Id: "13b6CMpbFWlOTOiDR2cxcZVjZ3i9zPRG6",
+    post_Id: "9",
+    user_Id: "vyapam",
     post_Src:
       "https://drive.google.com/file/d/19JzIjUSr0Ur6ZnB_1v8HzIlcMpETQWWv/preview",
     title: " CG Staff nursing vacancy 2025 ",
@@ -511,7 +361,8 @@ $
     category: "updates",
   },
   {
-    post_Id: "17sNfpmXyOu7Zb_wPAO2LMD6ck3Znfv3T",
+    post_Id: "10",
+    user_Id: "blog",
     post_Src:
       "https://drive.google.com/file/d/17sNfpmXyOu7Zb_wPAO2LMD6ck3Znfv3T/preview",
     title:
@@ -549,7 +400,8 @@ $
     category: "updates",
   },
   {
-    post_Id: "1CdggGAs8zQJ6rINEfTwydT7jVHqG_alg",
+    post_Id: "11",
+    user_Id: "vyapam",
     post_Src:
       "https://drive.google.com/file/d/1CdggGAs8zQJ6rINEfTwydT7jVHqG_alg/preview",
     title: "Ward boy and ward aaya vacancy 2025, CG vyapam",
@@ -573,6 +425,22 @@ $
     ],
     category: "updates",
   },
+  {
+    post_Id: "12",
+    user_Id: "results",
+    siteUrl_Id: "smkv_result",
+    siteUrl: "https://smkv.in",
+    title: "smkv result",
+    category: "results",
+  },
+  {
+    post_Id: "13",
+    user_Id: "admitcards",
+    siteUrl_Id: "smkv_admitcard",
+    siteUrl: "https://smkv.in",
+    title: "smkv admit card",
+    category: "admitcard",
+  },
 ];
 
-export { cafes, profiles, updates };
+export { cafes, profiles, updates, images };

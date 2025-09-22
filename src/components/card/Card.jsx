@@ -5,7 +5,9 @@ import Button from "../button/Button";
 export default function Card(props) {
   // console.log(props.data);
   return (
-    <div className="card">
+    <div
+      className={`${props?.className} overflow-hidden rounded-2xl h-full shadow-xl/20 border border-[#00000042]`}
+    >
       {props.children ? (
         props.children
       ) : (

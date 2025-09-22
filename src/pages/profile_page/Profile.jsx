@@ -2,8 +2,9 @@ import React, { useEffect } from "react";
 import Page_Container from "../../components/page_container/Page_Container";
 import Card from "../../components/card/Card";
 import { profiles as profileList } from "../../data_store/data";
-import Button, { Button2 } from "../../components/button/Button";
+import Button from "../../components/button/Button";
 import { Link, useParams } from "react-router";
+import Not_Found from "../page_not_found/Not_Found";
 
 export default function Profile() {
   const param = useParams();
@@ -15,22 +16,10 @@ export default function Profile() {
   // console.log(profileFilterd);
 
   if (!profileFilterd) {
-    return (
-      <div
-        style={{
-          textAlign: "center",
-        }}
-      >
-        {" "}
-        <h4>Page not found</h4> <br /> <Link to={"/"}>Home</Link>
-      </div>
-    );
+    return <Not_Found />;
   }
   return (
     <div className="profilePage">
-      <div>
-        <Button2 />
-      </div>
       <main>
         <Page_Container>
           <div className="section1">

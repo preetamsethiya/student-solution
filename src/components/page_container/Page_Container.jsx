@@ -5,9 +5,9 @@ export default function Page_Container(props) {
     document.documentElement.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, [location.pathname]);
   return (
-    <div className="page">
-      <div className="container">
-        <div className="wrapper">{props.children}</div>
+    <div>
+      <div className={`  ${props?.className} max-w-[640px] mx-auto mt-[68px] `}>
+        {props.children}
       </div>
     </div>
   );
