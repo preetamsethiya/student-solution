@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Page_Container from "../../components/page_container/Page_Container";
 import Card from "../../components/card/Card";
 import { profiles, updates } from "../../data_store/data";
@@ -6,10 +6,13 @@ import Button from "../../components/button/Button";
 import { Link, useParams, useSearchParams } from "react-router";
 import AdsComponent from "../../components/google_ad/AdsComponent";
 import { UseLocalstorage } from "../../hooks/UseLocalstorage";
+import { VarContext } from "../../context/VarContext";
+import Modal from "../../components/modal/Modal";
 
 export default function Post() {
   const param = useParams();
   const getPhone = UseLocalstorage("phone", "");
+  const getVarContext = useContext(VarContext);
   const [searchParams, setSearchParams] = useSearchParams();
   const phone = searchParams.get("phone");
   // console.log(param);
@@ -36,7 +39,7 @@ export default function Post() {
               {" "}
               <span>
                 <a
-                  className="ring-1 ring-green-500 bg-green-500 text-white  px-2 font-semibold"
+                  className="ring-1 ring-green-500 bg-green-500 text-white  px-3 rounded-sm py-1.5 font-semibold"
                   href={`https://wa.me?text=${window.location.href}`}
                   target="_blank"
                 >
@@ -46,7 +49,7 @@ export default function Post() {
             </div>
             <div>
               <a
-                className=" bg-blue-500 px-3 font-semibold text-white"
+                className=" bg-blue-500 px-3 py-1.5 rounded-sm font-semibold text-white"
                 href={`https://wa.me/${getPhone[0]}?text=#sss`}
                 target="_blank"
               >
@@ -83,6 +86,7 @@ export default function Post() {
                 </div>
               );
             })}
+            <AdsComponent dataAdSlot="7424430887" />
             {/* eligibilities */}
             {post?.eligibilities?.map((eligibility, i) => {
               return (
@@ -107,6 +111,24 @@ export default function Post() {
             })}
           </div>
         </Page_Container>
+        {getVarContext.isOpenAd && (
+          <Modal
+            footer={
+              <div className="flex justify-center gap-3">
+                <button
+                  className="rounded-md px-6 py-1 font-semibold text-center text-xl bg-gray-500 text-white"
+                  onClick={() => {
+                    getVarContext.setIsOpenAd(false);
+                  }}
+                >
+                  close
+                </button>
+              </div>
+            }
+          >
+            <AdsComponent className={"w-full h-full"} dataAdSlot="7424430887" />
+          </Modal>
+        )}
       </main>
     </>
   );

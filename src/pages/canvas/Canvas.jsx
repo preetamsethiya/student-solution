@@ -103,7 +103,7 @@ export default function Canvas() {
   };
   return (
     <Page_Container>
-      <div style={{ width: "100%" }}>
+      <div className="w-full flex justify-center px-4 flex-col gap-1">
         {/* <h1 className="text-4xl font-semibold text-blue-700 "> Canvas !</h1>{" "} */}
         {downloadUrl && (
           <button className="mb-1 rounded-sm ring-1 ring-blue-700 mr-1  bg-blue-500 text-center">

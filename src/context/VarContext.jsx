@@ -5,7 +5,9 @@ export const VarContext = createContext(null);
 export const VarProvider = (props) => {
   const [isClgActive, setIsClgActive] = useState("");
   const [isPhone, setIsPhone] = useState("");
-  const [isOpenPopUp, setIsOpenPopUp] = useState('true');
+  const [isOpenPopUp, setIsOpenPopUp] = useState("true");
+  const [isOpenAd, setIsOpenAd] = useState(false);
+  const [timerId, setTimerId] = useState("");
 
   return (
     <VarContext.Provider
@@ -16,6 +18,10 @@ export const VarProvider = (props) => {
         setIsPhone,
         isOpenPopUp,
         setIsOpenPopUp,
+        isOpenAd,
+        setIsOpenAd,
+        timerId,
+        setTimerId,
       }}
     >
       {props.children}

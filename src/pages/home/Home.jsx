@@ -13,6 +13,7 @@ import AdsComponent from "../../components/google_ad/AdsComponent";
 import "../../App.css";
 import { UseLocalstorage } from "../../hooks/UseLocalstorage";
 import PopUp from "../../components/pop_up/PopUp";
+import Modal from "../../components/modal/Modal";
 const buttons = [
   // {
   //   text: "updates",
@@ -60,13 +61,11 @@ export default function Home() {
   const phone = searchParams.get("phone");
 
   const getVarContext = useContext(VarContext);
-
   const { search_Filter, setSearch_Filter } = useContext(Search_FilterContext);
   const getPhone = UseLocalstorage("phone", "");
   const getPopUpState = UseLocalstorage("popUpState", "true" || "");
   const filter = UseSearch_Filter();
   // console.log(updateList);
-
   useEffect(() => {
     if (phone) {
       getPhone[1](phone);
@@ -142,43 +141,45 @@ export default function Home() {
 
               {/* cafe section  */}
 
-              <div>
+              {getPhone[0] && (
                 <div>
-                  {cafes.map((cafe) => {
-                    return (
-                      <Card key={cafe.user_Id}>
-                        <a
-                          href={`https://wa.me/${getPhone[0]}?text=#sss`}
-                          target="_blank"
-                          className="bg-blue-500"
-                        >
-                          <div
-                            className={`bg-green-500 pt-0 pb-1 px-1 flex flex-col   m-2 rounded-xl text-center font-bold text-3xl text-gray-100`}
+                  <div>
+                    {cafes.map((cafe) => {
+                      return (
+                        <Card key={cafe.user_Id}>
+                          <a
+                            href={`https://wa.me/${getPhone[0]}?text=#sss`}
+                            target="_blank"
+                            className="bg-blue-500"
                           >
-                            {" "}
-                            <div className="w-[120px] overflow-hidden self-center flex justify-center items-center">
-                              <img
-                                src={images.whatsappIcon}
-                                className="w-full h-full"
-                                alt=""
-                              />
+                            <div
+                              className={`bg-green-500 pt-0 pb-1 px-1 flex flex-col   m-2 rounded-xl text-center font-bold text-3xl text-gray-100`}
+                            >
+                              {" "}
+                              <div className="w-[120px] overflow-hidden self-center flex justify-center items-center">
+                                <img
+                                  src={images.whatsappIcon}
+                                  className="w-full h-full"
+                                  alt=""
+                                />
+                              </div>
+                              <div className="text-center mt-0 rounded-full bg-blue-500 py-1.5 font-bold text-xl text-gray-100">
+                                <Button
+                                  btn={{
+                                    text: "Contact for form fill-up",
+                                  }}
+                                />
+                              </div>
                             </div>
-                            <div className="text-center mt-0 rounded-full bg-blue-500 py-1.5 font-bold text-xl text-gray-100">
-                              <Button
-                                btn={{
-                                  text: "Contact for form fill-up",
-                                }}
-                              />
-                            </div>
-                          </div>
-                        </a>
-                      </Card>
-                    );
-                  })}
+                          </a>
+                        </Card>
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
-            {/* <AdsComponent dataAdSlot="7424430887" /> */}
+            <AdsComponent dataAdSlot="7424430887" />
 
             <div className=" mt-3 ">
               {/* buttons section  */}
@@ -227,6 +228,9 @@ export default function Home() {
                   .map((update, i) => {
                     return (
                       <article
+                        onClick={() => {
+                          getVarContext.setIsOpenAd(true);
+                        }}
                         key={update.post_Id}
                         className={` w-[300px] grow  ${
                           i % 2 === 0 ? " mb-3 sm:mt-3 sm:mb-0" : " mb-3 "
@@ -235,7 +239,7 @@ export default function Home() {
                         <div>
                           <span className="mb-1">
                             <a
-                              className="ring-1 ring-green-500 bg-green-500 text-white  px-2 font-semibold"
+                              className="ring-1 py-1.5 ring-green-500 bg-green-500 text-white  px-3 rounded-sm font-semibold"
                               href={`https://wa.me?text=${
                                 window.location.href
                               }${
@@ -262,8 +266,8 @@ export default function Home() {
                             {" "}
                             <Card>
                               <div className="p-2">
-                                <div className="text-center  p-10 bg-[url(/src/assets/images/door2.jpeg)] bg-cover  bg-center rounded-xl">
-                                  <span className="bg-gray-900 rounded-full px-4  py-1 text-gray-100 font-semibold ">
+                                <div className="text-center  p-16 bg-[url(/src/assets/images/door2.jpeg)] bg-cover  bg-center rounded-xl">
+                                  <span className="bg-gray-900 rounded-full px-5  py-1.5 text-gray-100 font-semibold ">
                                     Open
                                   </span>
                                 </div>
@@ -282,6 +286,28 @@ export default function Home() {
               {/* <AdsComponent dataAdSlot="7424430887" /> */}
             </div>
           </Page_Container>
+
+          {getVarContext.isOpenAd && (
+            <Modal
+              footer={
+                <div className="flex justify-center gap-3">
+                  <button
+                    className="rounded-md px-6 py-1 font-semibold text-center text-xl bg-gray-500 text-white"
+                    onClick={() => {
+                      getVarContext.setIsOpenAd(false);
+                    }}
+                  >
+                    close
+                  </button>
+                </div>
+              }
+            >
+              <AdsComponent
+                className={"w-full h-full"}
+                dataAdSlot="7424430887"
+              />
+            </Modal>
+          )}
         </main>
       </div>
     </>

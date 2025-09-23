@@ -13,7 +13,7 @@ const AdsComponent = (props) => {
 
   return (
     <>
-      <div>
+      <div className={`${props.className}`}>
         <ins
           className="adsbygoogle"
           style={{ display: "block" }}
