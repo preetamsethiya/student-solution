@@ -13,7 +13,7 @@ const AdsComponent = (props) => {
 
   return (
     <>
-      <div className={`${props.className}`}>
+      <div className={`${props.className} `}>
         <ins
           className="adsbygoogle"
           style={{ display: "block" }}
@@ -22,6 +22,7 @@ const AdsComponent = (props) => {
           data-ad-format={`${props.dataAdFormat}`}
           data-full-width-responsive="true"
         ></ins>
+        AD
       </div>
     </>
   );

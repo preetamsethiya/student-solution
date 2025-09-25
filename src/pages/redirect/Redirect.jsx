@@ -49,8 +49,8 @@ export default function Redirect() {
         >
           <AdsComponent
             className={"w-full h-full"}
-            dataAdSlot="7424430887"
-            dataAdFormat="video"
+            dataAdSlot="1446835924"
+            dataAdFormat="autorelaxed"
           />
         </Modal>
       ) : (
