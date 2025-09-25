@@ -37,7 +37,7 @@ export default function PopUp(props) {
               props.data.inputFunc(e);
               e.stopPropagation();
             }}
-            className="ring-1 ring-blue-400 rounded-full px-2.5 outline-none"
+            className="ring-1 ring-blue-400 rounded-full py-1.5 px-2.5 outline-none"
           />
         </div>
         <div className="flex justify-center items-center mt-3 mb-2">
@@ -46,7 +46,7 @@ export default function PopUp(props) {
             onClick={() => {
               props.data.addFunc();
             }}
-            className={`rounded-full text-center px-5 font-semibold text-gray-200 ${
+            className={`rounded-full text-center px-7 py-1.5 font-semibold text-gray-200 ${
               !getVarContext.isPhone ? "bg-red-300" : "bg-blue-500 "
             } `}
           >
@@ -56,7 +56,7 @@ export default function PopUp(props) {
             onClick={() => {
               props.data.skipFunc();
             }}
-            className="rounded-full bg-gray-500 text-center px-5 font-semibold text-gray-200 ml-1.5 "
+            className="rounded-full bg-gray-500 text-center px-7 py-1.5 font-semibold text-gray-200 ml-1.5 "
           >
             Skip
           </button>

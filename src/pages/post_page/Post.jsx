@@ -48,14 +48,16 @@ export default function Post() {
               </span>
             </div>
             <div>
-              <a
-                className=" bg-blue-500 px-3 py-1.5 rounded-sm font-semibold text-white"
-                href={`https://wa.me/${getPhone[0]}?text=#sss`}
-                target="_blank"
-              >
-                {" "}
-                Form fill up, contact..!
-              </a>
+              {getPhone[0] && (
+                <a
+                  className=" bg-blue-500 px-3 py-1.5 rounded-sm font-semibold text-white"
+                  href={`https://wa.me/${getPhone[0]}?text=#sss`}
+                  target="_blank"
+                >
+                  {" "}
+                  Form fill up, contact..!
+                </a>
+              )}
             </div>
           </div>
           <div className="font-semibold text-xl px-2 mt-1"> {post?.title}:</div>
@@ -86,7 +88,7 @@ export default function Post() {
                 </div>
               );
             })}
-            <AdsComponent dataAdSlot="7424430887" />
+            <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
             {/* eligibilities */}
             {post?.eligibilities?.map((eligibility, i) => {
               return (
@@ -111,24 +113,28 @@ export default function Post() {
             })}
           </div>
         </Page_Container>
-        {getVarContext.isOpenAd && (
-          <Modal
-            footer={
-              <div className="flex justify-center gap-3">
-                <button
-                  className="rounded-md px-6 py-1 font-semibold text-center text-xl bg-gray-500 text-white"
-                  onClick={() => {
-                    getVarContext.setIsOpenAd(false);
-                  }}
-                >
-                  close
-                </button>
-              </div>
-            }
-          >
-            <AdsComponent className={"w-full h-full"} dataAdSlot="7424430887" />
-          </Modal>
-        )}
+
+        <Modal
+          className={` ${!getVarContext.isOpenAd ? "hidden" : "block"}`}
+          footer={
+            <div className="flex justify-center gap-3">
+              <button
+                className={` rounded-md px-6 py-1 font-semibold text-center text-xl bg-gray-500 text-white`}
+                onClick={() => {
+                  getVarContext.setIsOpenAd(false);
+                }}
+              >
+                close
+              </button>
+            </div>
+          }
+        >
+          <AdsComponent
+            className={"w-full h-full"}
+            dataAdSlot="7424430887"
+            dataAdFormat="auto"
+          />
+        </Modal>
       </main>
     </>
   );

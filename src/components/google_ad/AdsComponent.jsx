@@ -19,7 +19,7 @@ const AdsComponent = (props) => {
           style={{ display: "block" }}
           data-ad-client="ca-pub-5935749075399685"
           data-ad-slot={dataAdSlot}
-          data-ad-format="auto"
+          data-ad-format={`${props.dataAdFormat}`}
           data-full-width-responsive="true"
         ></ins>
       </div>

@@ -136,12 +136,23 @@ export default function Home() {
                 >
                   Update phone{" "}
                 </span>
+                <div>
+                  {getPhone[0] && (
+                    <a
+                      className=" bg-blue-500 px-3 py-1.5 rounded-sm font-semibold text-white"
+                      href={`https://wa.me/${getPhone[0]}?text=#sss`}
+                      target="_blank"
+                    >
+                      {" "}
+                      Form fill up, contact..!
+                    </a>
+                  )}
+                </div>
               </div>
-              {/* google ad component */}
 
               {/* cafe section  */}
 
-              {getPhone[0] && (
+              {/* {getPhone[0] && (
                 <div>
                   <div>
                     {cafes.map((cafe) => {
@@ -177,9 +188,12 @@ export default function Home() {
                     })}
                   </div>
                 </div>
-              )}
+              )} */}
             </div>
-            <AdsComponent dataAdSlot="7424430887" />
+
+            {/* google ad component */}
+
+            <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
 
             <div className=" mt-3 ">
               {/* buttons section  */}
@@ -239,6 +253,7 @@ export default function Home() {
                         <div>
                           <span className="mb-1">
                             <a
+                              onClick={(e) => e.stopPropagation()}
                               className="ring-1 py-1.5 ring-green-500 bg-green-500 text-white  px-3 rounded-sm font-semibold"
                               href={`https://wa.me?text=${
                                 window.location.href

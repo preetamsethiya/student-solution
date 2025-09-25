@@ -33,19 +33,25 @@ export default function Redirect() {
         <Modal
           footer={
             <div className="flex justify-center gap-3">
-              <button
-                className="rounded-md px-6 py-1 font-semibold text-center text-xl bg-gray-500 text-white"
-                onClick={() => {
-                  open(filterUrl.siteUrl);
-                  getVarContext.setIsOpenAd(false);
-                }}
-              >
-                close
-              </button>
+              <a href={`${filterUrl.siteUrl}`} target="_blank">
+                <button
+                  className="rounded-md px-6 py-1 font-semibold text-center text-xl bg-gray-500 text-white"
+                  onClick={() => {
+                    // open(filterUrl.siteUrl);
+                    getVarContext.setIsOpenAd(false);
+                  }}
+                >
+                  close
+                </button>
+              </a>
             </div>
           }
         >
-          <AdsComponent className={"w-full h-full"} dataAdSlot="7424430887" />
+          <AdsComponent
+            className={"w-full h-full"}
+            dataAdSlot="7424430887"
+            dataAdFormat="video"
+          />
         </Modal>
       ) : (
         <div>
