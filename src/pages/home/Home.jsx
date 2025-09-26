@@ -74,7 +74,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="homeContainer mt-[60px] ">
+      <div className="homeContainer max-sm:mt-3 mt-[60px] ">
         <main>
           {/* home pop up  */}
           {getPopUpState[0] === "true" &&
@@ -105,7 +105,7 @@ export default function Home() {
             )}
           {/* search section  */}
 
-          <div className=" mb-[-50px] pt-7 max-sm:pt-1 flex justify-center px-6  py-2">
+          <div className=" mb-[-50px]pt-7 max-sm:pt-1 flex justify-center px-6  py-2">
             <div>
               <Input
                 input={{
@@ -193,7 +193,11 @@ export default function Home() {
 
             {/* google ad component */}
 
-            <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
+            <AdsComponent
+              className={"w-full h-full"}
+              dataAdSlot="7424430887"
+              dataAdFormat="auto"
+            />
 
             <div className=" mt-3 ">
               {/* buttons section  */}
@@ -298,7 +302,11 @@ export default function Home() {
                     );
                   })}
               </div>
-              {/* <AdsComponent dataAdSlot="7424430887" /> */}
+              <AdsComponent
+                className={"w-full h-full"}
+                dataAdSlot="7424430887"
+                dataAdFormat="auto"
+              />
             </div>
           </Page_Container>
 

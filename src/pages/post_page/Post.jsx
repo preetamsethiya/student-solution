@@ -88,7 +88,11 @@ export default function Post() {
                 </div>
               );
             })}
-            <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
+            <AdsComponent
+              className={"w-full h-full"}
+              dataAdSlot="7424430887"
+              dataAdFormat="auto"
+            />
             {/* eligibilities */}
             {post?.eligibilities?.map((eligibility, i) => {
               return (

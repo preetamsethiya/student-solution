@@ -6,7 +6,9 @@ export default function Page_Container(props) {
   }, [location.pathname]);
   return (
     <div>
-      <div className={`  ${props?.className} max-w-[640px] mx-auto mt-[68px] `}>
+      <div
+        className={`  ${props?.className} max-w-[640px] mx-auto mt-[68px] max-sm:mt-5 `}
+      >
         {props.children}
       </div>
     </div>
