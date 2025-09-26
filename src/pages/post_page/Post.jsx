@@ -117,28 +117,29 @@ export default function Post() {
             })}
           </div>
         </Page_Container>
-
-        <Modal
-          className={` ${getVarContext.isOpenAd ? "flex" : "hidden"}`}
-          footer={
-            <div className="flex justify-center gap-3">
-              <button
-                className={` rounded-md px-6 py-1 font-semibold text-center text-xl bg-gray-500 text-white`}
-                onClick={() => {
-                  getVarContext.setIsOpenAd(false);
-                }}
-              >
-                close
-              </button>
-            </div>
-          }
-        >
-          <AdsComponent
-            className={"w-full h-full"}
-            dataAdSlot="7424430887"
-            dataAdFormat="auto"
-          />
-        </Modal>
+        {getVarContext.isOpenAd && (
+          <Modal
+            footer={
+              <div className="flex justify-center gap-3">
+                <button
+                  className="rounded-md px-6 py-1 font-semibold text-center text-xl bg-gray-500 text-white"
+                  onClick={() => {
+                    // open(filterUrl.siteUrl);
+                    getVarContext.setIsOpenAd(false);
+                  }}
+                >
+                  close
+                </button>
+              </div>
+            }
+          >
+            <AdsComponent
+              className={"w-full h-full"}
+              dataAdSlot="1446835924"
+              dataAdFormat="auto"
+            />
+          </Modal>
+        )}
       </main>
     </>
   );

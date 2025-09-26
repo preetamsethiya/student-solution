@@ -29,30 +29,31 @@ export default function Redirect() {
   }, [filterUrl, phone]);
   return (
     <Page_Container>
-      <Modal
-        className={` ${getVarContext.isOpenAd ? "flex" : "hidden"}`}
-        footer={
-          <div className="flex justify-center gap-3">
-            <a href={`${filterUrl.siteUrl}`} target="_blank">
-              <button
-                className="rounded-md px-6 py-1 font-semibold text-center text-xl bg-gray-500 text-white"
-                onClick={() => {
-                  // open(filterUrl.siteUrl);
-                  getVarContext.setIsOpenAd(false);
-                }}
-              >
-                close
-              </button>
-            </a>
-          </div>
-        }
-      >
-        <AdsComponent
-          className={"w-full h-full"}
-          dataAdSlot="1446835924"
-          dataAdFormat="auto"
-        />
-      </Modal>
+      {getVarContext.isOpenAd && (
+        <Modal
+          footer={
+            <div className="flex justify-center gap-3">
+              <a href={`${filterUrl.siteUrl}`} target="_blank">
+                <button
+                  className="rounded-md px-6 py-1 font-semibold text-center text-xl bg-gray-500 text-white"
+                  onClick={() => {
+                    // open(filterUrl.siteUrl);
+                    getVarContext.setIsOpenAd(false);
+                  }}
+                >
+                  close
+                </button>
+              </a>
+            </div>
+          }
+        >
+          <AdsComponent
+            className={"w-full h-full"}
+            dataAdSlot="1446835924"
+            dataAdFormat="auto"
+          />
+        </Modal>
+      )}
 
       <div>
         {" "}
