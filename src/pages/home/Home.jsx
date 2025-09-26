@@ -286,7 +286,7 @@ export default function Home() {
                               <div className="p-2">
                                 <div className="text-center  p-16 bg-[url(/src/assets/images/door2.jpeg)] bg-cover  bg-center rounded-xl">
                                   <span className="bg-gray-900 rounded-full px-5  py-1.5 text-gray-100 font-semibold ">
-                                    Open
+                                    {search_Filter}
                                   </span>
                                 </div>
                                 <div className="text-center text-gray-500 font-semibold">
