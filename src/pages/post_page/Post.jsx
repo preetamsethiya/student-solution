@@ -88,11 +88,7 @@ export default function Post() {
                 </div>
               );
             })}
-            <AdsComponent
-              className={"w-full h-full"}
-              dataAdSlot="7424430887"
-              dataAdFormat="auto"
-            />
+            <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
             {/* eligibilities */}
             {post?.eligibilities?.map((eligibility, i) => {
               return (
@@ -133,11 +129,7 @@ export default function Post() {
               </div>
             }
           >
-            <AdsComponent
-              className={"w-full h-full"}
-              dataAdSlot="7424430887"
-              dataAdFormat="auto"
-            />
+            <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
           </Modal>
         )}
       </main>

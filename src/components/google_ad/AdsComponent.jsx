@@ -13,7 +13,7 @@ const AdsComponent = (props) => {
 
   return (
     <>
-      <div className={`${props.className} `}>
+      <div>
         <ins
           className="adsbygoogle"
           style={{ display: "block" }}
@@ -27,5 +27,9 @@ const AdsComponent = (props) => {
     </>
   );
 };
+
+// ad id
+
+// multiplex ad dataAdSlot="1446835924"
 
 export default AdsComponent;

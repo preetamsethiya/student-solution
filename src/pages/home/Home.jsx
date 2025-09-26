@@ -133,7 +133,7 @@ export default function Home() {
                   }}
                   className="cursor-pointer ring-1 ring-red-500 mr-2  "
                 >
-                  Update phone{" 6"}
+                  Update phone{" 7"}
                 </span>
                 <div>
                   {getPhone[0] && (
@@ -192,11 +192,7 @@ export default function Home() {
 
             {/* google ad component */}
 
-            <AdsComponent
-              className={"w-full h-full"}
-              dataAdSlot="7424430887"
-              dataAdFormat="auto"
-            />
+            <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
 
             <div className=" mt-3 ">
               {/* buttons section  */}
@@ -301,11 +297,7 @@ export default function Home() {
                     );
                   })}
               </div>
-              <AdsComponent
-                className={"w-full h-full"}
-                dataAdSlot="7424430887"
-                dataAdFormat="auto"
-              />
+              <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
             </div>
           </Page_Container>
         </main>

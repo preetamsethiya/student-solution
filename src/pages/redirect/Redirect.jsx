@@ -47,11 +47,7 @@ export default function Redirect() {
             </div>
           }
         >
-          <AdsComponent
-            className={"w-full h-full"}
-            dataAdSlot="1446835924"
-            dataAdFormat="auto"
-          />
+          <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
         </Modal>
       )}
 

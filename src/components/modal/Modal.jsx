@@ -6,7 +6,7 @@ export default function Modal(props) {
   return createPortal(
     <>
       <div
-        className={` w-full h-screen bg-gray-900/95  fixed top-0 z-10 `}
+        className={` w-full h-screen bg-gray-900/95  fixed top-0 bottom-0 z-10 `}
       >
         <Page_Container>
           {props.header}
