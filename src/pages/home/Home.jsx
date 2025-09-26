@@ -133,7 +133,7 @@ export default function Home() {
                   }}
                   className="cursor-pointer ring-1 ring-red-500 mr-2  "
                 >
-                  Update phone{" 4"}
+                  Update phone{" 5"}
                 </span>
                 <div>
                   {getPhone[0] && (

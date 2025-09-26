@@ -135,7 +135,7 @@ export default function Post() {
           >
             <AdsComponent
               className={"w-full h-full"}
-              dataAdSlot="1446835924"
+              dataAdSlot="7424430887"
               dataAdFormat="auto"
             />
           </Modal>
