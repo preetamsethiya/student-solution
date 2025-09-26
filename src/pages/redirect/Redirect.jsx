@@ -29,57 +29,56 @@ export default function Redirect() {
   }, [filterUrl, phone]);
   return (
     <Page_Container>
-      {getVarContext.isOpenAd ? (
-        <Modal
-          footer={
-            <div className="flex justify-center gap-3">
-              <a href={`${filterUrl.siteUrl}`} target="_blank">
-                <button
-                  className="rounded-md px-6 py-1 font-semibold text-center text-xl bg-gray-500 text-white"
-                  onClick={() => {
-                    // open(filterUrl.siteUrl);
-                    getVarContext.setIsOpenAd(false);
-                  }}
-                >
-                  close
-                </button>
-              </a>
-            </div>
-          }
-        >
-          <AdsComponent
-            className={"w-full h-full"}
-            dataAdSlot="1446835924"
-            dataAdFormat="auto"
-          />
-        </Modal>
-      ) : (
-        <div>
-          {" "}
-          <ul>
-            {updates.map((update, i) => {
-              if (i < 5) {
-                return (
-                  <li key={i} className="mb-2 flex justify-center ">
-                    <Link
-                      to={`${
-                        update.user_Id == "results" ||
-                        update.user_Id == "admitcards"
-                          ? `/resultcard/${update.siteUrl_Id}?phone=${getPhone[0]}`
-                          : `/post/${update.post_Id}?phone=${getPhone[0]}`
-                      }`}
-                      state={update}
-                      className=" bg-orange-400 mb-2 w-full pl-3 py-1.5"
-                    >
-                      {update.title}
-                    </Link>
-                  </li>
-                );
-              }
-            })}
-          </ul>
-        </div>
-      )}
+      <Modal
+        className={` ${getVarContext.isOpenAd ? "block" : "hidden"}`}
+        footer={
+          <div className="flex justify-center gap-3">
+            <a href={`${filterUrl.siteUrl}`} target="_blank">
+              <button
+                className="rounded-md px-6 py-1 font-semibold text-center text-xl bg-gray-500 text-white"
+                onClick={() => {
+                  // open(filterUrl.siteUrl);
+                  getVarContext.setIsOpenAd(false);
+                }}
+              >
+                close
+              </button>
+            </a>
+          </div>
+        }
+      >
+        <AdsComponent
+          className={"w-full h-full"}
+          dataAdSlot="1446835924"
+          dataAdFormat="auto"
+        />
+      </Modal>
+
+      <div>
+        {" "}
+        <ul>
+          {updates.map((update, i) => {
+            if (i < 5) {
+              return (
+                <li key={i} className="mb-2 flex justify-center ">
+                  <Link
+                    to={`${
+                      update.user_Id == "results" ||
+                      update.user_Id == "admitcards"
+                        ? `/resultcard/${update.siteUrl_Id}?phone=${getPhone[0]}`
+                        : `/post/${update.post_Id}?phone=${getPhone[0]}`
+                    }`}
+                    state={update}
+                    className=" bg-orange-400 mb-2 w-full pl-3 py-1.5"
+                  >
+                    {update.title}
+                  </Link>
+                </li>
+              );
+            }
+          })}
+        </ul>
+      </div>
     </Page_Container>
   );
 }

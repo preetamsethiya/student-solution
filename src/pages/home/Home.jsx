@@ -123,7 +123,6 @@ export default function Home() {
             </div>
           </div>
           <Page_Container className="px-3">
-            <div className={` h-9 w-9 `}></div>
             <div>
               <div className="mb-2 flex justify-between">
                 <span
@@ -134,7 +133,7 @@ export default function Home() {
                   }}
                   className="cursor-pointer ring-1 ring-red-500 mr-2  "
                 >
-                  Update phone{" "}
+                  Update phone{" 2"}
                 </span>
                 <div>
                   {getPhone[0] && (
@@ -309,29 +308,6 @@ export default function Home() {
               />
             </div>
           </Page_Container>
-
-          {getVarContext.isOpenAd && (
-            <Modal
-              footer={
-                <div className="flex justify-center gap-3">
-                  <button
-                    className="rounded-md px-6 py-1 font-semibold text-center text-xl bg-gray-500 text-white"
-                    onClick={() => {
-                      getVarContext.setIsOpenAd(false);
-                    }}
-                  >
-                    close
-                  </button>
-                </div>
-              }
-            >
-              <AdsComponent
-                className={"w-full h-full"}
-                dataAdSlot="7424430887"
-                dataAdFormat="auto"
-              />
-            </Modal>
-          )}
         </main>
       </div>
     </>
