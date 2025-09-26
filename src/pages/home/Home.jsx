@@ -320,6 +320,7 @@ export default function Home() {
               <AdsComponent
                 className={"w-full h-full"}
                 dataAdSlot="7424430887"
+                dataAdFormat="auto"
               />
             </Modal>
           )}
