@@ -32,10 +32,10 @@ export default function Redirect() {
       {getVarContext.isOpenAd && (
         <Modal
           footer={
-            <div className="flex justify-center gap-3">
+            <div className="flex justify-center gap-3 mt-[-24px]">
               <a href={`${filterUrl.siteUrl}`} target="_blank">
                 <button
-                  className="rounded-md px-6 py-1 font-semibold text-center text-xl bg-gray-500 text-white"
+                  className="rounded-full px-6 py-0 font-semibold text-center text-sm/6 bg-gray-500 text-white"
                   onClick={() => {
                     // open(filterUrl.siteUrl);
                     getVarContext.setIsOpenAd(false);

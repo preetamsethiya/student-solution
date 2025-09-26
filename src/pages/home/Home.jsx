@@ -133,7 +133,7 @@ export default function Home() {
                   }}
                   className="cursor-pointer ring-1 ring-red-500 mr-2  "
                 >
-                  Update phone{" 7"}
+                  Update phone{" 8"}
                 </span>
                 <div>
                   {getPhone[0] && (
@@ -245,7 +245,7 @@ export default function Home() {
                           getVarContext.setIsOpenAd(true);
                         }}
                         key={update.post_Id}
-                        className={` w-[300px] grow  ${
+                        className={` w-[300px] grow ${
                           i % 2 === 0 ? " mb-3 sm:mt-3 sm:mb-0" : " mb-3 "
                         }`}
                       >
@@ -266,6 +266,11 @@ export default function Home() {
                             >
                               SHARE
                             </a>
+                            {update.new && (
+                              <span className="ring-1 py-1.5 ring-red-500 bg-red-100 text-red-700 ml-1 mb-2   px-3 rounded-sm font-semibold">
+                                new
+                              </span>
+                            )}
                           </span>
 
                           <Link

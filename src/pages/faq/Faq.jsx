@@ -11,6 +11,12 @@ export default function Faq() {
       ans: "hellow",
       note: "this is msg",
     },
+    {
+      q: "hi ",
+      id: crypto.randomUUID(),
+      ans: "hellow",
+      note: "this is msg",
+    },
   ];
   const [showAns, setShowAns] = useState(null);
 
@@ -27,7 +33,16 @@ export default function Faq() {
           <div className="bg-gray-300 p-2 rounded-sm">
             {FAQs.map((FAQ, i) => {
               return (
-                <div key={i} className="border-b pb-1 ">
+                <div
+                  key={i}
+                  className="border-b pb-1 "
+                  onClick={() => {
+                    setShowAns(i);
+                    if (showAns === i) {
+                      setShowAns((prev) => prev + crypto.randomUUID());
+                    }
+                  }}
+                >
                   <div className="font-semibold flex justify-between text-xl">
                     {" "}
                     {FAQ.q}
@@ -35,12 +50,6 @@ export default function Faq() {
                     <Button
                       btn={{
                         text: `${i === showAns ? "⬆️" : "⬇️"}`,
-                        onClick: () => {
-                          setShowAns(i);
-                          if (showAns === i) {
-                            setShowAns((prev) => prev + crypto.randomUUID());
-                          }
-                        },
                       }}
                     />
                   </div>
@@ -48,7 +57,7 @@ export default function Faq() {
                     className={` h-1  overflow-scroll scroll-bar-none ${
                       i === showAns
                         ? " h-[82px] transition-all duration-500 ease-in-out "
-                        : ""
+                        : "h-1 transition-all duration-500 ease-in-out"
                     }`}
                   >
                     {i === showAns ? (

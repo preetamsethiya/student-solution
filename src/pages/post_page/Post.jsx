@@ -72,10 +72,21 @@ export default function Post() {
                 </div>
               );
             })}
+
+            {/* overView  */}
+            {post?.overView?.map((eachOverView, i) => {
+              return (
+                <div className="bg-purple-400/20  py-1  pl-1" key={i}>
+                  {eachOverView}
+                </div>
+              );
+            })}
+            {/* google ad section  */}
+            <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
             {/* date */}
             {post?.date?.map((aDate, i) => {
               return (
-                <div className="bg-red-300 py-1 pl-1" key={i}>
+                <div className="bg-red-300 py-1 pl-1 " key={i}>
                   {aDate}
                 </div>
               );
@@ -88,7 +99,7 @@ export default function Post() {
                 </div>
               );
             })}
-            <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
+
             {/* eligibilities */}
             {post?.eligibilities?.map((eligibility, i) => {
               return (

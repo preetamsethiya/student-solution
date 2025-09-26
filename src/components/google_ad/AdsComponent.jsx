@@ -14,6 +14,8 @@ const AdsComponent = (props) => {
   return (
     <>
       <div>
+        {" "}
+        AD
         <ins
           className="adsbygoogle"
           style={{ display: "block" }}
@@ -22,7 +24,6 @@ const AdsComponent = (props) => {
           data-ad-slot={dataAdSlot}
           data-full-width-responsive="true"
         ></ins>
-        AD
       </div>
     </>
   );
