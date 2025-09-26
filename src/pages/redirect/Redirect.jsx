@@ -30,7 +30,7 @@ export default function Redirect() {
   return (
     <Page_Container>
       <Modal
-        className={` ${getVarContext.isOpenAd ? "block" : "hidden"}`}
+        className={` ${getVarContext.isOpenAd ? "flex" : "hidden"}`}
         footer={
           <div className="flex justify-center gap-3">
             <a href={`${filterUrl.siteUrl}`} target="_blank">

@@ -119,7 +119,7 @@ export default function Post() {
         </Page_Container>
 
         <Modal
-          className={` ${getVarContext.isOpenAd ? "block" : "hidden"}`}
+          className={` ${getVarContext.isOpenAd ? "flex" : "hidden"}`}
           footer={
             <div className="flex justify-center gap-3">
               <button
