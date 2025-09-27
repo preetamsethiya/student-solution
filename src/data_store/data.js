@@ -485,11 +485,11 @@ $
       },
       {
         text: "Video",
-        site: "https://youtu.be/2xAMPYUn_BM?si=T9JHO-30ypo4zHc_",
+        site: "https://youtu.be/2xAMPYUn_BM?si=T9JHO-3Oypo4zHc_",
       },
       {
         text: "Preview",
-        site: "https://drive.google.com/file/d/14zAzhKH7NVWndgmvPsRFpHdAgiccgGpB/view?usp=drivesdk",
+        site: "https://drive.google.com/file/d/13zAzhKH7NVWndgmvPsRFpHdAgiccgGpB/view?usp=drivesdk",
       },
       {
         text: "Apply online ",
