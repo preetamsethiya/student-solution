@@ -99,6 +99,8 @@ export default function Post() {
                 </div>
               );
             })}
+            {/* google ad section  */}
+            <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
 
             {/* eligibilities */}
             {post?.eligibilities?.map((eligibility, i) => {
@@ -122,6 +124,8 @@ export default function Post() {
                 </div>
               );
             })}
+            {/* google ad section  */}
+            <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
           </div>
         </Page_Container>
         {getVarContext.isOpenAd && (
