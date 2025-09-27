@@ -32,7 +32,7 @@ export default function Redirect() {
       {getVarContext.isOpenAd && (
         <Modal
           footer={
-            <div className="flex justify-center gap-3 mt-[-24px]">
+            <div className="flex justify-center gap-3 ">
               <a href={`${filterUrl.siteUrl}`} target="_blank">
                 <button
                   className="rounded-full px-6 py-0 font-semibold text-center text-sm/6 bg-gray-500 text-white"
