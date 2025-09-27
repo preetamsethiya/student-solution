@@ -484,6 +484,14 @@ $
         site: "https://vyapamcg.cgstate.gov.in/",
       },
       {
+        text: "Video",
+        site: "https://youtu.be/2xAMPYUn_BM?si=T9JHO-30ypo4zHc_",
+      },
+      {
+        text: "Preview",
+        site: "https://drive.google.com/file/d/14zAzhKH7NVWndgmvPsRFpHdAgiccgGpB/view?usp=drivesdk",
+      },
+      {
         text: "Apply online ",
         site: "https://vyapamprofile.cgstate.gov.in/online/",
       },
