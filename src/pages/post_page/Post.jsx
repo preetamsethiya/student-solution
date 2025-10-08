@@ -82,7 +82,7 @@ export default function Post() {
               );
             })}
             {/* google ad section  */}
-            <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
+            {/* <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" /> */}
             {/* date */}
             {post?.date?.map((aDate, i) => {
               return (
@@ -100,7 +100,7 @@ export default function Post() {
               );
             })}
             {/* google ad section  */}
-            <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
+            {/* <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" /> */}
 
             {/* eligibilities */}
             {post?.eligibilities?.map((eligibility, i) => {
@@ -113,11 +113,11 @@ export default function Post() {
             {/* links */}
             {post?.links?.map((link, i) => {
               return (
-                <div key={i} className="flex flex-col text-center mt-2">
+                <div key={i} className="flex flex-col text-center mt-2  ">
                   <a
                     href={link?.site}
                     target="_blank"
-                    className="bg-blue-300 mb-1.5 py-2 font-semibold "
+                    className="bg-blue-300 mb-1.5 py-2 font-semibold rounded-md"
                   >
                     {link.text}{" "}
                   </a>
@@ -125,7 +125,7 @@ export default function Post() {
               );
             })}
             {/* google ad section  */}
-            <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
+            {/* <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" /> */}
           </div>
         </Page_Container>
         {getVarContext.isOpenAd && (

@@ -514,6 +514,21 @@ $
     ],
     category: "updates",
   },
+  {
+    post_Id: "15",
+    user_Id: "smkv",
+    new: "true",
+    title: "UG (final) syllabus",
+    description: ` `,
+
+    links: [
+      {
+        text: "UG (FINAL) ALL SYLLABUS",
+        site: "https://smkvbastar.ac.in/en/page/affilitated-university-syllabus.aspx?tag=MQ==&type=MQ==",
+      },
+    ],
+    category: "updates",
+  },
 ];
 
 export { cafes, profiles, updates, images };
