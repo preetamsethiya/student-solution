@@ -526,6 +526,10 @@ $
         text: "UG (FINAL) ALL SYLLABUS",
         site: "https://smkvbastar.ac.in/en/page/affilitated-university-syllabus.aspx?tag=MQ==&type=MQ==",
       },
+      {
+        text: "PG (OLD) ALL SYLLABUS",
+        site: "https://smkvbastar.ac.in/en/page/affilitated-university-syllabus.aspx?tag=Mg==&type=Mg==",
+      },
     ],
     category: "updates",
   },
