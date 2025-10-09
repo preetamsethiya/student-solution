@@ -518,7 +518,7 @@ $
     post_Id: "15",
     user_Id: "smkv",
     new: "true",
-    title: "UG (final) syllabus",
+    title: "SMKV all  syllabus",
     description: ` `,
 
     links: [
@@ -529,6 +529,10 @@ $
       {
         text: "PG (OLD) ALL SYLLABUS",
         site: "https://smkvbastar.ac.in/en/page/affilitated-university-syllabus.aspx?tag=Mg==&type=Mg==",
+      },
+      {
+        text: "NEP, session 2025-26 all syllabus",
+        site: "https://drive.google.com/drive/folders/1a65txXAJgfXSaBn0YA9-hw32nit4vC8v",
       },
     ],
     category: "updates",

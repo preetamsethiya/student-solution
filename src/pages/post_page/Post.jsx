@@ -125,10 +125,10 @@ export default function Post() {
               );
             })}
             {/* google ad section  */}
-            {/* <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" /> */}
+            <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
           </div>
         </Page_Container>
-        {getVarContext.isOpenAd && (
+        {/* {getVarContext.isOpenAd && (
           <Modal
             footer={
               <div className="flex justify-center gap-3">
@@ -146,7 +146,7 @@ export default function Post() {
           >
             <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
           </Modal>
-        )}
+        )} */}
       </main>
     </>
   );
