@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import Page_Container from "../../components/page_container/Page_Container";
 import AdsComponent from "../../components/google_ad/AdsComponent";
+import img from "../../assets/react.svg";
+console.log(img);
 
 const links = [
   {
@@ -64,7 +66,7 @@ export default function LinksList() {
                   >
                     {" "}
                     <img
-                      src="/src/assets/react.svg"
+                      src={img}
                       className="w-[36px] h-[36px] self-start rounded-full "
                       alt=""
                     />
