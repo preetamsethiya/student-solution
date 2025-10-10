@@ -19,7 +19,7 @@ export default function Header() {
       route: "/canvas",
     },
     {
-      text: "Links",
+      text: "Sites",
       icon: "🔗",
       route: "/linkslist",
     },

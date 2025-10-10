@@ -22,6 +22,11 @@ export default function Redirect() {
   };
 
   useEffect(() => {
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (e) {
+      console.log("ad error", e);
+    }
     getVarContext.setIsOpenAd(true);
     if (phone) {
       getPhone[1](phone);
@@ -47,7 +52,7 @@ export default function Redirect() {
             </div>
           }
         >
-          <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
+          <AdsComponent dataAdSlot="1446835924" dataAdFormat="auto" />
         </Modal>
       )}
 

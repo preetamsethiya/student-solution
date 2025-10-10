@@ -32,5 +32,6 @@ const AdsComponent = (props) => {
 // ad id
 
 // multiplex ad dataAdSlot="1446835924"
+// display ad dataAdSlot="7424430887"
 
 export default AdsComponent;

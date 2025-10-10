@@ -96,8 +96,9 @@ export default function Canvas() {
           setDownloadUrl(URL.createObjectURL(blob));
         }
       },
-      "image/jpeg",
-      qualityFunc(quality, file)
+      "image/png",
+      1
+      // qualityFunc(quality, file)
     );
     // return compressedblob;
   };
@@ -106,13 +107,13 @@ export default function Canvas() {
       <div className="w-full flex justify-center px-4 flex-col gap-1">
         {/* <h1 className="text-4xl font-semibold text-blue-700 "> Canvas !</h1>{" "} */}
         {downloadUrl && (
-          <button className="mb-1 rounded-sm ring-1 ring-blue-700 mr-1  bg-blue-500 text-center">
+          <button className="mb-1 rounded-sm ring-1 ring-blue-700 mr-1 py-1  bg-blue-500 text-center">
             <a
               role="download button"
               title="download"
               ref={downRef}
               href={downloadUrl}
-              download="hii.jpeg"
+              download="hp.png"
               className={`h-full w-full px-8 py-1  text-gray-200 font-bold `}
             >
               Download ⬇️
@@ -125,7 +126,7 @@ export default function Canvas() {
             setEventVal(e);
             // console.dir(e.target.files[0]);
           }}
-          className="bg-purple-500  w-max py-0.5 rounded-sm text-center text-gray-200 font-semibold ps-1 "
+          className="bg-purple-500  w-max py-1 rounded-sm text-center text-gray-200 font-semibold ps-2 "
         />
         <canvas ref={canvasRef} style={{ display: "none" }} />
         <img ref={showRef} src={downloadUrl} alt="" style={{ width: "100%" }} />
@@ -137,7 +138,7 @@ export default function Canvas() {
               onChange={(e) => {
                 setQuality(e.target.value);
               }}
-              className="outline-none ring-1 ring-blue-700 rounded-full px-2"
+              className="outline-none ring-1 ring-blue-700 rounded-full px-2 py-1"
             />
             {quality >= 200 && (
               <span className="text-red-500">
@@ -146,7 +147,7 @@ export default function Canvas() {
               </span>
             )}
             <button
-              className="ml-2 ring-1 ring-blue-800 bg-blue-500 px-3 text-gray-200 font-bold rounded-md"
+              className="ml-2 ring-1 ring-blue-800 bg-blue-500 px-3 py-1 text-gray-200 font-bold rounded-md"
               onClick={async () => {
                 await compressImage(eventVal);
               }}
