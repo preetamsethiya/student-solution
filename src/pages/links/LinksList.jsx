@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Page_Container from "../../components/page_container/Page_Container";
+import AdsComponent from "../../components/google_ad/AdsComponent";
 
 const links = [
   {
@@ -73,6 +74,7 @@ export default function LinksList() {
               );
             })}
           </ul>
+          <AdsComponent dataAdSlot="1446835924" dataAdFormat="auto" />
         </div>
       </div>
     </Page_Container>
