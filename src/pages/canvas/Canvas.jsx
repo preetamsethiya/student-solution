@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import Page_Container from "../../components/page_container/Page_Container";
+import AdsComponent from "../../components/google_ad/AdsComponent";
 
 export default function Canvas() {
   const [eventVal, setEventVal] = useState(null);
