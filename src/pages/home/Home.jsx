@@ -139,7 +139,7 @@ export default function Home() {
                   }}
                   className="cursor-pointer ring-1 ring-red-500 mr-2  "
                 >
-                  Update phone{" 13"}
+                  Update phone{" 15"}
                 </span>
                 <div>
                   {getPhone[0] && (
@@ -304,11 +304,20 @@ export default function Home() {
                             </Card>
                           </Link>
                         </div>
+                        {i === 1 && (
+                          <AdsComponent
+                            dataAdSlot="9588333210"
+                            dataAdFormat="fluid"
+                          />
+                        )}
                       </article>
                     );
                   })}
               </div>
-              <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
+              <AdsComponent
+                dataAdSlot="1446835924"
+                dataAdFormat="autorelaxed"
+              />
             </div>
           </Page_Container>
         </main>

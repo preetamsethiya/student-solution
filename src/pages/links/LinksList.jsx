@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import Page_Container from "../../components/page_container/Page_Container";
 import AdsComponent from "../../components/google_ad/AdsComponent";
 import img from "../../assets/react.svg";
-console.log(img);
 
 const links = [
   {
@@ -61,7 +60,8 @@ export default function LinksList() {
               return (
                 <li key={i} className="w-full px-8">
                   <a
-                    className="bg-blue-500 px-6 w-full flex   rounded-md  py-1 text-center font-semibold text-gray-300"
+                    className="bg-blue-500 px-6 w-full flex   rounded-md  py-1 text-center font-semibold text-gray-50"
+                    target="_blank"
                     href={link.link_Url}
                   >
                     {" "}
@@ -70,13 +70,15 @@ export default function LinksList() {
                       className="w-[36px] h-[36px] self-start rounded-full "
                       alt=""
                     />
-                    <span className="self-center ml-3.5"> {link.text}</span>
+                    <span className="self-center ml-3.5">
+                      {i + 1}. &nbsp;{link.text}
+                    </span>
                   </a>
                 </li>
               );
             })}
           </ul>
-          <AdsComponent dataAdSlot="1446835924" dataAdFormat="auto" />
+          <AdsComponent dataAdSlot="3510967884" dataAdFormat="fluid" />
         </div>
       </div>
     </Page_Container>

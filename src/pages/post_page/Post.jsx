@@ -87,7 +87,9 @@ export default function Post() {
               );
             })}
             {/* google ad section  */}
-            {/* <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" /> */}
+            {post?.description.length && (
+              <AdsComponent dataAdSlot="1488759680" dataAdFormat="fluid" />
+            )}
             {/* date */}
             {post?.date?.map((aDate, i) => {
               return (
@@ -105,7 +107,9 @@ export default function Post() {
               );
             })}
             {/* google ad section  */}
-            {/* <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" /> */}
+            {post?.description.length && (
+              <AdsComponent dataAdSlot="8846097187" dataAdFormat="fluid" />
+            )}
 
             {/* eligibilities */}
             {post?.eligibilities?.map((eligibility, i) => {
@@ -130,7 +134,7 @@ export default function Post() {
               );
             })}
             {/* google ad section  */}
-            <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
+            <AdsComponent dataAdSlot="6069365383" dataAdFormat="autorelaxed" />
           </div>
         </Page_Container>
         {/* {getVarContext.isOpenAd && (

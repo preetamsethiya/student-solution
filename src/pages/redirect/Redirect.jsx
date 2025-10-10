@@ -52,7 +52,7 @@ export default function Redirect() {
             </div>
           }
         >
-          <AdsComponent dataAdSlot="1446835924" dataAdFormat="auto" />
+          <AdsComponent dataAdSlot="9146437946" dataAdFormat="auto" />
         </Modal>
       )}
 

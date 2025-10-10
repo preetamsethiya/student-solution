@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Page_Container from "../../components/page_container/Page_Container";
 import Button from "../../components/button/Button";
 import "../../App.css";
+import AdsComponent from "../../components/google_ad/AdsComponent";
 
 export default function Faq() {
   const FAQs = [
@@ -72,6 +73,7 @@ export default function Faq() {
                 </div>
               );
             })}
+            <AdsComponent dataAdSlot="2448850423" dataAdFormat="fluid" />
           </div>
         </div>
       </Page_Container>
