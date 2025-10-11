@@ -40,11 +40,11 @@ const links = [
 
 export default function LinksList() {
   useEffect(() => {
-    try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (e) {
-      console.log("ad error", e);
-    }
+    // try {
+    //   (window.adsbygoogle = window.adsbygoogle || []).push({});
+    // } catch (e) {
+    //   console.log("ad error", e);
+    // }
   }, []);
   return (
     <Page_Container>

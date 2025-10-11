@@ -22,11 +22,11 @@ export default function Redirect() {
   };
 
   useEffect(() => {
-    try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (e) {
-      console.log("ad error", e);
-    }
+    // try {
+    //   (window.adsbygoogle = window.adsbygoogle || []).push({});
+    // } catch (e) {
+    //   console.log("ad error", e);
+    // }
     getVarContext.setIsOpenAd(true);
     if (phone) {
       getPhone[1](phone);

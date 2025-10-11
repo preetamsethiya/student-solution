@@ -21,11 +21,11 @@ export default function Post() {
   });
 
   useEffect(() => {
-    try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (e) {
-      console.log("ad error", e);
-    }
+    // try {
+    //   (window.adsbygoogle = window.adsbygoogle || []).push({});
+    // } catch (e) {
+    //   console.log("ad error", e);
+    // }
     if (phone) {
       getPhone[1](phone);
     }
