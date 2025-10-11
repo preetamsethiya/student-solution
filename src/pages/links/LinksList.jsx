@@ -39,13 +39,7 @@ const links = [
 ];
 
 export default function LinksList() {
-  useEffect(() => {
-    // try {
-    //   (window.adsbygoogle = window.adsbygoogle || []).push({});
-    // } catch (e) {
-    //   console.log("ad error", e);
-    // }
-  }, []);
+  useEffect(() => {}, []);
   return (
     <Page_Container>
       <div className="flex flex-col">

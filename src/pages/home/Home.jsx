@@ -67,12 +67,6 @@ export default function Home() {
   const filter = UseSearch_Filter();
   // console.log(updateList);
   useEffect(() => {
-    // try {
-    //   (window.adsbygoogle = window.adsbygoogle || []).push({});
-    // } catch (e) {
-    //   console.log("ad error", e);
-    // }
-
     if (phone) {
       getPhone[1](phone);
     }
@@ -139,7 +133,7 @@ export default function Home() {
                   }}
                   className="cursor-pointer ring-1 ring-red-500 mr-2  "
                 >
-                  Update phone{" 18"}
+                  Update phone{" 19"}
                 </span>
                 <div>
                   {getPhone[0] && (
