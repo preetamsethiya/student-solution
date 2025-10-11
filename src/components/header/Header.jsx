@@ -26,8 +26,14 @@ export default function Header() {
   ];
   return (
     <header>
-      <div>
-        <nav className="navbar py-2 shadow-sm  max-sm:shadow-gray-800 fixed backdrop-filter backdrop-blur-sm max-sm:bottom-0.5  sm:top-0.5  w-full">
+      <div
+        style={
+          {
+            // zIndex: "100",
+          }
+        }
+      >
+        <nav className="navbar py-2 shadow-sm  max-sm:shadow-gray-800 fixed backdrop-filter backdrop-blur-sm max-sm:bottom-0.5  sm:top-0.5  w-full z-400  ">
           <ul className="flex justify-center gap-2 max-sm:justify-between mx-1.5">
             <li className="list max-sm:hidden ">
               <NavLink

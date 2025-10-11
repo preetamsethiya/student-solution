@@ -158,7 +158,7 @@ export default function Canvas() {
             </button>
           </div>
         )}
-        <AdsComponent dataAdSlot="3019055434" dataAdFormat="autorelaxed" />
+        {/* <AdsComponent dataAdSlot="3019055434" dataAdFormat="autorelaxed" /> */}
       </div>
     </Page_Container>
   );
