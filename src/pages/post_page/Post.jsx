@@ -88,7 +88,7 @@ export default function Post() {
             })}
             {/* google ad section  */}
             {post?.description.length && (
-              <AdsComponent dataAdSlot="1488759680" dataAdFormat="fluid" />
+              <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
             )}
             {/* date */}
             {post?.date?.map((aDate, i) => {
