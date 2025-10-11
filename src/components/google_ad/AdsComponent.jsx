@@ -4,11 +4,11 @@ const AdsComponent = (props) => {
   const { dataAdSlot, dataAdFormat } = props;
 
   useEffect(() => {
-    // try {
-    //   (window.adsbygoogle = window.adsbygoogle || []).push({});
-    // } catch (e) {
-    //   console.log("ad error", e);
-    // }
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (e) {
+      console.log("ad error", e);
+    }
   }, []);
 
   return (

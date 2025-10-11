@@ -28,11 +28,11 @@ function App() {
   // warning: in the working copy of 'src/App.jsx', LF will be replaced by CRLF the next time Git touches it
 
   useEffect(() => {
-    try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (e) {
-      console.log("ad error", e);
-    }
+    // try {
+    //   (window.adsbygoogle = window.adsbygoogle || []).push({});
+    // } catch (e) {
+    //   console.log("ad error", e);
+    // }
   }, []);
 
   return (
