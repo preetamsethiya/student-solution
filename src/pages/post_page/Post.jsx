@@ -129,7 +129,7 @@ export default function Post() {
               );
             })}
             {/* google ad section  */}
-            <AdsComponent dataAdSlot="6069365383" dataAdFormat="autorelaxed" />
+            {/* <AdsComponent dataAdSlot="6069365383" dataAdFormat="autorelaxed" /> */}
           </div>
         </Page_Container>
         {/* {getVarContext.isOpenAd && (
