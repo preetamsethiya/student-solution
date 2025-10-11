@@ -308,10 +308,10 @@ export default function Home() {
                     );
                   })}
               </div>
-              <AdsComponent
+              {/* <AdsComponent
                 dataAdSlot="1446835924"
                 dataAdFormat="autorelaxed"
-              />
+              /> */}
             </div>
           </Page_Container>
         </main>
