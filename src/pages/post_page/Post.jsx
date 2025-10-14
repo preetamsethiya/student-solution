@@ -34,6 +34,7 @@ export default function Post() {
           <div className="bg-[url(/src/assets/images/now-or-never.png)]  bg-cover bg-center font-semibold text-white text-xl text-shadow-sm text-shadow-amber-400 text-center min-h-[200px] md:min-h-[300px]">
             {post?.title}
           </div>
+          <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
           <div className="mt-2 ml-2 flex justify-between">
             <div>
               {" "}
@@ -82,9 +83,9 @@ export default function Post() {
               );
             })}
             {/* google ad section  */}
-            {post?.description.length && (
+            {/* {post?.description.length && (
               <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
-            )}
+            )} */}
             {/* date */}
             {post?.date?.map((aDate, i) => {
               return (
