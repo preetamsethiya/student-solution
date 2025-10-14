@@ -30,9 +30,8 @@ export default function Faq() {
         <div>
           <div>
             <h3 className="pl-3 font-semibold  mb-2"> FAQs</h3>
-
           </div>
-             <AdsComponent dataAdSlot="2448850423" dataAdFormat="fluid" />
+          {/* <AdsComponent dataAdSlot="2448850423" dataAdFormat="fluid" /> */}
           <div className="bg-gray-300 p-2 rounded-sm">
             {FAQs.map((FAQ, i) => {
               return (
@@ -75,7 +74,6 @@ export default function Faq() {
                 </div>
               );
             })}
-         
           </div>
         </div>
       </Page_Container>

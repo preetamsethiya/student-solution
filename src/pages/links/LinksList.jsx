@@ -48,7 +48,7 @@ export default function LinksList() {
             Sites List
           </span>
         </div>
-         <AdsComponent dataAdSlot="3510967884" dataAdFormat="fluid" />
+        {/* <AdsComponent dataAdSlot="3510967884" dataAdFormat="fluid" /> */}
         <div>
           <ul className="flex justify-center items-center gap-2 flex-col mt-1.5 ">
             {links.map((link, i) => {
@@ -73,7 +73,6 @@ export default function LinksList() {
               );
             })}
           </ul>
-         
         </div>
       </div>
     </Page_Container>

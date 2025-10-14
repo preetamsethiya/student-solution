@@ -298,12 +298,12 @@ export default function Home() {
                             </Card>
                           </Link>
                         </div>
-                        {i === 1 && (
+                        {/* {i === 1 && (
                           <AdsComponent
                             dataAdSlot="9588333210"
                             dataAdFormat="fluid"
                           />
-                        )}
+                        )} */}
                       </article>
                     );
                   })}

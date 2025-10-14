@@ -102,7 +102,7 @@ export default function Post() {
               );
             })}
             {/* google ad section  */}
-            <AdsComponent dataAdSlot="8846097187" dataAdFormat="fluid" />
+            {/* <AdsComponent dataAdSlot="8846097187" dataAdFormat="fluid" /> */}
 
             {/* eligibilities */}
             {post?.eligibilities?.map((eligibility, i) => {
