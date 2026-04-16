@@ -37,7 +37,6 @@ export default function Faq() {
             data-ad-slot="9303603585"
             data-auto-format="rspv"
             layout="responsive"
-            data-full-width=""
           >
             <div overflow=""></div>
           </amp-ad>

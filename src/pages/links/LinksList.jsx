@@ -47,7 +47,6 @@ export default function LinksList() {
           data-ad-slot="6677440247"
           data-auto-format="mcrspv"
           layout="responsive"
-          data-full-width=""
         >
           <div overflow=""></div>
         </amp-ad>
