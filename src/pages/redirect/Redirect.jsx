@@ -4,7 +4,6 @@ import { Link, useLocation, useParams, useSearchParams } from "react-router";
 import { updates } from "../../data_store/data";
 import { UseLocalstorage } from "../../hooks/UseLocalstorage";
 import Modal from "../../components/modal/Modal";
-import AdsComponent from "../../components/google_ad/AdsComponent";
 import { VarContext } from "../../context/VarContext";
 
 export default function Redirect() {
@@ -37,7 +36,6 @@ export default function Redirect() {
                 <button
                   className="rounded-full px-6 py-0 font-semibold text-center text-sm/6 bg-gray-500 text-white"
                   onClick={() => {
-                    // open(filterUrl.siteUrl);
                     getVarContext.setIsOpenAd(false);
                   }}
                 >
@@ -46,9 +44,7 @@ export default function Redirect() {
               </a>
             </div>
           }
-        >
-          <AdsComponent dataAdSlot="9146437946" dataAdFormat="auto" />
-        </Modal>
+        ></Modal>
       )}
 
       <div>

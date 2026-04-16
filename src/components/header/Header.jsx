@@ -4,24 +4,24 @@ import { NavLink } from "react-router";
 export default function Header() {
   const routes = [
     {
-      text: "Home",
+      text: "SMKV",
       icon: "🏠",
       route: "/",
     },
     {
-      text: "FAQs",
+      text: "Results",
       icon: "❓",
       route: "/faq",
-    },
-    {
-      text: "Compressor",
-      icon: "📚",
-      route: "/canvas",
     },
     {
       text: "Sites",
       icon: "🔗",
       route: "/linkslist",
+    },
+    {
+      text: "Jobs",
+      icon: "👨‍🏭",
+      route: "/canvas",
     },
   ];
   return (

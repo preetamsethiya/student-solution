@@ -4,7 +4,6 @@ import Card from "../../components/card/Card";
 import { profiles, updates } from "../../data_store/data";
 import Button from "../../components/button/Button";
 import { Link, useParams, useSearchParams } from "react-router";
-import AdsComponent from "../../components/google_ad/AdsComponent";
 import { UseLocalstorage } from "../../hooks/UseLocalstorage";
 import { VarContext } from "../../context/VarContext";
 import Modal from "../../components/modal/Modal";
@@ -24,17 +23,14 @@ export default function Post() {
     if (phone) {
       getPhone[1](phone);
     }
-    // console.log(post);
   }, [post]);
   return (
     <>
       <main>
         <Page_Container className="px-0">
-          {/* {console.log(post.title)} */}
           <div className="bg-[url(/src/assets/images/now-or-never.png)]  bg-cover bg-center font-semibold text-white text-xl text-shadow-sm text-shadow-amber-400 text-center min-h-[200px] md:min-h-[300px]">
             {post?.title}
           </div>
-          <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
           <div className="mt-2 ml-2 flex justify-between">
             <div>
               {" "}
@@ -82,10 +78,6 @@ export default function Post() {
                 </div>
               );
             })}
-            {/* google ad section  */}
-            {/* {post?.description.length && (
-              <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
-            )} */}
             {/* date */}
             {post?.date?.map((aDate, i) => {
               return (
@@ -102,9 +94,6 @@ export default function Post() {
                 </div>
               );
             })}
-            {/* google ad section  */}
-            {/* <AdsComponent dataAdSlot="8846097187" dataAdFormat="fluid" /> */}
-
             {/* eligibilities */}
             {post?.eligibilities?.map((eligibility, i) => {
               return (
@@ -127,29 +116,8 @@ export default function Post() {
                 </div>
               );
             })}
-            {/* google ad section  */}
-            {/* <AdsComponent dataAdSlot="6069365383" dataAdFormat="autorelaxed" /> */}
           </div>
         </Page_Container>
-        {/* {getVarContext.isOpenAd && (
-          <Modal
-            footer={
-              <div className="flex justify-center gap-3">
-                <button
-                  className="rounded-md px-6 py-1 font-semibold text-center text-xl bg-gray-500 text-white"
-                  onClick={() => {
-                    // open(filterUrl.siteUrl);
-                    getVarContext.setIsOpenAd(false);
-                  }}
-                >
-                  close
-                </button>
-              </div>
-            }
-          >
-            <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
-          </Modal>
-        )} */}
       </main>
     </>
   );

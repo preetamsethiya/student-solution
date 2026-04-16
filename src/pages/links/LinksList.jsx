@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import Page_Container from "../../components/page_container/Page_Container";
-import AdsComponent from "../../components/google_ad/AdsComponent";
 import img from "../../assets/react.svg";
 
 const links = [
@@ -13,27 +12,19 @@ const links = [
     link_Url: "https://vyapamcg.cgstate.gov.in/",
   },
   {
-    text: "(Login) CGVyapam",
-    link_Url: "https://vyapamprofile.cgstate.gov.in/Online/UserLogin.aspx",
-  },
-  {
-    text: "CG post metric scholarship",
+    text: "CG Post Metric Scholarship",
     link_Url: "https://postmatric-scholarship.cg.nic.in/",
-  },
-  {
-    text: " (Login) CG post metric scholarship",
-    link_Url: "https://postmatric-scholarship.cg.nic.in/LoginPage.aspx",
   },
   {
     text: "NSP OTR",
     link_Url: "https://scholarships.gov.in/Students",
   },
   {
-    text: "CG E District (aay, jati, nivash status check)",
+    text: "CG E District",
     link_Url: "https://cgedistrict.cgstate.gov.in/workflow/trackAppStatus.html",
   },
   {
-    text: "AAdhar card",
+    text: "Aadhar card",
     link_Url: "https://uidai.gov.in/",
   },
 ];
@@ -42,32 +33,41 @@ export default function LinksList() {
   useEffect(() => {}, []);
   return (
     <Page_Container>
-      <div className="flex flex-col">
-        <div>
-          <span className="bg-amber-500 px-3 py-0.5 font-bold ">
+      <div>
+        <div className="mb-1">
+          <span className="bg-amber-500   px-3 py-0.5 font-bold ">
             Sites List
           </span>
         </div>
-        {/* <AdsComponent dataAdSlot="3510967884" dataAdFormat="fluid" /> */}
+        <amp-ad
+          width="100vw"
+          height="320"
+          type="adsense"
+          data-ad-client="ca-pub-5935749075399685"
+          data-ad-slot="6677440247"
+          data-auto-format="mcrspv"
+          data-full-width=""
+        >
+          <div overflow=""></div>
+        </amp-ad>
         <div>
-          <ul className="flex justify-center items-center gap-2 flex-col mt-1.5 ">
+          <ul className="grid grid-cols-[repeat(auto-fill,minmax(90px,1fr))] gap-[6px] bg-pink-300 p-[6px] text-center ">
             {links.map((link, i) => {
               return (
-                <li key={i} className="w-full px-8">
-                  <a
-                    className="bg-blue-500 px-6 w-full flex   rounded-md  py-1 text-center font-semibold text-gray-50"
-                    target="_blank"
-                    href={link.link_Url}
-                  >
-                    {" "}
-                    <img
-                      src={img}
-                      className="w-[36px] h-[36px] self-start rounded-full "
-                      alt=""
-                    />
-                    <span className="self-center ml-3.5">
-                      {i + 1}. &nbsp;{link.text}
-                    </span>
+                <li key={i}>
+                  <a href={link.link_Url} target="_blank">
+                    <div className=" flex items-center justify-center flex-col">
+                      <div
+                        className={`h-[70px] w-[70px] rounded-[85px] flex items-center justify-center bg-green-700`}
+                      >
+                        <div className="font-bold rounded-[40px] text-gray-200">
+                          {i + 1}
+                        </div>
+                      </div>
+                      <div className="text-[14px] font-bold px-1">
+                        {link.text}
+                      </div>
+                    </div>
                   </a>
                 </li>
               );

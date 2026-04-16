@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Page_Container from "../../components/page_container/Page_Container";
 import Button from "../../components/button/Button";
 import "../../App.css";
-import AdsComponent from "../../components/google_ad/AdsComponent";
+import { results } from "../../data_store/data";
 
 export default function Faq() {
   const FAQs = [
@@ -21,19 +21,60 @@ export default function Faq() {
   ];
   const [showAns, setShowAns] = useState(null);
 
-  useEffect(() => {
-    // console.log(showAns);
-  }, [showAns]);
   return (
     <div>
       <Page_Container>
         <div>
           <div>
-            <h3 className="pl-3 font-semibold  mb-2"> FAQs</h3>
+            <h3 className="pl-3 font-semibold  mb-2"> Results </h3>
           </div>
-          {/* <AdsComponent dataAdSlot="2448850423" dataAdFormat="fluid" /> */}
+
+          <amp-ad
+            width="100vw"
+            height="320"
+            type="adsense"
+            data-ad-client="ca-pub-5935749075399685"
+            data-ad-slot="9303603585"
+            data-auto-format="rspv"
+            data-full-width=""
+          >
+            <div overflow=""></div>
+          </amp-ad>
           <div className="bg-gray-300 p-2 rounded-sm">
-            {FAQs.map((FAQ, i) => {
+            {results.map((result) => {
+              return (
+                <div>
+                  <div className="bg-blue-400 font-semibold px-4 ">
+                    {result.course}
+                  </div>
+                  <div className="grid grid-cols-[repeat(auto-fill,minmax(90px,1fr))] gap-[6px] bg-pink-300 p-[6px] text-center ">
+                    {result.programmes.map((programme) => {
+                      return (
+                        <a href={programme.url} target="_blank">
+                          <div className=" flex items-center justify-center flex-col">
+                            <div
+                              className={`h-[70px] w-[70px] rounded-[85px] flex items-center justify-center bg-green-700
+                              `}
+                            >
+                              <div className="font-bold rounded-[40px] text-gray-200">
+                                {" "}
+                                {programme.semester}
+                              </div>
+                            </div>
+                            <div className="text-[14px] font-bold px-1">
+                              {result.course} {programme.semester}{" "}
+                              {programme.resultType} {programme.subjects}
+                            </div>
+                          </div>
+                        </a>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })}
+
+            {/* {FAQs.map((FAQ, i) => {
               return (
                 <div
                   key={i}
@@ -73,7 +114,7 @@ export default function Faq() {
                   </div>
                 </div>
               );
-            })}
+            })} */}
           </div>
         </div>
       </Page_Container>

@@ -9,43 +9,22 @@ import Input from "../../components/input/Input";
 import UseSearch_Filter from "../../hooks/UseSearch_Filter";
 import { Search_FilterContext } from "../../context/Search_FilterContext";
 import SelectMenu from "../../components/select_menu/SelectMenu";
-import AdsComponent from "../../components/google_ad/AdsComponent";
 import "../../App.css";
 import { UseLocalstorage } from "../../hooks/UseLocalstorage";
 import PopUp from "../../components/pop_up/PopUp";
 import Modal from "../../components/modal/Modal";
 const buttons = [
-  // {
-  //   text: "updates",
-  //   value: " ",
-  // },
+  {
+    text: "All",
+    value: " ",
+  },
   {
     text: "SMKV",
     value: "smkv",
   },
-  // {
-  //   text: "colleges",
-  //   value: "college",
-  // },
-  // {
-  //   text: "Jobs",
-  //   value: "other",
-  // },
   {
     text: "Scholarship",
     value: "scholarship",
-  },
-  {
-    text: "Vyapam",
-    value: "vyapam",
-  },
-  {
-    text: "Results",
-    value: "results",
-  },
-  {
-    text: "Admit cards",
-    value: "admitcards",
   },
 ];
 
@@ -190,10 +169,6 @@ export default function Home() {
               )} */}
             </div>
 
-            {/* google ad component */}
-
-            <AdsComponent dataAdSlot="7424430887" dataAdFormat="auto" />
-
             <div className=" mt-3 ">
               {/* buttons section  */}
               <div className=" p-1 flex justify-center flex-wrap gap-1.5  text-xl mb-2.5 ">
@@ -268,7 +243,7 @@ export default function Home() {
                             </a>
                             {update.new && (
                               <span className="ring-1 py-1.5 ring-red-500 bg-red-100 text-red-700 ml-1 mb-2   px-3 rounded-sm font-semibold">
-                                new
+                                {update.new}
                               </span>
                             )}
                           </span>
@@ -285,7 +260,7 @@ export default function Home() {
                             {" "}
                             <Card>
                               <div className="p-2">
-                                <div className="text-center  p-16 bg-[url(/src/assets/images/door2.jpeg)] bg-cover  bg-center rounded-xl">
+                                <div className="text-center  p-16 bg-[url(/src/assets/images/door1.jpg)] bg-cover  bg-center rounded-xl">
                                   <span className="bg-gray-900 rounded-full px-5  py-1.5 text-gray-100 font-semibold ">
                                     {search_Filter}
                                   </span>
@@ -298,20 +273,10 @@ export default function Home() {
                             </Card>
                           </Link>
                         </div>
-                        {/* {i === 1 && (
-                          <AdsComponent
-                            dataAdSlot="9588333210"
-                            dataAdFormat="fluid"
-                          />
-                        )} */}
                       </article>
                     );
                   })}
               </div>
-              {/* <AdsComponent
-                dataAdSlot="1446835924"
-                dataAdFormat="autorelaxed"
-              /> */}
             </div>
           </Page_Container>
         </main>
