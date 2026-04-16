@@ -36,6 +36,7 @@ export default function Faq() {
             data-ad-client="ca-pub-5935749075399685"
             data-ad-slot="9303603585"
             data-auto-format="rspv"
+            layout="responsive"
             data-full-width=""
           >
             <div overflow=""></div>
