@@ -53,7 +53,7 @@ export default function Faq() {
                         <a href={programme.url} target="_blank">
                           <div className=" flex items-center justify-center flex-col">
                             <div
-                              className={`h-[70px] w-[70px] rounded-[85px] flex items-center justify-center bg-green-700
+                              className={`h-[70px] w-[70px] rounded-[85px] flex items-center justify-center ${programme?.color}
                               `}
                             >
                               <div className="font-bold rounded-[40px] text-gray-200">
