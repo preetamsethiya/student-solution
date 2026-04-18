@@ -29,17 +29,6 @@ export default function Faq() {
             <h3 className="pl-3 font-semibold  mb-2"> Results </h3>
           </div>
 
-          <amp-ad
-            width="100vw"
-            height="320"
-            type="adsense"
-            data-ad-client="ca-pub-5935749075399685"
-            data-ad-slot="9303603585"
-            data-auto-format="rspv"
-            layout="responsive"
-          >
-            <div overflow=""></div>
-          </amp-ad>
           <div className="bg-gray-300 p-2 rounded-sm">
             {results.map((result) => {
               return (

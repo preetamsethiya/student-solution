@@ -21,15 +21,6 @@ function App() {
   const TRACKING_ID = "G-3CZ1S9KW80";
   ReactGA.initialize(TRACKING_ID);
   ReactGA.send({ hitType: "pageview", page: "/" });
-  // warning: in the working copy of 'src/App.jsx', LF will be replaced by CRLF the next time Git touches it
-
-  useEffect(() => {
-    // try {
-    //   (window.adsbygoogle = window.adsbygoogle || []).push({});
-    // } catch (e) {
-    //   console.log("ad error", e);
-    // }
-  }, []);
 
   return (
     <>

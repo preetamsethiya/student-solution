@@ -39,17 +39,7 @@ export default function LinksList() {
             Sites List
           </span>
         </div>
-        <amp-ad
-          width="100vw"
-          height="320"
-          type="adsense"
-          data-ad-client="ca-pub-5935749075399685"
-          data-ad-slot="6677440247"
-          data-auto-format="mcrspv"
-          layout="responsive"
-        >
-          <div overflow=""></div>
-        </amp-ad>
+
         <div>
           <ul className="grid grid-cols-[repeat(auto-fill,minmax(90px,1fr))] gap-[6px] bg-pink-300 p-[6px] text-center ">
             {links.map((link, i) => {
