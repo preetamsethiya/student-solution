@@ -32,7 +32,7 @@ export default function Faq() {
             <h3 className="pl-3 font-semibold  mb-2 text-2xl"> Results </h3>
             <div className="flex items-center gap-2 pl-3 mb-2 ">
               <input
-                className="ring-1 p-1 w-[140px] ring-blue-500 outline-none "
+                className="ring-1 p-1 w-[140px] ring-black outline-none rounded-sm"
                 type="number"
                 placeholder="total marks"
                 onChange={(e) => {
@@ -40,7 +40,7 @@ export default function Faq() {
                 }}
               />
               <input
-                className="ring-1 p-1 w-[140px] ring-blue-500 outline-none "
+                className="ring-1 p-1 w-[140px] ring-black outline-none rounded-sm"
                 type="number"
                 placeholder="obtained marks "
                 onChange={(e) => {
@@ -53,14 +53,14 @@ export default function Faq() {
             </div>
           </div>
 
-          <div className="bg-gray-300 p-2 rounded-sm">
+          <div className="bg-gray-200 p-2 rounded-sm">
             {results.map((result, i) => {
               return (
                 <div key={i}>
-                  <div className="bg-blue-400 font-semibold px-4 ">
+                  <div className="bg-black text-gray-50 font-semibold px-4 ">
                     {result.course}
                   </div>
-                  <div className="grid grid-cols-[repeat(auto-fill,minmax(90px,1fr))] gap-[6px] bg-pink-300 p-[6px] text-center ">
+                  <div className="grid grid-cols-[repeat(auto-fill,minmax(90px,1fr))] gap-[6px] bg-pink-200 p-[6px] text-center ">
                     {result.programmes.reverse().map((programme, i) => {
                       return (
                         <a key={i} href={programme.url} target="_blank">

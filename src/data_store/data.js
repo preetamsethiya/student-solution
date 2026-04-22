@@ -63,7 +63,7 @@ const results = [
       {
         semester: "1st",
         resultType: "Private",
-        color: "bg-yellow-600",
+        color: "bg-amber-600",
         url: "https://smkv.ucanapply.com/results-declared/bachelor-of-science-life-science/eyJpdiI6IjJTbGNWbmlxQUZPdXYwSEVOWWdhakE9PSIsInZhbHVlIjoiM1VjODZxazJkRm9WVXU5em40aHRlQT09IiwibWFjIjoiNTMyZjg5YWFkMjg2NjA4ZTJjZmUzNTY4MDQ2Yzc4ZTNlZjRiMmZmZjM2NGIzNGMwNTgwMWYyZjViZTYyMGRlNyIsInRhZyI6IiJ9",
       },
       {
@@ -75,7 +75,7 @@ const results = [
       {
         semester: "3rd",
         resultType: "Private",
-        color: "bg-yellow-600",
+        color: "bg-amber-600",
         url: "https://smkv.ucanapply.com/results-declared/bachelor-of-science-life-science/eyJpdiI6InBnWS95eEF2bmFyc3JBZTBaR3JmQ0E9PSIsInZhbHVlIjoiWERCY3dEUkZQZW5TV25aNU9zY3JqQT09IiwibWFjIjoiOGRjNzllNmE4NzlhYWY3NTgzN2YxMDEwZjcwODk5MmMzZDdhMTU4YjFiM2ZmZTliY2FkMTUyMWEyZDE2ZTRmNSIsInRhZyI6IiJ9",
       },
     ],
@@ -86,28 +86,28 @@ const results = [
       {
         semester: "1st",
         resultType: "Regular",
-        color: "bg-green-600",
+        color: "bg-violet-600",
         subjects: "",
         url: "https://smkv.ucanapply.com/results-declared/bachelor-of-arts/eyJpdiI6Im5TZ0kzVzVRU0ZRaWFscnphaDlrZkE9PSIsInZhbHVlIjoiR0tDOWQyZEEzY1d0MlZ3ZDI0N0VZQT09IiwibWFjIjoiMjIyOGIwZjg1ZjZhOTQ5ODA1MTY0ZDAyYmM2YzlhNmRhNWYyMTkxNTA0MjQyMzgwMjc3NDhjMjI0ZWQ1ZDNkYiIsInRhZyI6IiJ9",
       },
       {
         semester: "1st",
         resultType: "Private",
-        color: "bg-yellow-600",
+        color: "bg-blue-500",
         subjects: "",
         url: "https://smkv.ucanapply.com/results-declared/bachelor-of-arts/eyJpdiI6Im5TZ0kzVzVRU0ZRaWFscnphaDlrZkE9PSIsInZhbHVlIjoiR0tDOWQyZEEzY1d0MlZ3ZDI0N0VZQT09IiwibWFjIjoiMjIyOGIwZjg1ZjZhOTQ5ODA1MTY0ZDAyYmM2YzlhNmRhNWYyMTkxNTA0MjQyMzgwMjc3NDhjMjI0ZWQ1ZDNkYiIsInRhZyI6IiJ9",
       },
       {
         semester: "3rd",
         resultType: "Regular",
-        color: "bg-green-600",
+        color: "bg-violet-600",
         subjects: "",
         url: "https://smkv.ucanapply.com/results-declared/bachelor-of-arts/eyJpdiI6IlgvTXZBdnh4TVVNM2V6RW10ejNFbEE9PSIsInZhbHVlIjoiN1d5SER5THpMaXhKeXF0YVptZEN4QT09IiwibWFjIjoiMWU4NmJjY2I1Y2M5NWVmZDA1OGI3ZmEzN2Q2NDNiNjNiZDk5YTk4MzU3NzU3ODU5ODY1YTE1YjI0N2JmMWQ4NSIsInRhZyI6IiJ9",
       },
       {
         semester: "3rd",
         resultType: "Private",
-        color: "bg-yellow-600",
+        color: "bg-blue-500",
         subjects: "",
         url: "https://smkv.ucanapply.com/results-declared/bachelor-of-arts/eyJpdiI6IlgvTXZBdnh4TVVNM2V6RW10ejNFbEE9PSIsInZhbHVlIjoiN1d5SER5THpMaXhKeXF0YVptZEN4QT09IiwibWFjIjoiMWU4NmJjY2I1Y2M5NWVmZDA1OGI3ZmEzN2Q2NDNiNjNiZDk5YTk4MzU3NzU3ODU5ODY1YTE1YjI0N2JmMWQ4NSIsInRhZyI6IiJ9",
       },
